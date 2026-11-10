@@ -15,7 +15,7 @@ export function ArticleCard({ post, eager = false }: { post: BlogPost; eager?: b
     <article className="group flex flex-col gap-4 h-full">
       <Link
         to={`/blog/${post.slug}`}
-        className="flex flex-col gap-4 h-full rounded-[24px] outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-4 focus-visible:ring-offset-white"
+        className="flex flex-col gap-4 h-full rounded-[24px] outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-4 focus-visible:ring-offset-white"
       >
         <div className="relative aspect-[4/3] sm:aspect-auto sm:h-[240px] rounded-[24px] overflow-hidden mb-2 bg-slate-100">
           <img
@@ -41,13 +41,13 @@ export function ArticleCard({ post, eager = false }: { post: BlogPost; eager?: b
           ))}
         </div>
 
-        <h3 className="text-[1.25rem] font-bold text-[#111111] leading-snug group-hover:text-[#f97316] transition-colors line-clamp-3">
+        <h3 className="text-[1.25rem] font-bold text-[#111111] leading-snug group-hover:text-[#6D28D9] transition-colors line-clamp-3">
           {post.title}
         </h3>
 
         <p className="text-[15px] text-slate-600 leading-relaxed line-clamp-3">{post.excerpt}</p>
 
-        <div className="flex items-center gap-2 text-[13px] font-bold text-slate-600 mt-auto pt-2 group-hover:text-[#f97316] transition-colors">
+        <div className="flex items-center gap-2 text-[13px] font-bold text-slate-600 mt-auto pt-2 group-hover:text-[#6D28D9] transition-colors">
           {readingMinutes(post)} Min read
           <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
         </div>
@@ -74,7 +74,7 @@ export function SidebarWidget({
       className="bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100"
       aria-labelledby={`widget-${title.replace(/\s+/g, '-').toLowerCase()}`}
     >
-      <div className="bg-[#f97316] py-5 px-6">
+      <div className="bg-[#6D28D9] py-5 px-6">
         <h3 id={`widget-${title.replace(/\s+/g, '-').toLowerCase()}`} className="text-white font-bold text-[18px]">
           {title}
         </h3>
@@ -100,13 +100,13 @@ export function CategoryItem({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`w-full flex items-center justify-between px-4 py-3.5 rounded-xl transition-colors group text-left outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] ${
-        active ? 'bg-orange-50' : 'hover:bg-slate-50'
+      className={`w-full flex items-center justify-between px-4 py-3.5 rounded-xl transition-colors group text-left outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] ${
+        active ? 'bg-violet-50' : 'hover:bg-slate-50'
       }`}
     >
       <span
         className={`text-[15px] font-medium transition-colors ${
-          active ? 'text-[#f97316] font-bold' : 'text-slate-700 group-hover:text-[#f97316]'
+          active ? 'text-[#6D28D9] font-bold' : 'text-slate-700 group-hover:text-[#6D28D9]'
         }`}
       >
         {name}
@@ -120,7 +120,7 @@ export function PopularArticleItem({ post }: { post: BlogPost }) {
   return (
     <Link
       to={`/blog/${post.slug}`}
-      className="flex gap-4 group rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2"
+      className="flex gap-4 group rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
     >
       <div className="w-16 h-16 shrink-0 rounded-[14px] overflow-hidden bg-slate-100">
         <img
@@ -134,7 +134,7 @@ export function PopularArticleItem({ post }: { post: BlogPost }) {
         />
       </div>
       <div className="flex flex-col justify-center">
-        <h4 className="text-[14px] font-bold text-[#111111] leading-snug mb-1.5 group-hover:text-[#f97316] transition-colors line-clamp-2">
+        <h4 className="text-[14px] font-bold text-[#111111] leading-snug mb-1.5 group-hover:text-[#6D28D9] transition-colors line-clamp-2">
           {post.title}
         </h4>
         <div className="text-[12px] text-slate-500 font-medium">{readingMinutes(post)} min read</div>
@@ -157,10 +157,10 @@ export function TagPill({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`px-3 py-2.5 sm:py-1.5 rounded-full text-[13px] font-semibold border transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] ${
+      className={`px-3 py-2.5 sm:py-1.5 rounded-full text-[13px] font-semibold border transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] ${
         active
-          ? 'bg-[#f97316] text-white border-[#f97316] shadow-[0_4px_14px_rgb(249,115,22,0.3)]'
-          : 'bg-white text-slate-600 border-slate-200 hover:border-[#f97316] hover:text-[#f97316]'
+          ? 'bg-[#6D28D9] text-white border-[#6D28D9] shadow-[0_4px_14px_rgb(249,115,22,0.3)]'
+          : 'bg-white text-slate-600 border-slate-200 hover:border-[#6D28D9] hover:text-[#6D28D9]'
       }`}
     >
       {name}
@@ -187,7 +187,7 @@ export function NewsletterWidget() {
         <label htmlFor="blog-newsletter-email" className="sr-only">
           Email address
         </label>
-        <div className="flex items-center gap-2 border border-slate-200 rounded-full px-4 py-2.5 focus-within:border-[#f97316] transition-colors">
+        <div className="flex items-center gap-2 border border-slate-200 rounded-full px-4 py-2.5 focus-within:border-[#6D28D9] transition-colors">
           <Mail className="w-4 h-4 text-slate-400 shrink-0" aria-hidden="true" />
           <input
             id="blog-newsletter-email"
@@ -201,7 +201,7 @@ export function NewsletterWidget() {
         </div>
         <button
           type="submit"
-          className="px-6 py-2.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[14px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5"
+          className="px-6 py-2.5 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[14px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5"
         >
           Subscribe
         </button>
@@ -232,7 +232,7 @@ export function BackToTop() {
       type="button"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       aria-label="Back to top"
-      className={`fixed bottom-28 right-6 z-40 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center text-slate-600 hover:text-[#f97316] hover:border-[#f97316] transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] ${
+      className={`fixed bottom-28 right-6 z-40 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex items-center justify-center text-slate-600 hover:text-[#6D28D9] hover:border-[#6D28D9] transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] ${
         visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3 pointer-events-none'
       }`}
     >

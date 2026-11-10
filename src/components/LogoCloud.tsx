@@ -10,7 +10,7 @@ export function LogoCloud() {
               Top companies<br />
               choose PyHire.
             </h2>
-            <button className="px-8 py-3.5 bg-[#ff5a1f] hover:bg-[#e04e1a] text-white rounded-full font-medium text-[16px] transition-colors shadow-sm">
+            <button className="px-8 py-3.5 bg-[#6D28D9] hover:bg-[#e04e1a] text-white rounded-full font-medium text-[16px] transition-colors shadow-sm">
               Read customer stories
             </button>
           </div>

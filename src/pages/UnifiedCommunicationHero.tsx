@@ -9,15 +9,15 @@ export function UnifiedCommunicationHero() {
     <section className="relative w-full bg-[#fdfdfd] pt-12 pb-12 lg:pt-10 lg:pb-8 overflow-hidden flex justify-center">
       
       {/* Background Shapes */}
-      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-blue-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
+      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-violet-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
       <div className="absolute bottom-20 left-40 w-6 h-6 bg-green-400 rounded-full hidden lg:block"></div>
-      <div className="absolute -bottom-20 right-[-100px] w-80 h-80 bg-orange-600 rounded-full hidden lg:block"></div>
+      <div className="absolute -bottom-20 right-[-100px] w-80 h-80 bg-violet-600 rounded-full hidden lg:block"></div>
       
       {/* Decorative Dots */}
       <div className="absolute bottom-[20%] left-[8%] w-3 h-3 bg-green-400 rounded-full hidden lg:block"></div>
       <div className="absolute bottom-16 left-16 hidden lg:grid grid-cols-4 gap-2 opacity-50">
         {[...Array(16)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 bg-orange-300 rounded-full"></div>
+          <div key={i} className="w-1.5 h-1.5 bg-violet-300 rounded-full"></div>
         ))}
       </div>
 
@@ -49,10 +49,10 @@ export function UnifiedCommunicationHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-wrap items-center gap-6"
           >
-            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
               Book a Demo
             </Link>
-            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#f97316] font-bold text-[16px] transition-colors hover:text-[#ea580c] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full">
+            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#6D28D9] font-bold text-[16px] transition-colors hover:text-[#5B21B6] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full">
               Get Free Quote
             </Link>
           </motion.div>
@@ -62,7 +62,7 @@ export function UnifiedCommunicationHero() {
         <div className="w-full lg:w-7/12 relative h-[600px] hidden lg:block">
           
           {/* Background Dotted Circles */}
-          <div className="absolute top-[30px] left-[20px] w-[500px] h-[500px] rounded-full border-[3px] border-dotted border-blue-200/60 z-0"></div>
+          <div className="absolute top-[30px] left-[20px] w-[500px] h-[500px] rounded-full border-[3px] border-dotted border-violet-200/60 z-0"></div>
           <div className="absolute top-[80px] left-[70px] w-[400px] h-[400px] rounded-full border-[3px] border-dotted border-purple-200/60 z-0"></div>
 
           {/* Squircle 1: Notifications */}
@@ -70,7 +70,7 @@ export function UnifiedCommunicationHero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="absolute top-[40px] left-[70px] w-[130px] h-[130px] bg-blue-600 rounded-[40px] flex flex-col items-center justify-center text-white shadow-xl z-10"
+            className="absolute top-[40px] left-[70px] w-[130px] h-[130px] bg-violet-600 rounded-[40px] flex flex-col items-center justify-center text-white shadow-xl z-10"
           >
             <Bell className="w-9 h-9 mb-2" fill="currentColor" />
             <span className="font-bold text-[12px]">Notifications</span>
@@ -92,7 +92,7 @@ export function UnifiedCommunicationHero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="absolute top-[40px] left-[380px] w-[130px] h-[130px] bg-[#f97316] rounded-[40px] flex flex-col items-center justify-center text-white shadow-xl z-10"
+            className="absolute top-[40px] left-[380px] w-[130px] h-[130px] bg-[#6D28D9] rounded-[40px] flex flex-col items-center justify-center text-white shadow-xl z-10"
           >
             <Phone className="w-9 h-9 mb-2" fill="currentColor" />
             <span className="font-bold text-[12px]">Calls</span>
@@ -103,7 +103,7 @@ export function UnifiedCommunicationHero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6 }}
-            className="absolute top-[190px] left-[30px] w-[140px] h-[140px] bg-[#ea580c] rounded-[45px] flex flex-col items-center justify-center text-white shadow-xl z-10"
+            className="absolute top-[190px] left-[30px] w-[140px] h-[140px] bg-[#5B21B6] rounded-[45px] flex flex-col items-center justify-center text-white shadow-xl z-10"
           >
             <Mail className="w-10 h-10 mb-2" fill="currentColor" />
             <span className="font-bold text-[13px]">Email</span>
@@ -140,7 +140,7 @@ export function UnifiedCommunicationHero() {
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
-            className="absolute top-[210px] left-[360px] w-[210px] h-[280px] bg-blue-600 rounded-[50px] overflow-hidden shadow-2xl z-10 border-[6px] border-white"
+            className="absolute top-[210px] left-[360px] w-[210px] h-[280px] bg-violet-600 rounded-[50px] overflow-hidden shadow-2xl z-10 border-[6px] border-white"
           >
              <img src="/recruiter-portrait.jpg" alt="Recruiter" className="w-full h-full object-cover" width={600} height={849} />
           </motion.div>
@@ -152,13 +152,13 @@ export function UnifiedCommunicationHero() {
             transition={{ duration: 0.6, delay: 1.0 }}
             className="absolute top-[160px] left-[180px] w-[280px] bg-white rounded-3xl p-5 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] z-30 flex items-center gap-4"
           >
-             <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600">
+             <div className="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center text-violet-600">
                 <CalendarDays className="w-6 h-6" />
              </div>
              <div>
                 <h3 className="font-bold text-[15px] text-[#111111] mb-1">Book a Meeting</h3>
                 <div className="flex items-center gap-2 text-[13px] text-slate-500 font-medium">
-                   <span className="text-blue-600">07 Mon</span>
+                   <span className="text-violet-600">07 Mon</span>
                    <div className="w-0.5 h-3 bg-slate-300"></div>
                    <span>11:30 AM</span>
                 </div>
@@ -172,7 +172,7 @@ export function UnifiedCommunicationHero() {
             transition={{ duration: 0.6, delay: 1.1 }}
             className="absolute top-[260px] left-[180px] w-[110px] h-[110px] bg-white rounded-[32px] shadow-[0_20px_50px_-10px_rgba(0,0,0,0.15)] z-20 flex flex-col items-center justify-center gap-2"
           >
-             <Mic className="w-8 h-8 text-blue-600" />
+             <Mic className="w-8 h-8 text-violet-600" />
              <span className="font-bold text-[12px] text-slate-700">Voice</span>
           </motion.div>
           

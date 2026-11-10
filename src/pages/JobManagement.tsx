@@ -84,12 +84,12 @@ export function JobManagement() {
       workflowTitle="Job Creation Workflow"
       workflowDesc="From drafting to publishing, streamline your requisition process in minutes."
       workflowSteps={[
-        { id: "01", title: "Draft Requisition", desc: "Create new job request with required skills and budget.", icon: <FileText className="w-6 h-6 text-[#f97316]" /> },
-        { id: "02", title: "Approval Chain", desc: "Automated routing for multi-stakeholder approvals.", icon: <CheckCircle className="w-6 h-6 text-[#f97316]" /> },
-        { id: "03", title: "Job Description", desc: "AI-enhanced formatting and JD optimization.", icon: <PenTool className="w-6 h-6 text-[#f97316]" /> },
-        { id: "04", title: "Job Publishing", desc: "Distribute across multiple channels simultaneously.", icon: <Globe className="w-6 h-6 text-[#f97316]" /> },
-        { id: "05", title: "Sourcing Begins", desc: "Start receiving applications and matching candidates.", icon: <Target className="w-6 h-6 text-[#f97316]" /> },
-        { id: "06", title: "Pipeline Management", desc: "Track candidates progressing through tailored stages.", icon: <Filter className="w-6 h-6 text-[#f97316]" /> }
+        { id: "01", title: "Draft Requisition", desc: "Create new job request with required skills and budget.", icon: <FileText className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "02", title: "Approval Chain", desc: "Automated routing for multi-stakeholder approvals.", icon: <CheckCircle className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "03", title: "Job Description", desc: "AI-enhanced formatting and JD optimization.", icon: <PenTool className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "04", title: "Job Publishing", desc: "Distribute across multiple channels simultaneously.", icon: <Globe className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "05", title: "Sourcing Begins", desc: "Start receiving applications and matching candidates.", icon: <Target className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "06", title: "Pipeline Management", desc: "Track candidates progressing through tailored stages.", icon: <Filter className="w-6 h-6 text-[#6D28D9]" /> }
       ]}
       benefitsTitle="Simplify Job Operations"
       benefitsDesc="Centralize your job tracking and scale your hiring without losing control."

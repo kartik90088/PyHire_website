@@ -84,12 +84,12 @@ export function ClientVendorManagement() {
       workflowTitle="Collaborative Recruitment Workflow"
       workflowDesc="Seamlessly bridge the gap between your agency, your clients, and your vendors."
       workflowSteps={[
-        { id: "01", title: "Client Requisition", desc: "Receive and process new job orders from clients.", icon: <Briefcase className="w-6 h-6 text-[#f97316]" /> },
-        { id: "02", title: "Vendor Assignment", desc: "Optionally assign requisitions to preferred staffing vendors.", icon: <Network className="w-6 h-6 text-[#f97316]" /> },
-        { id: "03", title: "Candidate Submission", desc: "Vendors submit candidates through a secure portal.", icon: <Users className="w-6 h-6 text-[#f97316]" /> },
-        { id: "04", title: "Internal Review", desc: "Review vendor submissions before forwarding to clients.", icon: <CheckSquare className="w-6 h-6 text-[#f97316]" /> },
-        { id: "05", title: "Client Presentation", desc: "Present shortlisted candidates to the client via portal.", icon: <Building2 className="w-6 h-6 text-[#f97316]" /> },
-        { id: "06", title: "Feedback & Hiring", desc: "Clients leave feedback and make hiring decisions directly.", icon: <Handshake className="w-6 h-6 text-[#f97316]" /> }
+        { id: "01", title: "Client Requisition", desc: "Receive and process new job orders from clients.", icon: <Briefcase className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "02", title: "Vendor Assignment", desc: "Optionally assign requisitions to preferred staffing vendors.", icon: <Network className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "03", title: "Candidate Submission", desc: "Vendors submit candidates through a secure portal.", icon: <Users className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "04", title: "Internal Review", desc: "Review vendor submissions before forwarding to clients.", icon: <CheckSquare className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "05", title: "Client Presentation", desc: "Present shortlisted candidates to the client via portal.", icon: <Building2 className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "06", title: "Feedback & Hiring", desc: "Clients leave feedback and make hiring decisions directly.", icon: <Handshake className="w-6 h-6 text-[#6D28D9]" /> }
       ]}
       benefitsTitle="Build Stronger Partnerships"
       benefitsDesc="Deliver exceptional service to your clients while maximizing vendor efficiency."

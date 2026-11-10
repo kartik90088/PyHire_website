@@ -29,17 +29,17 @@ export function NotFound() {
   });
 
   return (
-    <main className="pt-32 pb-24 bg-white min-h-screen font-sans">
+    <main className="pt-28 pb-14 bg-white min-h-screen font-sans">
       <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
-        <div className="w-16 h-16 rounded-2xl bg-orange-50 border border-orange-100 flex items-center justify-center mx-auto mb-8 text-[#f97316]">
+        <div className="w-16 h-16 rounded-2xl bg-violet-50 border border-violet-100 flex items-center justify-center mx-auto mb-8 text-[#6D28D9]">
           <Compass className="w-8 h-8" strokeWidth={1.5} aria-hidden="true" />
         </div>
 
-        <p className="text-[13px] font-bold text-[#f97316] tracking-wider uppercase mb-4">
+        <p className="text-[13px] font-bold text-[#6D28D9] tracking-wider uppercase mb-4">
           404
         </p>
 
-        <h1 className="text-[2.5rem] lg:text-[3rem] font-bold text-[#111111] leading-[1.1] mb-6 tracking-tight">
+        <h1 className="text-[2.5rem] lg:text-[3rem] font-bold text-[#1B1650] leading-[1.1] mb-6 tracking-tight">
           We couldn’t find that page
         </h1>
 
@@ -48,18 +48,18 @@ export function NotFound() {
           places worth trying instead.
         </p>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <Link
             to="/"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#6D28D9] hover:bg-[#8B5CF6] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(253,101,0,0.3)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
           >
             <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to home
           </Link>
           <Link
             to={DEMO_PATH}
-            className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 rounded-full font-bold text-[15px] transition-all border border-slate-200 shadow-sm hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316]"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-7 py-3.5 bg-white hover:bg-slate-50 text-slate-800 rounded-full font-bold text-[15px] transition-all border border-slate-200 shadow-sm hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9]"
           >
-            Book a Demo
+            Book a demo
           </Link>
         </div>
 
@@ -69,17 +69,17 @@ export function NotFound() {
           </p>
           <ul className="flex flex-wrap items-center justify-center gap-3">
             {[
-              { name: 'Candidate Management', path: '/candidate-management' },
-              { name: 'AI Candidate Matching', path: '/ai-candidate-matching' },
-              { name: 'Interview Management', path: '/interview-management' },
-              { name: 'Case Studies', path: '/case-studies' },
+              { name: 'Jobs & candidates', path: '/product/jobs-and-candidates' },
+              { name: 'AI matching & insights', path: '/product/ai' },
+              { name: 'Solutions', path: '/solutions' },
+              { name: 'Pricing', path: '/pricing' },
               { name: 'Blog', path: '/blog' },
-              { name: 'About Us', path: '/about-us' },
+              { name: 'About', path: '/about' },
             ].map((link) => (
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className="inline-block px-4 py-2 rounded-full border border-slate-200 text-[14px] font-semibold text-slate-600 hover:text-[#f97316] hover:border-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316]"
+                  className="inline-block px-4 py-2 rounded-full border border-slate-200 text-[14px] font-semibold text-slate-600 hover:text-[#6D28D9] hover:border-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9]"
                 >
                   {link.name}
                 </Link>

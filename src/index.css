@@ -1,7 +1,68 @@
 @import "tailwindcss";
 
+/* PyCore family typography (shared with PyMedic): Outfit for headings,
+   Figtree for body copy. Loaded from Google Fonts in index.html.
+   --font-inter / --font-script keep their old token names so existing
+   classes resolve to the new faces. */
+@theme {
+  --color-brand: #6D28D9;
+  --color-brand-deep: #5B21B6;
+  --color-accent: #F28C30;
+  --color-ink: #1B1650;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-inter: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
+  --font-script: "Figtree", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Home page motion. All of it is neutralised by the reduced-motion reset below. */
+@keyframes home-marquee {
+  to { transform: translateX(-50%); }
+}
+
+@keyframes home-marquee-y {
+  to { transform: translateY(-50%); }
+}
+
+/* `.beam` — travelling orange highlight on a card's border (same effect as
+   BeamBorder, as a class for elements that can't be wrapped). */
+@property --beam-angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+.beam { position: relative; }
+.beam::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(from var(--beam-angle), transparent 0 68%, #F28C30 82%, #6D28D9 93%, transparent 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: beam-spin 7s linear infinite;
+  pointer-events: none;
+}
+@keyframes beam-spin {
+  to { --beam-angle: 360deg; }
+}
+
+/* Slow shimmer across gradient headline text. */
+@keyframes text-shine {
+  to { background-position: 200% center; }
+}
+
+@keyframes board-pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.035); }
+  100% { transform: scale(1); }
+}
+
 /* Anchor targets (e.g. the article table of contents) must clear the fixed navbar. */
 html {
+  overflow-x: clip;
   scroll-behavior: smooth;
   scroll-padding-top: 7rem;
 }
@@ -19,4 +80,32 @@ html {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Dark surfaces: a rich violet-to-indigo gradient (from the logo's hexagon)
+   with soft orange and blue glows, instead of flat near-black. */
+@utility bg-panel {
+  background-color: #2A1B7A;
+  background-image:
+    radial-gradient(60% 80% at 100% 0%, rgba(242, 140, 48, 0.28), transparent 60%),
+    radial-gradient(70% 90% at 0% 100%, rgba(45, 91, 227, 0.45), transparent 60%),
+    linear-gradient(135deg, #4C1D95 0%, #2E1F85 48%, #1B1650 100%);
+}
+
+/* Page backdrop: faint lavender-to-sky wash like the logo's own background. */
+body {
+  overflow-x: clip;
+  background-color: #FBFAFF;
+  background-image:
+    radial-gradient(900px 500px at 8% -5%, rgba(124, 92, 255, 0.10), transparent 70%),
+    radial-gradient(800px 500px at 100% 0%, rgba(45, 140, 255, 0.10), transparent 70%);
+  background-repeat: no-repeat;
+}
+
+/* Brand gradient text for headline accents. */
+.text-brand-gradient {
+  background-image: linear-gradient(90deg, #6D28D9, #3B5BDB);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }

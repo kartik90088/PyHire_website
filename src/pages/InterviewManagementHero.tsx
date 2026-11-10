@@ -17,7 +17,7 @@ export function InterviewManagementHero() {
     <section className="relative w-full bg-[#fdfdfd] pt-12 pb-12 lg:pt-10 lg:pb-8 overflow-hidden flex justify-center">
       
       {/* Background Shapes */}
-      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-blue-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
+      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-violet-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
       <div className="absolute bottom-20 left-40 w-6 h-6 bg-green-400 rounded-full hidden lg:block"></div>
       {/* The bottom-right orange circle is baked into the hero visual, so no
           decorative circle is drawn here — a second one showed the image's
@@ -27,7 +27,7 @@ export function InterviewManagementHero() {
       <div className="absolute bottom-[20%] left-[8%] w-3 h-3 bg-green-400 rounded-full hidden lg:block"></div>
       <div className="absolute bottom-16 left-16 hidden lg:grid grid-cols-4 gap-2 opacity-50">
         {[...Array(16)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 bg-orange-300 rounded-full"></div>
+          <div key={i} className="w-1.5 h-1.5 bg-violet-300 rounded-full"></div>
         ))}
       </div>
 
@@ -59,10 +59,10 @@ export function InterviewManagementHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-wrap items-center gap-6"
           >
-            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
               Book a Demo
             </Link>
-            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#f97316] font-bold text-[16px] transition-colors hover:text-[#ea580c] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full">
+            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#6D28D9] font-bold text-[16px] transition-colors hover:text-[#5B21B6] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full">
               Get Free Quote
             </Link>
           </motion.div>

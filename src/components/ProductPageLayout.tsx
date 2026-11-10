@@ -220,7 +220,7 @@ export function ProductPageLayout({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Link to={DEMO_PATH} className="px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.2)] hover:shadow-[0_12px_25px_rgb(249,115,22,0.3)] hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 mx-auto outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+              <Link to={DEMO_PATH} className="px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.2)] hover:shadow-[0_12px_25px_rgb(249,115,22,0.3)] hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 mx-auto outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
                 Request Demo <ArrowRight className="w-5 h-5" />
               </Link>
             </motion.div>
@@ -257,7 +257,7 @@ export function ProductPageLayout({
             <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
               <div className="w-full lg:w-[62%]">
                 {overview.eyebrow && (
-                  <span className="text-[#f97316] font-bold text-[13px] uppercase tracking-wider mb-3 block">
+                  <span className="text-[#6D28D9] font-bold text-[13px] uppercase tracking-wider mb-3 block">
                     {overview.eyebrow}
                   </span>
                 )}
@@ -269,14 +269,14 @@ export function ProductPageLayout({
 
               {overview.highlights && overview.highlights.length > 0 && (
                 <aside className="w-full lg:w-[38%]">
-                  <div className="lg:sticky lg:top-28 bg-[#FFFCF4] rounded-[28px] p-7 lg:p-8 border border-orange-50">
+                  <div className="lg:sticky lg:top-28 bg-[#F5F9FF] rounded-[28px] p-7 lg:p-8 border border-violet-50">
                     <h3 className="text-[15px] font-bold text-[#111111] uppercase tracking-wider mb-6">
                       At a glance
                     </h3>
                     <dl className="flex flex-col gap-5">
                       {overview.highlights.map((item, idx) => (
-                        <div key={idx} className="border-b border-orange-100/70 last:border-0 pb-5 last:pb-0">
-                          <dt className="text-[13px] font-bold text-[#f97316] uppercase tracking-wide mb-1.5">
+                        <div key={idx} className="border-b border-violet-100/70 last:border-0 pb-5 last:pb-0">
+                          <dt className="text-[13px] font-bold text-[#6D28D9] uppercase tracking-wide mb-1.5">
                             {item.label}
                           </dt>
                           <dd className="text-[15px] text-[#4B5563] leading-relaxed">{item.value}</dd>
@@ -292,7 +292,7 @@ export function ProductPageLayout({
       )}
 
       {/* Features Carousel Section */}
-      <section className="py-4 lg:py-8 bg-[#FFFCF4] overflow-hidden relative">
+      <section className="py-4 lg:py-8 bg-[#F5F9FF] overflow-hidden relative">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 mb-8">
           <div className="text-center">
             <h2 className="text-[2.5rem] font-bold text-[#111111] mb-4">Powerful Features</h2>
@@ -301,8 +301,8 @@ export function ProductPageLayout({
         </div>
 
         <div className="relative w-full max-w-[100vw] overflow-hidden flex group">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#FFFCF4] to-transparent z-10 pointer-events-none"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#FFFCF4] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-[#F5F9FF] to-transparent z-10 pointer-events-none"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-[#F5F9FF] to-transparent z-10 pointer-events-none"></div>
 
           <div className="flex gap-6 animate-[marquee_40s_linear_infinite] group-hover:[animation-play-state:paused] px-4">
             {[...features, ...features, ...features].map((feature, idx) => (
@@ -310,7 +310,7 @@ export function ProductPageLayout({
                 key={idx} 
                 className="w-[350px] shrink-0 bg-white p-8 rounded-[24px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#f2f2f2] hover:-translate-y-2 hover:shadow-[0_20px_40px_rgb(249,115,22,0.08)] transition-all duration-300 group/card"
               >
-                <div className="w-14 h-14 rounded-2xl bg-orange-50 flex items-center justify-center mb-6 group-hover/card:scale-110 transition-transform duration-300 text-[#f97316]">
+                <div className="w-14 h-14 rounded-2xl bg-violet-50 flex items-center justify-center mb-6 group-hover/card:scale-110 transition-transform duration-300 text-[#6D28D9]">
                   {feature.icon}
                 </div>
                 <h3 className="text-[1.25rem] font-bold text-[#111111] mb-3">{feature.title}</h3>
@@ -348,7 +348,7 @@ export function ProductPageLayout({
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.15 }}
                   transition={{ duration: 0.5, delay: Math.min(idx, 1) * 0.08 }}
-                  className="border-t-2 border-[#f97316] pt-6"
+                  className="border-t-2 border-[#6D28D9] pt-6"
                 >
                   <h3 className="text-[1.3125rem] lg:text-[1.5rem] font-bold text-[#111111] leading-snug tracking-tight mb-4">
                     {item.title}
@@ -392,10 +392,10 @@ export function ProductPageLayout({
                   <path d={wavePath} fill="none" stroke="url(#wave-grad)" strokeWidth="4" />
                   <defs>
                     <linearGradient id="wave-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#f97316" stopOpacity="0.2" />
-                      <stop offset="10%" stopColor="#f97316" stopOpacity="1" />
-                      <stop offset="90%" stopColor="#f97316" stopOpacity="1" />
-                      <stop offset="100%" stopColor="#f97316" stopOpacity="0.2" />
+                      <stop offset="0%" stopColor="#6D28D9" stopOpacity="0.2" />
+                      <stop offset="10%" stopColor="#6D28D9" stopOpacity="1" />
+                      <stop offset="90%" stopColor="#6D28D9" stopOpacity="1" />
+                      <stop offset="100%" stopColor="#6D28D9" stopOpacity="0.2" />
                     </linearGradient>
                   </defs>
                 </svg>
@@ -406,22 +406,22 @@ export function ProductPageLayout({
                   const isTop = idx % 2 === 0;
                   return (
                     <div key={idx} className="relative flex justify-center w-full h-full">
-                      <div className={`absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#f97316] ring-[6px] ring-white shadow-[0_0_15px_rgba(249,115,22,0.5)] z-20 flex items-center justify-center ${isTop ? "top-[calc(50%+60px)]" : "top-[calc(50%-60px)]"} -translate-y-1/2`}>
+                      <div className={`absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#6D28D9] ring-[6px] ring-white shadow-[0_0_15px_rgba(109,40,217,0.5)] z-20 flex items-center justify-center ${isTop ? "top-[calc(50%+60px)]" : "top-[calc(50%-60px)]"} -translate-y-1/2`}>
                         <div className="w-2 h-2 rounded-full bg-white"></div>
                       </div>
 
-                      <div className={`absolute left-1/2 -translate-x-1/2 w-[2px] h-[75px] border-l-[2.5px] border-dashed border-orange-200 z-10 ${isTop ? "bottom-[calc(50%-60px)]" : "top-[calc(50%-60px)]"}`}></div>
+                      <div className={`absolute left-1/2 -translate-x-1/2 w-[2px] h-[75px] border-l-[2.5px] border-dashed border-violet-200 z-10 ${isTop ? "bottom-[calc(50%-60px)]" : "top-[calc(50%-60px)]"}`}></div>
 
-                      <div className={`absolute left-1/2 -translate-x-1/2 w-[300px] bg-white rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-orange-50 z-30 ${isTop ? "bottom-[calc(50%+25px)]" : "top-[calc(50%+25px)]"} hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)] transition-all hover:-translate-y-1`}>
+                      <div className={`absolute left-1/2 -translate-x-1/2 w-[300px] bg-white rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-violet-50 z-30 ${isTop ? "bottom-[calc(50%+25px)]" : "top-[calc(50%+25px)]"} hover:shadow-[0_8px_30px_rgba(109,40,217,0.15)] transition-all hover:-translate-y-1`}>
                         {/*
-                          Steps arrive with their icon pre-coloured `text-[#f97316]`
+                          Steps arrive with their icon pre-coloured `text-[#6D28D9]`
                           for the rail, which would vanish on this orange disc.
                           Force it white here rather than re-authoring every page.
                         */}
-                        <span className="absolute -top-5 right-6 w-12 h-12 rounded-full bg-[#f97316] flex items-center justify-center shadow-[0_4px_15px_rgba(249,115,22,0.4)] border-4 border-white [&_svg]:!text-white [&_svg]:w-5 [&_svg]:h-5">
+                        <span className="absolute -top-5 right-6 w-12 h-12 rounded-full bg-[#6D28D9] flex items-center justify-center shadow-[0_4px_15px_rgba(109,40,217,0.4)] border-4 border-white [&_svg]:!text-white [&_svg]:w-5 [&_svg]:h-5">
                           {step.icon}
                         </span>
-                        <span className="text-[#f97316] font-bold text-[20px] leading-none mb-2 block">{step.id}</span>
+                        <span className="text-[#6D28D9] font-bold text-[20px] leading-none mb-2 block">{step.id}</span>
                         <h4 className="font-bold text-[#111111] text-[16px] leading-tight mb-2 pr-12">{step.title}</h4>
                         <p className="text-[13px] text-[#4B5563] leading-relaxed">{step.desc}</p>
                       </div>
@@ -460,7 +460,7 @@ export function ProductPageLayout({
                             {step.icon}
                           </div>
                           <div className="flex flex-col pt-1">
-                            <span className="text-[#f97316] font-extrabold text-[18px] leading-none mb-1">{step.id}</span>
+                            <span className="text-[#6D28D9] font-extrabold text-[18px] leading-none mb-1">{step.id}</span>
                             <h4 className="font-bold text-[#111111] text-[13px] leading-snug">{step.title}</h4>
                           </div>
                         </div>
@@ -481,12 +481,12 @@ export function ProductPageLayout({
             {workflowSteps.map((step, idx) => (
               <div key={idx} className="flex gap-4 items-start bg-white border border-[#F2F2F2] p-5 rounded-2xl shadow-sm relative">
                 <div className="absolute left-6 top-full w-[1px] h-4 border-l border-dashed border-slate-200"></div>
-                <div className="w-12 h-12 shrink-0 rounded-xl bg-orange-50 flex items-center justify-center border border-orange-100">
+                <div className="w-12 h-12 shrink-0 rounded-xl bg-violet-50 flex items-center justify-center border border-violet-100">
                    {step.icon}
                 </div>
                 <div>
                    <div className="flex items-center gap-2 mb-1">
-                     <span className="text-[#f97316] font-bold text-sm">{step.id}</span>
+                     <span className="text-[#6D28D9] font-bold text-sm">{step.id}</span>
                      <span className="font-bold text-[#111111] text-[15px]">{step.title}</span>
                    </div>
                    <div className="text-[#4B5563] text-[13px] leading-relaxed">{step.desc}</div>
@@ -499,7 +499,7 @@ export function ProductPageLayout({
 
       {/* Use cases — who this is for, stated as scenarios */}
       {useCases && (
-        <section className="py-10 lg:py-16 bg-[#FFFCF4] border-y border-orange-50">
+        <section className="py-10 lg:py-16 bg-[#F5F9FF] border-y border-violet-50">
           <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
             <div className="max-w-3xl mb-10 lg:mb-12">
               <h2 className="text-[2rem] lg:text-[2.75rem] font-bold text-[#111111] leading-[1.15] tracking-tight mb-5">
@@ -523,7 +523,7 @@ export function ProductPageLayout({
                   </h3>
                   <p className="text-[15px] text-[#4B5563] leading-relaxed mb-5">{item.situation}</p>
                   <p className="text-[15px] text-[#111111] leading-relaxed mt-auto">
-                    <span className="block text-[12px] font-bold text-[#f97316] uppercase tracking-wider mb-1.5">
+                    <span className="block text-[12px] font-bold text-[#6D28D9] uppercase tracking-wider mb-1.5">
                       With PyHire
                     </span>
                     {item.outcome}
@@ -565,9 +565,9 @@ export function ProductPageLayout({
                 {[...benefits, ...benefits].map((benefit, idx) => (
                   <div 
                     key={idx} 
-                    className="bg-white p-8 rounded-[24px] border border-[#F2F2F2] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(249,115,22,0.08)] hover:border-orange-200"
+                    className="bg-white p-8 rounded-[24px] border border-[#F2F2F2] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(109,40,217,0.08)] hover:border-violet-200"
                   >
-                    <div className="w-14 h-14 bg-orange-50 rounded-2xl flex items-center justify-center mb-5 text-[#f97316]">
+                    <div className="w-14 h-14 bg-violet-50 rounded-2xl flex items-center justify-center mb-5 text-[#6D28D9]">
                       {benefit.icon}
                     </div>
                     <h3 className="text-[1.25rem] font-bold text-[#111111] mb-3">{benefit.title}</h3>
@@ -598,17 +598,17 @@ export function ProductPageLayout({
             {faqs.map((faq, idx) => (
               <div 
                 key={idx}
-                className={`border border-[#F2F2F2] rounded-[20px] overflow-hidden transition-all duration-300 ${openIdx === idx ? 'bg-[#FFFCF4] shadow-sm' : 'bg-white hover:border-orange-100'}`}
+                className={`border border-[#F2F2F2] rounded-[20px] overflow-hidden transition-all duration-300 ${openIdx === idx ? 'bg-[#F5F9FF] shadow-sm' : 'bg-white hover:border-violet-100'}`}
               >
                 <button
                   onClick={() => setOpenIdx(openIdx === idx ? -1 : idx)}
                   aria-expanded={openIdx === idx}
                   aria-controls={`${faqIdBase}-answer-${idx}`}
                   id={`${faqIdBase}-question-${idx}`}
-                  className="w-full text-left p-6 flex justify-between items-center gap-4 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-inset rounded-[20px]"
+                  className="w-full text-left p-6 flex justify-between items-center gap-4 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-inset rounded-[20px]"
                 >
                   <span className="font-bold text-[16px] text-[#111111]">{faq.q}</span>
-                  <span aria-hidden="true" className="text-[#f97316] text-2xl font-light shrink-0">{openIdx === idx ? '−' : '+'}</span>
+                  <span aria-hidden="true" className="text-[#6D28D9] text-2xl font-light shrink-0">{openIdx === idx ? '−' : '+'}</span>
                 </button>
                 {/*
                   A 0fr→1fr grid row rather than an animated max-height.
@@ -646,7 +646,7 @@ export function ProductPageLayout({
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-[#FFFCF4] rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-6 border border-orange-50 relative overflow-hidden"
+            className="bg-[#F5F9FF] rounded-[40px] p-8 md:p-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-6 border border-violet-50 relative overflow-hidden"
           >
             <div className="w-full lg:w-1/2 relative h-[400px] flex items-center justify-center">
               <img 
@@ -664,7 +664,7 @@ export function ProductPageLayout({
               <p className="text-[1.125rem] text-[#4B5563] leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
                 {ctaDesc}
               </p>
-              <Link to={DEMO_PATH} className="px-10 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[17px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.3)] hover:shadow-[0_12px_25px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 group outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+              <Link to={DEMO_PATH} className="px-10 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[17px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.3)] hover:shadow-[0_12px_25px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 inline-flex items-center justify-center gap-2 group outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
                 Book a Demo Today
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
               </Link>

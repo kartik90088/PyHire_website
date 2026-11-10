@@ -134,26 +134,26 @@ export function ContactUs() {
 
   const fieldClass = (field: string) =>
     `w-full bg-white border ${
-      errors[field] ? 'border-red-400 focus:border-red-500 focus:ring-red-100' : 'border-slate-200 focus:border-orange-500 focus:ring-orange-100'
+      errors[field] ? 'border-red-400 focus:border-red-500 focus:ring-red-100' : 'border-slate-200 focus:border-violet-500 focus:ring-violet-100'
     } text-slate-900 text-[16px] sm:text-[15px] rounded-xl px-5 py-4 outline-none focus:ring-2 transition-all placeholder:text-slate-500`;
 
   return (
     <main className="pt-12 bg-[#FAFAFA] min-h-screen font-sans relative overflow-hidden">
       
       {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-50/60 via-[#FAFAFA]/0 to-[#FAFAFA]/0 pointer-events-none rounded-full translate-x-1/3 -translate-y-1/3"></div>
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-violet-50/60 via-[#FAFAFA]/0 to-[#FAFAFA]/0 pointer-events-none rounded-full translate-x-1/3 -translate-y-1/3"></div>
       
       <div className="absolute top-20 left-10 opacity-40 z-0 hidden lg:block">
         <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="5" cy="5" r="2" fill="#f97316"/>
-          <circle cx="20" cy="5" r="2" fill="#f97316"/>
-          <circle cx="35" cy="5" r="2" fill="#f97316"/>
-          <circle cx="5" cy="20" r="2" fill="#f97316"/>
-          <circle cx="20" cy="20" r="2" fill="#f97316"/>
-          <circle cx="35" cy="20" r="2" fill="#f97316"/>
-          <circle cx="5" cy="35" r="2" fill="#f97316"/>
-          <circle cx="20" cy="35" r="2" fill="#f97316"/>
-          <circle cx="35" cy="35" r="2" fill="#f97316"/>
+          <circle cx="5" cy="5" r="2" fill="#6D28D9"/>
+          <circle cx="20" cy="5" r="2" fill="#6D28D9"/>
+          <circle cx="35" cy="5" r="2" fill="#6D28D9"/>
+          <circle cx="5" cy="20" r="2" fill="#6D28D9"/>
+          <circle cx="20" cy="20" r="2" fill="#6D28D9"/>
+          <circle cx="35" cy="20" r="2" fill="#6D28D9"/>
+          <circle cx="5" cy="35" r="2" fill="#6D28D9"/>
+          <circle cx="20" cy="35" r="2" fill="#6D28D9"/>
+          <circle cx="35" cy="35" r="2" fill="#6D28D9"/>
         </svg>
       </div>
 
@@ -161,7 +161,7 @@ export function ContactUs() {
         
         {/* Header Section */}
         <div className="flex flex-col items-center text-center mt-8 mb-8">
-          <div className="bg-orange-50 text-orange-600 font-bold text-[12px] px-4 py-1.5 rounded-full uppercase tracking-wide mb-6">
+          <div className="bg-violet-50 text-violet-600 font-bold text-[12px] px-4 py-1.5 rounded-full uppercase tracking-wide mb-6">
             CONTACT US
           </div>
           <h1 className="text-[3rem] lg:text-[4rem] font-bold text-[#111111] leading-tight tracking-tight mb-4">
@@ -182,7 +182,7 @@ export function ContactUs() {
               
               <div className="mb-8">
                 <h2 className="text-[1.75rem] font-bold text-[#111111] mb-2">Send us a message</h2>
-                <div className="w-12 h-1 bg-orange-500 rounded-full"></div>
+                <div className="w-12 h-1 bg-violet-500 rounded-full"></div>
               </div>
 
               {status === 'success' ? (
@@ -197,7 +197,7 @@ export function ContactUs() {
                   <p className="text-[15px] text-slate-600 leading-relaxed max-w-md mx-auto">
                     A member of our team will get back to you within one working day.
                     For anything urgent, call{' '}
-                    <a href="tel:+919964667676" className="font-bold text-[#f97316] hover:underline">
+                    <a href="tel:+919964667676" className="font-bold text-[#6D28D9] hover:underline">
                       +91 9964667676
                     </a>{' '}
                     (Mon&ndash;Sat, 9:30&nbsp;AM&ndash;7:00&nbsp;PM IST).
@@ -205,7 +205,7 @@ export function ContactUs() {
                   <button
                     type="button"
                     onClick={() => setStatus('idle')}
-                    className="mt-6 text-[15px] font-bold text-[#f97316] hover:underline outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded"
+                    className="mt-6 text-[15px] font-bold text-[#6D28D9] hover:underline outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded"
                   >
                     Send another message
                   </button>
@@ -339,12 +339,12 @@ export function ContactUs() {
                         onChange={(e) => update('consent', e.target.checked)}
                         aria-invalid={!!errors.consent}
                         aria-describedby={errors.consent ? 'consent-error' : undefined}
-                        className="w-5 h-5 shrink-0 border border-slate-300 rounded bg-white checked:bg-orange-500 checked:border-orange-500 focus:ring-orange-500 cursor-pointer"
+                        className="w-5 h-5 shrink-0 border border-slate-300 rounded bg-white checked:bg-violet-500 checked:border-violet-500 focus:ring-violet-500 cursor-pointer"
                       />
                     </div>
                     <label htmlFor="consent" className="text-[14px] text-slate-600 leading-relaxed cursor-pointer select-none">
                       I agree to receive communications from PyHire about their products and services, and accept the{' '}
-                      <Link to="/privacy-policy" className="font-bold text-[#f97316] hover:underline">Privacy Policy</Link>.
+                      <Link to="/privacy-policy" className="font-bold text-[#6D28D9] hover:underline">Privacy Policy</Link>.
                     </label>
                   </div>
                   {errors.consent && (
@@ -356,7 +356,7 @@ export function ContactUs() {
                   <button
                     type="submit"
                     disabled={status === 'submitting'}
-                    className="w-full sm:w-auto px-8 py-4 bg-[#ff5a1f] hover:bg-[#ea4a13] disabled:opacity-70 disabled:cursor-not-allowed text-white rounded-xl font-bold text-[16px] transition-all flex items-center justify-center gap-2 shadow-[0_4px_14px_rgb(255,90,31,0.3)] hover:-translate-y-0.5 disabled:hover:translate-y-0 outline-none focus-visible:ring-2 focus-visible:ring-[#ff5a1f] focus-visible:ring-offset-2"
+                    className="w-full sm:w-auto px-8 py-4 bg-[#6D28D9] hover:bg-[#ea4a13] disabled:opacity-70 disabled:cursor-not-allowed text-white rounded-xl font-bold text-[16px] transition-all flex items-center justify-center gap-2 shadow-[0_4px_14px_rgb(255,90,31,0.3)] hover:-translate-y-0.5 disabled:hover:translate-y-0 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
                   >
                     {status === 'submitting' ? (
                       <>Sending<Loader2 className="w-5 h-5 animate-spin" aria-hidden="true" /></>
@@ -380,31 +380,31 @@ export function ContactUs() {
               
               <div className="flex flex-col gap-8">
                 <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 shrink-0 bg-orange-50 rounded-full flex items-center justify-center text-[#ff5a1f]">
+                  <div className="w-12 h-12 shrink-0 bg-violet-50 rounded-full flex items-center justify-center text-[#6D28D9]">
                     <Phone className="w-5 h-5" fill="currentColor" />
                   </div>
                   <div>
                     <div className="text-[13px] text-slate-500 mb-1">Call us on</div>
-                    <a href="tel:+919964667676" className="inline-block py-2.5 -my-2.5 text-[16px] font-bold text-[#111111] hover:text-[#ff5a1f] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#ff5a1f] rounded">+91 9964667676</a>
+                    <a href="tel:+919964667676" className="inline-block py-2.5 -my-2.5 text-[16px] font-bold text-[#111111] hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded">+91 9964667676</a>
                   </div>
                 </div>
 
                 <div className="h-[1px] w-full bg-slate-100"></div>
 
                 <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 shrink-0 bg-orange-50 rounded-full flex items-center justify-center text-[#ff5a1f]">
+                  <div className="w-12 h-12 shrink-0 bg-violet-50 rounded-full flex items-center justify-center text-[#6D28D9]">
                     <Mail className="w-5 h-5" />
                   </div>
                   <div>
                     <div className="text-[13px] text-slate-500 mb-1">Reach out</div>
-                    <a href="mailto:support@veriright.com" className="inline-block py-2.5 -my-2.5 text-[16px] font-bold text-[#111111] hover:text-[#ff5a1f] transition-colors break-all outline-none focus-visible:ring-2 focus-visible:ring-[#ff5a1f] rounded">support@veriright.com</a>
+                    <a href="mailto:support@veriright.com" className="inline-block py-2.5 -my-2.5 text-[16px] font-bold text-[#111111] hover:text-[#6D28D9] transition-colors break-all outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded">support@veriright.com</a>
                   </div>
                 </div>
 
                 <div className="h-[1px] w-full bg-slate-100"></div>
 
                 <div className="flex items-center gap-5">
-                  <div className="w-12 h-12 shrink-0 bg-orange-50 rounded-full flex items-center justify-center text-[#ff5a1f]">
+                  <div className="w-12 h-12 shrink-0 bg-violet-50 rounded-full flex items-center justify-center text-[#6D28D9]">
                     <Clock className="w-5 h-5" />
                   </div>
                   <div>
@@ -418,10 +418,10 @@ export function ContactUs() {
             {/* About PyHire Card */}
             <div className="bg-white rounded-[24px] p-8 shadow-[0_4px_30px_rgb(0,0,0,0.03)]">
               <h3 className="text-[1.25rem] font-bold text-[#111111] mb-2">About PyHire</h3>
-              <div className="w-8 h-1 bg-orange-500 rounded-full mb-6"></div>
+              <div className="w-8 h-1 bg-violet-500 rounded-full mb-6"></div>
               
               <div className="flex gap-4 mb-6">
-                <div className="w-14 h-14 shrink-0 bg-orange-50 rounded-full flex items-center justify-center text-[#ff5a1f]">
+                <div className="w-14 h-14 shrink-0 bg-violet-50 rounded-full flex items-center justify-center text-[#6D28D9]">
                   <Users className="w-6 h-6" />
                 </div>
                 <p className="text-[14px] text-slate-600 leading-relaxed">
@@ -431,25 +431,25 @@ export function ContactUs() {
 
               <div className="flex flex-col gap-4 pl-1">
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#ff5a1f] flex items-center justify-center text-white shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-[#6D28D9] flex items-center justify-center text-white shrink-0">
                     <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={3} />
                   </div>
                   <span className="text-[15px] font-semibold text-[#111111]">AI-Powered Interviews</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#ff5a1f] flex items-center justify-center text-white shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-[#6D28D9] flex items-center justify-center text-white shrink-0">
                     <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={3} />
                   </div>
                   <span className="text-[15px] font-semibold text-[#111111]">Smart Evaluation</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#ff5a1f] flex items-center justify-center text-white shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-[#6D28D9] flex items-center justify-center text-white shrink-0">
                     <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={3} />
                   </div>
                   <span className="text-[15px] font-semibold text-[#111111]">Faster Hiring Decisions</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 rounded-full bg-[#ff5a1f] flex items-center justify-center text-white shrink-0">
+                  <div className="w-5 h-5 rounded-full bg-[#6D28D9] flex items-center justify-center text-white shrink-0">
                     <CheckCircle2 className="w-3.5 h-3.5" strokeWidth={3} />
                   </div>
                   <span className="text-[15px] font-semibold text-[#111111]">Better Candidate Experience</span>
@@ -466,30 +466,30 @@ export function ContactUs() {
           {/* Decorative dots right */}
           <div className="absolute right-10 bottom-10 z-0 opacity-40">
              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="5" cy="5" r="2" fill="#f97316"/>
-              <circle cx="20" cy="5" r="2" fill="#f97316"/>
-              <circle cx="35" cy="5" r="2" fill="#f97316"/>
-              <circle cx="5" cy="20" r="2" fill="#f97316"/>
-              <circle cx="20" cy="20" r="2" fill="#f97316"/>
-              <circle cx="35" cy="20" r="2" fill="#f97316"/>
-              <circle cx="5" cy="35" r="2" fill="#f97316"/>
-              <circle cx="20" cy="35" r="2" fill="#f97316"/>
-              <circle cx="35" cy="35" r="2" fill="#f97316"/>
+              <circle cx="5" cy="5" r="2" fill="#6D28D9"/>
+              <circle cx="20" cy="5" r="2" fill="#6D28D9"/>
+              <circle cx="35" cy="5" r="2" fill="#6D28D9"/>
+              <circle cx="5" cy="20" r="2" fill="#6D28D9"/>
+              <circle cx="20" cy="20" r="2" fill="#6D28D9"/>
+              <circle cx="35" cy="20" r="2" fill="#6D28D9"/>
+              <circle cx="5" cy="35" r="2" fill="#6D28D9"/>
+              <circle cx="20" cy="35" r="2" fill="#6D28D9"/>
+              <circle cx="35" cy="35" r="2" fill="#6D28D9"/>
             </svg>
           </div>
 
           <div className="relative w-48 h-48 shrink-0 flex items-center justify-center">
-            <div className="absolute inset-0 bg-orange-50 rounded-full scale-125 z-0"></div>
+            <div className="absolute inset-0 bg-violet-50 rounded-full scale-125 z-0"></div>
             <div className="absolute top-0 right-0 bg-white shadow-lg rounded-full px-4 py-2 flex gap-1 z-20">
                <div className="w-2 h-2 bg-slate-300 rounded-full"></div>
                <div className="w-2 h-2 bg-slate-300 rounded-full"></div>
-               <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+               <div className="w-2 h-2 bg-violet-500 rounded-full"></div>
             </div>
             <div className="relative z-10 text-slate-800">
                <Headset className="w-32 h-32 text-slate-800" strokeWidth={1} />
                {/* Decorative orange circles on headset */}
-               <div className="absolute top-[45%] left-2 w-6 h-10 border-4 border-[#ff5a1f] rounded-full z-20"></div>
-               <div className="absolute top-[45%] right-2 w-6 h-10 border-4 border-[#ff5a1f] rounded-full z-20"></div>
+               <div className="absolute top-[45%] left-2 w-6 h-10 border-4 border-[#6D28D9] rounded-full z-20"></div>
+               <div className="absolute top-[45%] right-2 w-6 h-10 border-4 border-[#6D28D9] rounded-full z-20"></div>
             </div>
           </div>
 
@@ -504,7 +504,7 @@ export function ContactUs() {
                 mobile, where most of these taps happen. */}
             <a
               href="tel:+919964667676"
-              className="self-start px-8 py-3.5 bg-[#ff5a1f] hover:bg-[#ea4a13] text-white rounded-xl font-bold text-[16px] transition-all flex items-center gap-3 shadow-[0_4px_14px_rgb(255,90,31,0.3)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#ff5a1f] focus-visible:ring-offset-2"
+              className="self-start px-8 py-3.5 bg-[#6D28D9] hover:bg-[#ea4a13] text-white rounded-xl font-bold text-[16px] transition-all flex items-center gap-3 shadow-[0_4px_14px_rgb(255,90,31,0.3)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
             >
               <Phone className="w-5 h-5" fill="currentColor" aria-hidden="true" />
               +91 9964667676

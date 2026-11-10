@@ -84,12 +84,12 @@ export function ComplianceSecurity() {
       workflowTitle="Secure by Design"
       workflowDesc="How we protect your sensitive candidate and corporate data."
       workflowSteps={[
-        { id: "01", title: "Access Control", desc: "Users authenticate via SSO (SAML/OAuth) with MFA enforcement.", icon: <Lock className="w-6 h-6 text-[#f97316]" /> },
-        { id: "02", title: "Permission Check", desc: "System verifies user roles before granting access to records.", icon: <Key className="w-6 h-6 text-[#f97316]" /> },
-        { id: "03", title: "Data Encryption", desc: "Information is retrieved via secure, encrypted channels.", icon: <Shield className="w-6 h-6 text-[#f97316]" /> },
-        { id: "04", title: "Action Auditing", desc: "Every read, write, and export is logged immutably.", icon: <FileText className="w-6 h-6 text-[#f97316]" /> },
-        { id: "05", title: "Compliance Scans", desc: "Continuous monitoring for PII exposure and policy adherence.", icon: <AlertTriangle className="w-6 h-6 text-[#f97316]" /> },
-        { id: "06", title: "Data Retention", desc: "Automated deletion of old records per compliance policies.", icon: <Server className="w-6 h-6 text-[#f97316]" /> }
+        { id: "01", title: "Access Control", desc: "Users authenticate via SSO (SAML/OAuth) with MFA enforcement.", icon: <Lock className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "02", title: "Permission Check", desc: "System verifies user roles before granting access to records.", icon: <Key className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "03", title: "Data Encryption", desc: "Information is retrieved via secure, encrypted channels.", icon: <Shield className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "04", title: "Action Auditing", desc: "Every read, write, and export is logged immutably.", icon: <FileText className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "05", title: "Compliance Scans", desc: "Continuous monitoring for PII exposure and policy adherence.", icon: <AlertTriangle className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "06", title: "Data Retention", desc: "Automated deletion of old records per compliance policies.", icon: <Server className="w-6 h-6 text-[#6D28D9]" /> }
       ]}
       benefitsTitle="Peace of Mind for Enterprise"
       benefitsDesc="Focus on hiring while we handle the complex regulatory and security landscape."

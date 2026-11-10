@@ -9,15 +9,15 @@ export function ClientVendorManagementHero() {
     <section className="relative w-full bg-[#fdfdfd] pt-12 pb-12 lg:pt-10 lg:pb-8 overflow-hidden flex justify-center">
       
       {/* Background Shapes */}
-      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-blue-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
+      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-violet-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
       <div className="absolute bottom-20 left-40 w-6 h-6 bg-green-400 rounded-full hidden lg:block"></div>
-      <div className="absolute -bottom-20 right-[-100px] w-80 h-80 bg-orange-600 rounded-full hidden lg:block"></div>
+      <div className="absolute -bottom-20 right-[-100px] w-80 h-80 bg-violet-600 rounded-full hidden lg:block"></div>
       
       {/* Decorative Dots */}
       <div className="absolute bottom-[20%] left-[8%] w-3 h-3 bg-green-400 rounded-full hidden lg:block"></div>
       <div className="absolute bottom-16 left-16 hidden lg:grid grid-cols-4 gap-2 opacity-50">
         {[...Array(16)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 bg-orange-300 rounded-full"></div>
+          <div key={i} className="w-1.5 h-1.5 bg-violet-300 rounded-full"></div>
         ))}
       </div>
 
@@ -49,10 +49,10 @@ export function ClientVendorManagementHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-wrap items-center gap-6"
           >
-            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
               Book a Demo
             </Link>
-            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#f97316] font-bold text-[16px] transition-colors hover:text-[#ea580c] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full">
+            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#6D28D9] font-bold text-[16px] transition-colors hover:text-[#5B21B6] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full">
               Get Free Quote
             </Link>
           </motion.div>
@@ -66,9 +66,9 @@ export function ClientVendorManagementHero() {
             {/* Connecting Lines */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" style={{ transform: 'translateZ(-50px)' }}>
                 {/* Left lines */}
-                <path d="M 280 250 L 330 250 L 330 350 L 370 350" fill="none" stroke="#60a5fa" strokeWidth="2" strokeDasharray="4 4" />
-                <path d="M 280 350 L 370 350" fill="none" stroke="#60a5fa" strokeWidth="2" strokeDasharray="4 4" />
-                <path d="M 280 450 L 330 450 L 330 350 L 370 350" fill="none" stroke="#60a5fa" strokeWidth="2" strokeDasharray="4 4" />
+                <path d="M 280 250 L 330 250 L 330 350 L 370 350" fill="none" stroke="#A78BFA" strokeWidth="2" strokeDasharray="4 4" />
+                <path d="M 280 350 L 370 350" fill="none" stroke="#A78BFA" strokeWidth="2" strokeDasharray="4 4" />
+                <path d="M 280 450 L 330 450 L 330 350 L 370 350" fill="none" stroke="#A78BFA" strokeWidth="2" strokeDasharray="4 4" />
                 
                 {/* Right lines */}
                 <path d="M 520 250 L 470 250 L 470 350 L 430 350" fill="none" stroke="#a78bfa" strokeWidth="2" strokeDasharray="4 4" />
@@ -84,9 +84,9 @@ export function ClientVendorManagementHero() {
                 className="absolute left-[50px] top-[100px] w-[260px] bg-white rounded-3xl p-5 shadow-[20px_20px_60px_rgba(0,0,0,0.1),-10px_-10px_30px_rgba(255,255,255,0.8)] z-10 border border-slate-100"
                 style={{ transformStyle: 'preserve-3d' }}
             >
-                <div className="flex items-center gap-3 mb-6 bg-blue-500 rounded-full p-2 pr-6 w-max shadow-lg shadow-blue-200">
+                <div className="flex items-center gap-3 mb-6 bg-violet-500 rounded-full p-2 pr-6 w-max shadow-lg shadow-violet-200">
                     <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center">
-                        <Users className="w-4 h-4 text-blue-500" />
+                        <Users className="w-4 h-4 text-violet-500" />
                     </div>
                     <span className="text-white font-bold text-[13px] tracking-wide">CLIENTS</span>
                 </div>
@@ -94,14 +94,14 @@ export function ClientVendorManagementHero() {
                 <div className="space-y-4">
                     {[1, 2, 3, 4].map((i) => (
                         <div key={i} className="flex items-center gap-4 bg-slate-50/50 p-3 rounded-2xl border border-slate-100 hover:bg-slate-50 transition-colors">
-                            <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center shrink-0">
-                                <Building2 className="w-4 h-4 text-blue-600" />
+                            <div className="w-8 h-8 rounded-lg bg-violet-100 flex items-center justify-center shrink-0">
+                                <Building2 className="w-4 h-4 text-violet-600" />
                             </div>
                             <div className="flex-1 space-y-2">
                                 <div className="h-2 bg-slate-200 rounded-full w-full"></div>
                                 <div className="h-1.5 bg-slate-100 rounded-full w-2/3"></div>
                             </div>
-                            <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                            <div className="w-2 h-2 rounded-full bg-violet-400"></div>
                         </div>
                     ))}
                 </div>
@@ -116,7 +116,7 @@ export function ClientVendorManagementHero() {
             >
                 <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center border border-indigo-100">
                     <div className="flex -space-x-2">
-                        <div className="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center shadow-md">
+                        <div className="w-10 h-10 rounded-full bg-violet-500 flex items-center justify-center shadow-md">
                             <User className="w-5 h-5 text-white" />
                         </div>
                         <div className="w-10 h-10 rounded-full bg-purple-500 flex items-center justify-center shadow-md z-10">
@@ -126,9 +126,9 @@ export function ClientVendorManagementHero() {
                 </div>
                 
                 {/* Decorative nodes on circle */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-200 border-2 border-white"></div>
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-violet-200 border-2 border-white"></div>
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 rounded-full bg-purple-200 border-2 border-white"></div>
-                <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-400 border-2 border-white"></div>
+                <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-violet-400 border-2 border-white"></div>
                 <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-purple-400 border-2 border-white"></div>
             </motion.div>
 
@@ -171,8 +171,8 @@ export function ClientVendorManagementHero() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="absolute bottom-[20px] left-1/2 -translate-x-1/2 w-[480px] h-24 bg-white rounded-full shadow-[0_20px_40px_-10px_rgba(0,0,0,0.1)] flex items-center justify-center gap-8 border-b-4 border-slate-100"
             >
-                <div className="w-16 h-16 rounded-2xl bg-white shadow-[0_10px_20px_-5px_rgba(59,130,246,0.3)] flex items-center justify-center -mt-6 border border-slate-50">
-                    <Handshake className="w-8 h-8 text-blue-500" />
+                <div className="w-16 h-16 rounded-2xl bg-white shadow-[0_10px_20px_-5px_rgba(139,92,246,0.3)] flex items-center justify-center -mt-6 border border-slate-50">
+                    <Handshake className="w-8 h-8 text-violet-500" />
                 </div>
                 <div className="w-16 h-16 rounded-2xl bg-white shadow-[0_10px_20px_-5px_rgba(167,139,250,0.3)] flex items-center justify-center mt-2 border border-slate-50">
                     <BarChart className="w-8 h-8 text-purple-500" />

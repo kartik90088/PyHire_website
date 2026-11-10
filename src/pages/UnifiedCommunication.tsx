@@ -84,12 +84,12 @@ export function UnifiedCommunication() {
       workflowTitle="How Unified Communication Works"
       workflowDesc="Keep candidates engaged without losing track of the conversation."
       workflowSteps={[
-        { id: "01", title: "Connect Channels", desc: "Sync your work email, WhatsApp Business, and SMS providers.", icon: <Phone className="w-6 h-6 text-[#f97316]" /> },
-        { id: "02", title: "Candidate Outreach", desc: "Initiate contact via the candidate's preferred channel.", icon: <Send className="w-6 h-6 text-[#f97316]" /> },
-        { id: "03", title: "Centralized Replies", desc: "All candidate responses route to the unified candidate timeline.", icon: <Inbox className="w-6 h-6 text-[#f97316]" /> },
-        { id: "04", title: "Team Visibility", desc: "The entire hiring team can see the communication history.", icon: <Users className="w-6 h-6 text-[#f97316]" /> },
-        { id: "05", title: "Automated Follow-ups", desc: "Trigger automated messages based on pipeline stage changes.", icon: <Clock className="w-6 h-6 text-[#f97316]" /> },
-        { id: "06", title: "Internal Alignment", desc: "Discuss candidates internally using private profile notes.", icon: <MessageSquare className="w-6 h-6 text-[#f97316]" /> }
+        { id: "01", title: "Connect Channels", desc: "Sync your work email, WhatsApp Business, and SMS providers.", icon: <Phone className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "02", title: "Candidate Outreach", desc: "Initiate contact via the candidate's preferred channel.", icon: <Send className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "03", title: "Centralized Replies", desc: "All candidate responses route to the unified candidate timeline.", icon: <Inbox className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "04", title: "Team Visibility", desc: "The entire hiring team can see the communication history.", icon: <Users className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "05", title: "Automated Follow-ups", desc: "Trigger automated messages based on pipeline stage changes.", icon: <Clock className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "06", title: "Internal Alignment", desc: "Discuss candidates internally using private profile notes.", icon: <MessageSquare className="w-6 h-6 text-[#6D28D9]" /> }
       ]}
       benefitsTitle="Connect Faster, Hire Better"
       benefitsDesc="Never let a top candidate slip through the cracks due to missed emails or unread texts."

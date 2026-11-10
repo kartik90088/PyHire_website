@@ -12,7 +12,7 @@ const prefetchDetailRoute = () => {
 };
 
 const ctaClasses =
-  'inline-flex items-center gap-3 px-7 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2';
+  'inline-flex items-center gap-3 px-7 py-3.5 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2';
 
 /**
  * Vertical card (image on top) so three sit side by side in the grid without the
@@ -29,7 +29,7 @@ export function CaseStudyCard({ study, index = 0 }: { study: CaseStudy; index?: 
       viewport={{ once: true, amount: 0.15 }}
       transition={{ duration: 0.6, delay: Math.min(index, 2) * 0.08 }}
       aria-labelledby={headingId}
-      className="group h-full bg-[#FFFCF4] rounded-[28px] p-5 sm:p-6 flex flex-col transition-all duration-300 hover:shadow-[0_18px_45px_-25px_rgba(0,0,0,0.25)] hover:-translate-y-1"
+      className="group h-full bg-[#F5F9FF] rounded-[28px] p-5 sm:p-6 flex flex-col transition-all duration-300 hover:shadow-[0_18px_45px_-25px_rgba(0,0,0,0.25)] hover:-translate-y-1"
     >
       {/* Visual */}
       <div className="relative aspect-[16/10] rounded-[20px] overflow-hidden bg-slate-100 mb-6 shrink-0">
@@ -48,7 +48,7 @@ export function CaseStudyCard({ study, index = 0 }: { study: CaseStudy; index?: 
       {/* Copy */}
       <div className="flex gap-4 sm:gap-5 flex-1 min-h-0">
         <span
-          className="w-[3px] shrink-0 rounded-full bg-[#f97316] h-[40px]"
+          className="w-[3px] shrink-0 rounded-full bg-[#6D28D9] h-[40px]"
           aria-hidden="true"
         />
         <div className="min-w-0 flex flex-col flex-1">
@@ -81,7 +81,7 @@ export function CaseStudyCard({ study, index = 0 }: { study: CaseStudy; index?: 
 export function CaseStudiesList() {
   return (
     <section
-      className="bg-white py-14 lg:py-20 scroll-mt-24"
+      className="bg-white py-10 lg:py-14 scroll-mt-24"
       aria-label="Customer case studies"
       onPointerEnter={prefetchDetailRoute}
       onFocusCapture={prefetchDetailRoute}

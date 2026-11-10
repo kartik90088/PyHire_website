@@ -41,13 +41,13 @@ type LengthId = (typeof LENGTH_FILTERS)[number]['id'];
 
 function FilterChip({ label, onClear }: { label: string; onClear: () => void }) {
   return (
-    <span className="inline-flex items-center gap-1.5 pl-3 pr-2 py-1.5 rounded-full text-[13px] font-semibold bg-orange-50 text-[#f97316] border border-orange-100">
+    <span className="inline-flex items-center gap-1.5 pl-3 pr-2 py-1.5 rounded-full text-[13px] font-semibold bg-violet-50 text-[#6D28D9] border border-violet-100">
       {label}
       <button
         type="button"
         onClick={onClear}
         aria-label={`Remove ${label} filter`}
-        className="hover:bg-orange-100 rounded-full p-0.5 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316]"
+        className="hover:bg-violet-100 rounded-full p-0.5 transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9]"
       >
         <X className="w-3.5 h-3.5" aria-hidden="true" />
       </button>
@@ -175,16 +175,16 @@ export function Blog() {
   };
 
   return (
-    <main className="pt-12 bg-white min-h-screen font-sans overflow-hidden">
+    <main className="pt-24 lg:pt-12 bg-white min-h-screen font-sans overflow-hidden">
       {/* 1. Hero Section */}
       <section className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 py-4 lg:py-8 flex flex-col lg:flex-row items-center gap-8 lg:gap-6">
         {/* Left Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-start relative z-10">
-          <div className="inline-block px-3 py-1 bg-orange-50 text-orange-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-8 tracking-wider uppercase border border-orange-100">
+          <div className="inline-block px-3 py-1 bg-violet-50 text-violet-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-8 tracking-wider uppercase border border-violet-100">
             BLOG
           </div>
-          <h1 className="text-[3.5rem] lg:text-[4rem] font-bold text-[#111111] leading-[1.1] mb-6 tracking-tight">
-            Insights, tips &<br />trends on smarter<br />hiring
+          <h1 className="text-[2.6rem] sm:text-[3.5rem] lg:text-[4rem] font-bold text-[#1B1650] leading-[1.1] mb-6 tracking-tight">
+            Insights, tips &amp;<br className="hidden sm:block" /> trends on smarter<br className="hidden sm:block" /> hiring
           </h1>
           <p className="text-[1.125rem] text-[#4B5563] leading-relaxed max-w-md">
             Explore the latest recruitment strategies, HR tech insights, and expert advice to attract, engage, and hire the best talent.
@@ -192,61 +192,69 @@ export function Blog() {
         </div>
 
         {/* Right Image Content */}
-        <div className="w-full lg:w-1/2 relative h-[450px] lg:h-[550px] flex justify-center items-end mt-8 lg:mt-0">
-
-          {/* Decorative background shape */}
-          <div className="absolute bottom-0 right-0 lg:right-10 w-[90%] md:w-[450px] h-[90%] md:h-[450px] bg-[#FFF8E7] rounded-full z-0"></div>
-
-          {/* Decorative dots */}
-          <div className="absolute right-0 top-20 z-0 opacity-40" aria-hidden="true">
-             <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="5" cy="5" r="2" fill="#f97316"/>
-              <circle cx="20" cy="5" r="2" fill="#f97316"/>
-              <circle cx="35" cy="5" r="2" fill="#f97316"/>
-              <circle cx="5" cy="20" r="2" fill="#f97316"/>
-              <circle cx="20" cy="20" r="2" fill="#f97316"/>
-              <circle cx="35" cy="20" r="2" fill="#f97316"/>
+        <div className="w-full lg:w-1/2 relative h-[460px] sm:h-[500px] lg:h-[560px] flex justify-center items-end mt-8 lg:mt-0">
+          {/* Backdrop: soft violet disc with an orbit ring and dot grid */}
+          <div aria-hidden="true" className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[92%] max-w-[500px] aspect-square rounded-full bg-gradient-to-br from-[#EEEAFE] via-[#F6F3FF] to-[#E6EFFC]" />
+          <div aria-hidden="true" className="absolute bottom-6 left-1/2 -translate-x-1/2 w-[78%] max-w-[420px] aspect-square rounded-full border border-dashed border-[#C4B5FD]" />
+          <div aria-hidden="true" className="absolute right-2 top-16 opacity-50">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+              {[5, 20, 35, 50].flatMap((x) => [5, 20, 35].map((y) => <circle key={`${x}-${y}`} cx={x} cy={y} r="2" fill="#6D28D9" />))}
             </svg>
           </div>
 
-          {/* Main Character Image */}
-          <div className="relative z-10 h-full w-full flex justify-center">
+          {/* Portrait in an arch frame */}
+          <div className="relative z-10 h-[92%] w-[min(340px,72%)] rounded-t-[999px] rounded-b-[32px] overflow-hidden bg-gradient-to-b from-[#6D28D9] to-[#2D5BE3] p-[6px] shadow-[0_40px_80px_-30px_rgba(76,29,149,0.6)]">
             <img
-              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
-              alt=""
-              className="h-[110%] w-auto object-cover object-top mask-image-bottom max-w-full sm:max-w-none ml-0 sm:ml-10 lg:ml-20"
-              style={{ maskImage: 'linear-gradient(to top, transparent 0%, black 15%)', WebkitMaskImage: 'linear-gradient(to top, transparent 0%, black 15%)' }}
+              src="/recruiter-portrait.jpg"
+              alt="Recruiter at her desk, smiling"
+              width={600}
+              height={849}
+              className="h-full w-full rounded-t-[999px] rounded-b-[26px] object-cover object-top"
+              decoding="async"
             />
           </div>
 
-          {/* Floating Cards */}
-          <div className="absolute top-10 right-0 lg:-right-4 bg-white rounded-[20px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-3.5 pr-8 flex items-center gap-4 z-20 border border-slate-50">
-            <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500">
+          {/* Second, smaller portrait */}
+          <div className="absolute z-20 left-0 sm:left-2 lg:-left-2 bottom-8 hidden sm:block w-[132px] h-[132px] rounded-[26px] overflow-hidden border-4 border-white shadow-[0_18px_40px_-16px_rgba(27,22,80,0.5)]">
+            <img
+              src="/job-management-hiring-manager.jpg"
+              alt="Hiring manager"
+              width={900}
+              height={618}
+              className="h-full w-full object-cover object-[60%_20%]"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+
+          {/* Floating cards */}
+          <div className="absolute top-8 right-0 lg:right-2 bg-white rounded-[20px] shadow-[0_12px_34px_-12px_rgba(27,22,80,0.25)] p-3.5 pr-7 flex items-center gap-3.5 z-30 border border-[#E7E3F6]">
+            <div className="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center text-violet-600">
               <Users className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
             </div>
             <div>
               <div className="text-[11px] text-slate-500 font-medium tracking-wide">Open Positions</div>
-              <div className="text-[22px] font-bold text-[#111] leading-none mt-1">124</div>
+              <div className="text-[22px] font-bold text-[#1B1650] leading-none mt-1">124</div>
             </div>
           </div>
 
-          <div className="absolute top-1/2 lg:top-[45%] left-0 lg:-left-12 -translate-y-1/2 bg-white rounded-[20px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-3.5 pl-5 pr-4 flex items-center gap-6 z-20 border border-slate-50">
+          <div className="absolute top-[42%] left-0 sm:left-4 lg:left-0 bg-white rounded-[20px] shadow-[0_12px_34px_-12px_rgba(27,22,80,0.25)] p-3.5 pl-5 pr-4 flex items-center gap-5 z-30 border border-[#E7E3F6]">
             <div>
               <div className="text-[11px] text-slate-500 font-medium tracking-wide">Hires This Month</div>
-              <div className="text-[22px] font-bold text-[#111] leading-none mt-1">32</div>
+              <div className="text-[22px] font-bold text-[#1B1650] leading-none mt-1">32</div>
             </div>
-            <div className="w-12 h-12 border-2 border-orange-500 rounded-xl flex items-center justify-center text-orange-500">
+            <div className="w-12 h-12 border-2 border-violet-500 rounded-xl flex items-center justify-center text-violet-600">
               <UserPlus className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
             </div>
           </div>
 
-          <div className="absolute bottom-20 right-0 lg:-right-4 bg-white rounded-[20px] shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-3.5 pr-8 flex items-center gap-4 z-20 border border-slate-50">
-            <div className="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-500">
+          <div className="absolute bottom-16 right-0 lg:right-2 bg-white rounded-[20px] shadow-[0_12px_34px_-12px_rgba(27,22,80,0.25)] p-3.5 pr-7 flex items-center gap-3.5 z-30 border border-[#E7E3F6]">
+            <div className="w-12 h-12 bg-violet-50 rounded-xl flex items-center justify-center text-violet-600">
               <Target className="w-6 h-6" strokeWidth={2} aria-hidden="true" />
             </div>
             <div>
               <div className="text-[11px] text-slate-500 font-medium tracking-wide">Time to Hire</div>
-              <div className="text-[22px] font-bold text-[#111] leading-none mt-1">12 Days</div>
+              <div className="text-[22px] font-bold text-[#1B1650] leading-none mt-1">12 Days</div>
             </div>
           </div>
         </div>
@@ -254,7 +262,7 @@ export function Blog() {
 
       {/* 2. Search Bar */}
       <section className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 mb-6 relative z-30">
-        <div className="flex flex-col sm:flex-row justify-between items-center bg-white border border-slate-200 rounded-full p-2.5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus-within:border-[#f97316] transition-colors">
+        <div className="flex flex-col sm:flex-row justify-between items-center bg-white border border-slate-200 rounded-full p-2.5 shadow-[0_4px_20px_rgb(0,0,0,0.03)] focus-within:border-[#6D28D9] transition-colors">
           <div className="flex items-center gap-3 pl-4 w-full sm:w-auto flex-1 h-10">
             <Search className="w-5 h-5 text-slate-400 shrink-0" strokeWidth={2} aria-hidden="true" />
             <label htmlFor="blog-search" className="sr-only">Search articles</label>
@@ -271,7 +279,7 @@ export function Blog() {
                 type="button"
                 onClick={() => setQuery('')}
                 aria-label="Clear search"
-                className="text-slate-400 hover:text-[#f97316] transition-colors shrink-0"
+                className="text-slate-400 hover:text-[#6D28D9] transition-colors shrink-0"
               >
                 <X className="w-4 h-4" />
               </button>
@@ -290,7 +298,7 @@ export function Blog() {
               onClick={() => setDropdownOpen((o) => !o)}
               aria-expanded={dropdownOpen}
               aria-haspopup="listbox"
-              className="flex items-center justify-between sm:justify-start gap-2 pr-4 pl-4 sm:pl-0 w-full sm:w-auto h-10 sm:h-auto cursor-pointer text-slate-700 font-bold text-[14px] hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full"
+              className="flex items-center justify-between sm:justify-start gap-2 pr-4 pl-4 sm:pl-0 w-full sm:w-auto h-10 sm:h-auto cursor-pointer text-slate-700 font-bold text-[14px] hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full"
             >
               <span>{category ?? 'All Categories'}</span>
               <ChevronDown
@@ -314,7 +322,7 @@ export function Blog() {
                   role="option"
                   aria-selected={category === null}
                   onClick={() => { setCategory(null); setDropdownOpen(false); }}
-                  className={`w-full flex items-center justify-between px-4 py-2.5 text-[14px] rounded-xl transition-colors text-left ${category === null ? 'text-[#f97316] bg-orange-50 font-bold' : 'text-slate-600 hover:text-[#f97316] hover:bg-orange-50'}`}
+                  className={`w-full flex items-center justify-between px-4 py-2.5 text-[14px] rounded-xl transition-colors text-left ${category === null ? 'text-[#6D28D9] bg-violet-50 font-bold' : 'text-slate-600 hover:text-[#6D28D9] hover:bg-violet-50'}`}
                 >
                   All Categories
                   {category === null && <Check className="w-4 h-4" aria-hidden="true" />}
@@ -326,7 +334,7 @@ export function Blog() {
                     role="option"
                     aria-selected={category === c.name}
                     onClick={() => { setCategory(c.name); setDropdownOpen(false); }}
-                    className={`w-full flex items-center justify-between px-4 py-2.5 text-[14px] rounded-xl transition-colors text-left ${category === c.name ? 'text-[#f97316] bg-orange-50 font-bold' : 'text-slate-600 hover:text-[#f97316] hover:bg-orange-50'}`}
+                    className={`w-full flex items-center justify-between px-4 py-2.5 text-[14px] rounded-xl transition-colors text-left ${category === c.name ? 'text-[#6D28D9] bg-violet-50 font-bold' : 'text-slate-600 hover:text-[#6D28D9] hover:bg-violet-50'}`}
                   >
                     <span>{c.name}</span>
                     {category === c.name ? <Check className="w-4 h-4" aria-hidden="true" /> : <span className="text-slate-400">({c.count})</span>}
@@ -360,7 +368,7 @@ export function Blog() {
               id="blog-length"
               value={length}
               onChange={(e) => setLength(e.target.value as LengthId)}
-              className="px-3 py-2.5 sm:py-1.5 rounded-full text-[13px] font-semibold bg-white text-slate-600 border border-slate-200 hover:border-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] cursor-pointer"
+              className="px-3 py-2.5 sm:py-1.5 rounded-full text-[13px] font-semibold bg-white text-slate-600 border border-slate-200 hover:border-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] cursor-pointer"
             >
               {LENGTH_FILTERS.map((f) => (
                 <option key={f.id} value={f.id}>{f.label}</option>
@@ -371,7 +379,7 @@ export function Blog() {
               <button
                 type="button"
                 onClick={clearAll}
-                className="flex items-center gap-1.5 text-[13px] font-bold text-slate-500 hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full px-2 py-1"
+                className="flex items-center gap-1.5 text-[13px] font-bold text-slate-500 hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full px-2 py-1"
               >
                 <X className="w-3.5 h-3.5" aria-hidden="true" /> Clear
               </button>
@@ -410,7 +418,7 @@ export function Blog() {
                 ))}
               </div>
             ) : (
-              <div className="text-center py-20 px-6 bg-slate-50 rounded-[24px] border border-slate-100">
+              <div className="text-center py-12 px-6 bg-slate-50 rounded-[24px] border border-slate-100">
                 <Search className="w-8 h-8 text-slate-300 mx-auto mb-4" aria-hidden="true" />
                 <h2 className="text-[1.25rem] font-bold text-[#111111] mb-2">No articles found</h2>
                 <p className="text-[15px] text-slate-600 mb-6">
@@ -419,7 +427,7 @@ export function Blog() {
                 <button
                   type="button"
                   onClick={clearAll}
-                  className="px-6 py-2.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[14px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:-translate-y-0.5"
+                  className="px-6 py-2.5 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[14px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:-translate-y-0.5"
                 >
                   Clear filters
                 </button>
@@ -428,13 +436,13 @@ export function Blog() {
 
             {/* Pagination */}
             {totalPages > 1 && (
-              <nav aria-label="Blog pagination" className="flex items-center justify-center gap-2 mt-14">
+              <nav aria-label="Blog pagination" className="flex items-center justify-center gap-2 mt-8">
                 <button
                   type="button"
                   onClick={() => goToPage(currentPage - 1)}
                   disabled={currentPage === 1}
                   aria-label="Previous page"
-                  className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#f97316] hover:border-[#f97316] transition-colors disabled:opacity-40 disabled:pointer-events-none outline-none focus-visible:ring-2 focus-visible:ring-[#f97316]"
+                  className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#6D28D9] hover:border-[#6D28D9] transition-colors disabled:opacity-40 disabled:pointer-events-none outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9]"
                 >
                   <ChevronLeft className="w-4 h-4" aria-hidden="true" />
                 </button>
@@ -446,10 +454,10 @@ export function Blog() {
                     onClick={() => goToPage(n)}
                     aria-label={`Page ${n}`}
                     aria-current={n === currentPage ? 'page' : undefined}
-                    className={`w-10 h-10 rounded-full text-[14px] font-bold transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] ${
+                    className={`w-10 h-10 rounded-full text-[14px] font-bold transition-all outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] ${
                       n === currentPage
-                        ? 'bg-[#f97316] text-white shadow-[0_4px_14px_rgb(249,115,22,0.3)]'
-                        : 'border border-slate-200 text-slate-600 hover:text-[#f97316] hover:border-[#f97316]'
+                        ? 'bg-[#6D28D9] text-white shadow-[0_4px_14px_rgb(249,115,22,0.3)]'
+                        : 'border border-slate-200 text-slate-600 hover:text-[#6D28D9] hover:border-[#6D28D9]'
                     }`}
                   >
                     {n}
@@ -461,7 +469,7 @@ export function Blog() {
                   onClick={() => goToPage(currentPage + 1)}
                   disabled={currentPage === totalPages}
                   aria-label="Next page"
-                  className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#f97316] hover:border-[#f97316] transition-colors disabled:opacity-40 disabled:pointer-events-none outline-none focus-visible:ring-2 focus-visible:ring-[#f97316]"
+                  className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:text-[#6D28D9] hover:border-[#6D28D9] transition-colors disabled:opacity-40 disabled:pointer-events-none outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9]"
                 >
                   <ChevronRight className="w-4 h-4" aria-hidden="true" />
                 </button>

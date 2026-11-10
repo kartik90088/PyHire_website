@@ -76,7 +76,7 @@ function ReadingProgress({ target }: { target: React.RefObject<HTMLElement | nul
       aria-valuemax={100}
     >
       <div
-        className="h-full bg-[#f97316] transition-[width] duration-150 ease-out"
+        className="h-full bg-[#6D28D9] transition-[width] duration-150 ease-out"
         style={{ width: `${progress}%` }}
       />
     </div>
@@ -102,7 +102,7 @@ function ShareButtons({ title, orientation = 'vertical' }: { title: string; orie
   };
 
   const base =
-    'w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:text-[#f97316] hover:border-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316]';
+    'w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center text-slate-500 hover:text-[#6D28D9] hover:border-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9]';
 
   return (
     <div className={orientation === 'vertical' ? 'flex flex-col gap-3 items-center' : 'flex gap-3 items-center'}>
@@ -158,7 +158,7 @@ function ArticleBody({ body }: { body: Block[] }) {
             <ul key={i} className="my-6 space-y-4">
               {block.items.map((item, j) => (
                 <li key={j} className="flex gap-3.5 text-[1.0625rem] text-[#4B5563] leading-[1.75]">
-                  <span className="mt-[0.65em] w-1.5 h-1.5 rounded-full bg-[#f97316] shrink-0" aria-hidden="true" />
+                  <span className="mt-[0.65em] w-1.5 h-1.5 rounded-full bg-[#6D28D9] shrink-0" aria-hidden="true" />
                   <span><RichText text={item} /></span>
                 </li>
               ))}
@@ -171,7 +171,7 @@ function ArticleBody({ body }: { body: Block[] }) {
             <ol key={i} className="my-6 space-y-4">
               {block.items.map((item, j) => (
                 <li key={j} className="flex gap-4 text-[1.0625rem] text-[#4B5563] leading-[1.75]">
-                  <span className="shrink-0 w-7 h-7 rounded-full bg-orange-50 border border-orange-100 text-[#f97316] text-[13px] font-bold flex items-center justify-center mt-1">
+                  <span className="shrink-0 w-7 h-7 rounded-full bg-violet-50 border border-violet-100 text-[#6D28D9] text-[13px] font-bold flex items-center justify-center mt-1">
                     {j + 1}
                   </span>
                   <span><RichText text={item} /></span>
@@ -199,7 +199,7 @@ function TableOfContents({ headings, activeId }: { headings: { id: string; text:
   if (headings.length < 2) return null;
   return (
     <nav aria-label="Table of contents" className="bg-white rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100">
-      <div className="bg-[#f97316] py-5 px-6 flex items-center gap-2">
+      <div className="bg-[#6D28D9] py-5 px-6 flex items-center gap-2">
         <List className="w-4 h-4 text-white" aria-hidden="true" />
         <h2 className="text-white font-bold text-[18px]">On this page</h2>
       </div>
@@ -209,10 +209,10 @@ function TableOfContents({ headings, activeId }: { headings: { id: string; text:
             <a
               href={`#${h.id}`}
               aria-current={activeId === h.id ? 'location' : undefined}
-              className={`block px-4 py-3 text-[14px] leading-snug rounded-xl transition-colors border-l-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] ${
+              className={`block px-4 py-3 text-[14px] leading-snug rounded-xl transition-colors border-l-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] ${
                 activeId === h.id
-                  ? 'text-[#f97316] bg-orange-50 font-bold border-[#f97316]'
-                  : 'text-slate-600 hover:text-[#f97316] hover:bg-orange-50 border-transparent'
+                  ? 'text-[#6D28D9] bg-violet-50 font-bold border-[#6D28D9]'
+                  : 'text-slate-600 hover:text-[#6D28D9] hover:bg-violet-50 border-transparent'
               }`}
             >
               {h.text}
@@ -319,9 +319,9 @@ export function BlogPost() {
 
   if (!post) {
     return (
-      <main className="pt-32 pb-24 bg-white min-h-screen font-sans">
+      <main className="pt-28 pb-14 bg-white min-h-screen font-sans">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 text-center">
-          <div className="inline-block px-3 py-1 bg-orange-50 text-orange-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-8 tracking-wider uppercase border border-orange-100">
+          <div className="inline-block px-3 py-1 bg-violet-50 text-violet-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-8 tracking-wider uppercase border border-violet-100">
             BLOG
           </div>
           <h1 className="text-[2.5rem] lg:text-[3rem] font-bold text-[#111111] leading-[1.1] mb-6 tracking-tight">
@@ -332,7 +332,7 @@ export function BlogPost() {
           </p>
           <Link
             to="/blog"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:-translate-y-0.5"
           >
             <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to the blog
           </Link>
@@ -347,20 +347,20 @@ export function BlogPost() {
 
       {/* 1. Hero banner */}
       <section className="relative">
-        <div className="absolute top-0 right-0 w-[520px] h-[520px] bg-[#FFF8E7] rounded-full -translate-y-1/3 translate-x-1/4 z-0" aria-hidden="true" />
+        <div className="absolute top-0 right-0 w-[520px] h-[520px] bg-[#F6F3FF] rounded-full -translate-y-1/3 translate-x-1/4 z-0" aria-hidden="true" />
 
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 pt-6 pb-10 relative z-10">
           {/* Breadcrumbs */}
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-[13px] font-semibold text-slate-500 flex-wrap">
               <li>
-                <Link to="/" className="inline-block py-3 -my-3 hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded">
+                <Link to="/" className="inline-block py-3 -my-3 hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded">
                   Home
                 </Link>
               </li>
               <li aria-hidden="true"><ChevronRight className="w-3.5 h-3.5 text-slate-300" /></li>
               <li>
-                <Link to="/blog" className="inline-block py-3 -my-3 hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded">
+                <Link to="/blog" className="inline-block py-3 -my-3 hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded">
                   Blog
                 </Link>
               </li>
@@ -375,7 +375,7 @@ export function BlogPost() {
             transition={{ duration: 0.6 }}
             className="max-w-3xl"
           >
-            <div className="inline-block px-3 py-1 bg-orange-50 text-orange-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-6 tracking-wider uppercase border border-orange-100">
+            <div className="inline-block px-3 py-1 bg-violet-50 text-violet-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-6 tracking-wider uppercase border border-violet-100">
               {post.category}
             </div>
 
@@ -387,7 +387,7 @@ export function BlogPost() {
 
             <div className="flex items-center gap-5 flex-wrap">
               <span className="flex items-center gap-2 text-[13px] font-bold text-slate-600">
-                <Clock className="w-4 h-4 text-[#f97316]" aria-hidden="true" />
+                <Clock className="w-4 h-4 text-[#6D28D9]" aria-hidden="true" />
                 {minutes} Min read
               </span>
               <span className="hidden sm:block w-[1px] h-5 bg-slate-200" aria-hidden="true" />
@@ -452,7 +452,7 @@ export function BlogPost() {
             </div>
 
             {/* Article CTA */}
-            <div className="mt-10 bg-[#FFFCF4] border border-orange-100 rounded-[32px] p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
+            <div className="mt-10 bg-[#F5F9FF] border border-violet-100 rounded-[32px] p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
               <div className="flex-1">
                 <h2 className="text-[1.5rem] font-bold text-[#111111] leading-snug mb-2">
                   See PyHire in action
@@ -462,8 +462,8 @@ export function BlogPost() {
                 </p>
               </div>
               <Link
-                to="/contact-us"
-                className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5"
+                to="/contact"
+                className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5"
               >
                 Book a Demo <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>
@@ -472,7 +472,7 @@ export function BlogPost() {
             <div className="mt-10">
               <Link
                 to="/blog"
-                className="inline-flex items-center gap-2 text-[14px] font-bold text-slate-600 hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full px-2 py-2.5"
+                className="inline-flex items-center gap-2 text-[14px] font-bold text-slate-600 hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full px-2 py-2.5"
               >
                 <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to all articles
               </Link>
@@ -498,7 +498,7 @@ export function BlogPost() {
 
       {/* 3. Related articles */}
       {related.length > 0 && (
-        <section className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 pb-20">
+        <section className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 pb-12">
           <div className="border-t border-slate-100 pt-14">
             <h2 className="text-[1.75rem] lg:text-[2rem] font-bold text-[#111111] tracking-tight mb-2">
               Related articles

@@ -16,11 +16,11 @@ export function KeyTakeaways({ items }: { items: string[] }) {
     <aside
       aria-labelledby="key-takeaways-heading"
       data-speakable="takeaways"
-      className="mt-10 bg-[#FFFCF4] border border-orange-100 rounded-[24px] p-6 sm:p-8"
+      className="mt-10 bg-[#F5F9FF] border border-violet-100 rounded-[24px] p-6 sm:p-8"
     >
       <h2
         id="key-takeaways-heading"
-        className="text-[12px] font-bold text-[#f97316] tracking-wider uppercase mb-5"
+        className="text-[12px] font-bold text-[#6D28D9] tracking-wider uppercase mb-5"
       >
         Key takeaways
       </h2>
@@ -28,7 +28,7 @@ export function KeyTakeaways({ items }: { items: string[] }) {
         {items.map((item) => (
           <li key={item} className="flex gap-3 text-[15px] text-[#374151] leading-relaxed">
             <Check
-              className="w-[18px] h-[18px] mt-0.5 shrink-0 text-[#f97316]"
+              className="w-[18px] h-[18px] mt-0.5 shrink-0 text-[#6D28D9]"
               strokeWidth={2.5}
               aria-hidden="true"
             />
@@ -91,9 +91,9 @@ export function TableOfContents({ headings }: { headings: { id: string; text: st
               <a
                 href={`#${heading.id}`}
                 aria-current={isActive ? 'location' : undefined}
-                className={`block -ml-px border-l-2 pl-4 py-1.5 text-[13.5px] leading-snug transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-r ${
+                className={`block -ml-px border-l-2 pl-4 py-1.5 text-[13.5px] leading-snug transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-r ${
                   isActive
-                    ? 'border-[#f97316] text-[#f97316] font-bold'
+                    ? 'border-[#6D28D9] text-[#6D28D9] font-bold'
                     : 'border-transparent text-slate-500 hover:text-[#111111]'
                 }`}
               >

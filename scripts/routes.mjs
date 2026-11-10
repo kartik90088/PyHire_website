@@ -18,20 +18,27 @@ export const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
  */
 const STATIC_ROUTES = [
   { path: '/', priority: '1.0' },
-  { path: '/candidate-management', priority: '0.9' },
-  { path: '/job-management', priority: '0.9' },
-  { path: '/ai-candidate-matching', priority: '0.9' },
-  { path: '/interview-management', priority: '0.9' },
-  { path: '/client-vendor-management', priority: '0.9' },
-  { path: '/unified-communication', priority: '0.9' },
-  { path: '/analytics-dashboards', priority: '0.9' },
-  { path: '/compliance-security', priority: '0.9' },
-  { path: '/about-us', priority: '0.6' },
-  { path: '/blog', priority: '0.8' },
-  { path: '/case-studies', priority: '0.8' },
-  { path: '/contact-us', priority: '0.8' },
+  // Product pages — keep in step with src/data/navigation.ts (productLinks).
+  { path: '/product/jobs-and-candidates', priority: '0.9' },
+  { path: '/product/ai', priority: '0.9' },
+  { path: '/product/interviews-and-offers', priority: '0.9' },
+  { path: '/product/communication', priority: '0.9' },
+  { path: '/product/clients-and-vendors', priority: '0.9' },
+  { path: '/product/analytics', priority: '0.9' },
+  { path: '/product/careers-page', priority: '0.9' },
+  { path: '/product/mobile', priority: '0.9' },
+  { path: '/solutions', priority: '0.8' },
+  { path: '/pricing', priority: '0.9' },
+  { path: '/partners', priority: '0.6' },
+  { path: '/about', priority: '0.6' },
+  { path: '/contact', priority: '0.8' },
+  { path: '/blog', priority: '0.7' },
+  { path: '/case-studies', priority: '0.7' },
   { path: '/privacy-policy', priority: '0.3' },
   { path: '/terms-of-use', priority: '0.3' },
+  /* The pre-redesign URLs (/job-management, /about-us, /contact-us …) are
+     client-side redirects now (legacyRedirects in src/data/navigation.ts) and
+     are deliberately not listed: a sitemap should only advertise final URLs. */
 ];
 
 /**

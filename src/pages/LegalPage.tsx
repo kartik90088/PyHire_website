@@ -53,13 +53,13 @@ export function LegalPage({ doc }: { doc: LegalDocument }) {
   });
 
   return (
-    <main className="pt-32 pb-24 bg-white font-sans">
+    <main className="pt-28 pb-14 bg-white font-sans">
       <div className="max-w-[1100px] mx-auto px-5 sm:px-8 lg:px-12">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-8">
           <ol className="flex items-center gap-2 text-[13px] text-slate-500">
             <li>
-              <Link to="/" className="hover:text-[#f97316] transition-colors">
+              <Link to="/" className="hover:text-[#6D28D9] transition-colors">
                 Home
               </Link>
             </li>
@@ -96,7 +96,7 @@ export function LegalPage({ doc }: { doc: LegalDocument }) {
                   <li key={heading.id}>
                     <a
                       href={`#${heading.id}`}
-                      className="block text-[14px] text-slate-600 leading-snug hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded"
+                      className="block text-[14px] text-slate-600 leading-snug hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded"
                     >
                       {heading.text}
                     </a>
@@ -109,12 +109,12 @@ export function LegalPage({ doc }: { doc: LegalDocument }) {
           <article className="lg:col-span-8 xl:col-span-9">
             <Prose blocks={doc.body} size="article" headingIds />
 
-            <div className="mt-14 pt-10 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center gap-5 justify-between">
+            <div className="mt-8 pt-10 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center gap-5 justify-between">
               <p className="text-[15px] text-slate-600">
                 Still have a question about this?{' '}
                 <a
                   href="mailto:support@veriright.com"
-                  className="font-bold text-[#f97316] hover:underline"
+                  className="font-bold text-[#6D28D9] hover:underline"
                 >
                   Email our team
                 </a>
@@ -122,7 +122,7 @@ export function LegalPage({ doc }: { doc: LegalDocument }) {
               </p>
               <Link
                 to={DEMO_PATH}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[15px] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[15px] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
               >
                 Book a Demo <ArrowRight className="w-4 h-4" aria-hidden="true" />
               </Link>

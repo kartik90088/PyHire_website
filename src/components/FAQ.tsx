@@ -107,8 +107,8 @@ export function FAQ() {
   return (
     <section className="pt-10 lg:pt-10 relative overflow-hidden bg-white">
       {/* Premium Radial Glow Background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150vw] sm:w-[120vw] lg:w-[100vw] max-w-[1600px] h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#FFFCF4]/90 via-orange-50/40 to-white/0 pointer-events-none"></div>
-      <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] h-[600px] bg-[#FFFCF4]/80 rounded-full blur-[100px] pointer-events-none"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150vw] sm:w-[120vw] lg:w-[100vw] max-w-[1600px] h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#F5F9FF]/90 via-violet-50/40 to-white/0 pointer-events-none"></div>
+      <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[600px] sm:w-[800px] h-[600px] bg-[#F5F9FF]/80 rounded-full blur-[100px] pointer-events-none"></div>
 
       <div className="relative z-10 max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -124,8 +124,8 @@ export function FAQ() {
 
         {/* Search Bar */}
         <div className="max-w-4xl mx-auto mb-6 relative">
-          <div className="flex items-center bg-white rounded-full p-2 sm:p-2.5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 transition-shadow hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] focus-within:shadow-[0_12px_40px_rgb(249,115,22,0.15)] focus-within:border-orange-200">
-            <div className="pl-4 pr-3 text-[#f97316]">
+          <div className="flex items-center bg-white rounded-full p-2 sm:p-2.5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-slate-100 transition-shadow hover:shadow-[0_12px_40px_rgb(0,0,0,0.08)] focus-within:shadow-[0_12px_40px_rgb(249,115,22,0.15)] focus-within:border-violet-200">
+            <div className="pl-4 pr-3 text-[#6D28D9]">
               <Search className="w-6 h-6" strokeWidth={2.5} />
             </div>
             <input 
@@ -138,14 +138,14 @@ export function FAQ() {
             />
             <button 
               onClick={handleSearch}
-              className="hidden sm:flex items-center gap-2 bg-[#f97316] hover:bg-[#ea580c] text-white px-7 py-3.5 rounded-full font-bold text-[15px] transition-colors shadow-sm ml-2"
+              className="hidden sm:flex items-center gap-2 bg-[#6D28D9] hover:bg-[#5B21B6] text-white px-7 py-3.5 rounded-full font-bold text-[15px] transition-colors shadow-sm ml-2"
             >
               Ask AI
               <Send className="w-4 h-4" strokeWidth={2.5} />
             </button>
             <button 
               onClick={handleSearch}
-              className="sm:hidden flex items-center justify-center bg-[#f97316] hover:bg-[#ea580c] text-white w-12 h-12 rounded-full transition-colors shadow-sm ml-2 shrink-0"
+              className="sm:hidden flex items-center justify-center bg-[#6D28D9] hover:bg-[#5B21B6] text-white w-12 h-12 rounded-full transition-colors shadow-sm ml-2 shrink-0"
             >
               <Send className="w-5 h-5" strokeWidth={2.5} />
             </button>
@@ -166,12 +166,12 @@ export function FAQ() {
               <p className="text-slate-600 text-[15px]">Please try rephrasing your question or explore our suggested questions below.</p>
             </div>
           ) : activeAnswer ? (
-            <div className="bg-white rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgb(249,115,22,0.1)] border border-orange-50 relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-1.5 h-full bg-[#f97316]"></div>
+            <div className="bg-white rounded-[24px] p-6 sm:p-8 lg:p-10 shadow-[0_8px_30px_rgb(249,115,22,0.1)] border border-violet-50 relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-[#6D28D9]"></div>
               
               {/* Question */}
               <div className="flex gap-4 mb-6 relative">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-[#FEFBEA] flex items-center justify-center text-[#f97316] shadow-sm">
+                <div className="w-10 h-10 shrink-0 rounded-full bg-[#F6F3FF] flex items-center justify-center text-[#6D28D9] shadow-sm">
                   <User className="w-5 h-5" strokeWidth={2} />
                 </div>
                 <div className="flex-1 pt-2">
@@ -183,7 +183,7 @@ export function FAQ() {
               
               {/* Answer */}
               <div className="flex gap-4 relative">
-                <div className="w-10 h-10 shrink-0 rounded-full bg-gradient-to-br from-[#f97316] to-[#ea580c] flex items-center justify-center text-white shadow-md">
+                <div className="w-10 h-10 shrink-0 rounded-full bg-gradient-to-br from-[#6D28D9] to-[#5B21B6] flex items-center justify-center text-white shadow-md">
                   <Sparkles className="w-5 h-5" strokeWidth={2} />
                 </div>
                 <div className="flex-1 pt-2">
@@ -207,15 +207,15 @@ export function FAQ() {
               <div 
                 key={q.id} 
                 onClick={() => handleQuestionClick(q)}
-                className={`bg-white rounded-[20px] p-5 flex items-center gap-4 cursor-pointer shadow-[0_4px_20px_rgb(0,0,0,0.03)] border transition-all group hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgb(249,115,22,0.08)] ${activeAnswer?.question === q.question ? 'border-orange-200 bg-orange-50/30' : 'border-slate-50'}`}
+                className={`bg-white rounded-[20px] p-5 flex items-center gap-4 cursor-pointer shadow-[0_4px_20px_rgb(0,0,0,0.03)] border transition-all group hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgb(249,115,22,0.08)] ${activeAnswer?.question === q.question ? 'border-violet-200 bg-violet-50/30' : 'border-slate-50'}`}
               >
-                <div className="w-12 h-12 shrink-0 rounded-2xl bg-[#FFFCF4] flex items-center justify-center text-[#f97316]">
+                <div className="w-12 h-12 shrink-0 rounded-2xl bg-[#F5F9FF] flex items-center justify-center text-[#6D28D9]">
                   {q.icon}
                 </div>
-                <div className={`flex-1 text-[15px] font-bold leading-snug pr-2 transition-colors ${activeAnswer?.question === q.question ? 'text-[#f97316]' : 'text-slate-800 group-hover:text-[#f97316]'}`}>
+                <div className={`flex-1 text-[15px] font-bold leading-snug pr-2 transition-colors ${activeAnswer?.question === q.question ? 'text-[#6D28D9]' : 'text-slate-800 group-hover:text-[#6D28D9]'}`}>
                   {q.question}
                 </div>
-                <ChevronRight className={`w-5 h-5 transition-transform ${activeAnswer?.question === q.question ? 'text-[#f97316] translate-x-1' : 'text-slate-300 group-hover:text-[#f97316] group-hover:translate-x-1'}`} strokeWidth={2.5} />
+                <ChevronRight className={`w-5 h-5 transition-transform ${activeAnswer?.question === q.question ? 'text-[#6D28D9] translate-x-1' : 'text-slate-300 group-hover:text-[#6D28D9] group-hover:translate-x-1'}`} strokeWidth={2.5} />
               </div>
             ))}
           </div>

@@ -84,12 +84,12 @@ export function InterviewManagement() {
       workflowTitle="Seamless Interview Workflows"
       workflowDesc="Coordinate complex interview processes with absolute simplicity."
       workflowSteps={[
-        { id: "01", title: "Select Candidates", desc: "Move shortlisted candidates to the interview stage.", icon: <Users className="w-6 h-6 text-[#f97316]" /> },
-        { id: "02", title: "Find Availability", desc: "System auto-suggests slots based on interviewer calendars.", icon: <Clock className="w-6 h-6 text-[#f97316]" /> },
-        { id: "03", title: "Send Invites", desc: "Automated calendar invites with video links.", icon: <CalendarCheck className="w-6 h-6 text-[#f97316]" /> },
-        { id: "04", title: "Conduct Interview", desc: "Interviewers access candidate profiles and scorecards instantly.", icon: <Video className="w-6 h-6 text-[#f97316]" /> },
-        { id: "05", title: "Submit Feedback", desc: "Prompt interviewers to complete scorecards post-interview.", icon: <FileQuestion className="w-6 h-6 text-[#f97316]" /> },
-        { id: "06", title: "Make Decision", desc: "Review consolidated feedback to make a hiring choice.", icon: <CheckCircle className="w-6 h-6 text-[#f97316]" /> }
+        { id: "01", title: "Select Candidates", desc: "Move shortlisted candidates to the interview stage.", icon: <Users className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "02", title: "Find Availability", desc: "System auto-suggests slots based on interviewer calendars.", icon: <Clock className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "03", title: "Send Invites", desc: "Automated calendar invites with video links.", icon: <CalendarCheck className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "04", title: "Conduct Interview", desc: "Interviewers access candidate profiles and scorecards instantly.", icon: <Video className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "05", title: "Submit Feedback", desc: "Prompt interviewers to complete scorecards post-interview.", icon: <FileQuestion className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "06", title: "Make Decision", desc: "Review consolidated feedback to make a hiring choice.", icon: <CheckCircle className="w-6 h-6 text-[#6D28D9]" /> }
       ]}
       benefitsTitle="Better Interviews, Better Hires"
       benefitsDesc="Create a frictionless experience for both your hiring team and your candidates."

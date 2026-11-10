@@ -58,7 +58,7 @@ export function CandidateManagement() {
       <CandidateOverviewSection />
 
       {/* 2. Features Section */}
-      <section className="py-4 lg:py-8 bg-[#FFFCF4]">
+      <section className="py-4 lg:py-8 bg-[#F5F9FF]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
           <div className="text-center mb-8">
             {/* h2, not h1 — CandidateManagementHero owns this page's single h1. */}
@@ -74,7 +74,7 @@ export function CandidateManagement() {
             <div className="flex gap-6 animate-[marqueeHorizontal_30s_linear_infinite] hover:[animation-play-state:paused] w-max py-4">
               {[...features, ...features].map((feature, idx) => (
                 <div key={idx} className="w-[280px] sm:w-[300px] shrink-0 bg-white rounded-[20px] p-6 shadow-[0_4px_20px_rgb(0,0,0,0.03)] border border-[#f2f2f2] flex flex-col hover:-translate-y-1 transition-transform">
-                  <div className="h-32 bg-[#FFF8F3] rounded-[16px] mb-6 flex items-center justify-center border border-orange-50 overflow-hidden relative">
+                  <div className="h-32 bg-[#F6F3FF] rounded-[16px] mb-6 flex items-center justify-center border border-violet-50 overflow-hidden relative">
                      {feature.illustration}
                   </div>
                   <h3 className="text-[1.125rem] font-bold text-[#111111] mb-2 leading-snug">{feature.title}</h3>
@@ -101,7 +101,7 @@ export function CandidateManagement() {
       <WorkflowSection />
 
       {/* 4. Benefits Section */}
-      <section className="py-4 lg:py-8 bg-[#FFFCF4]">
+      <section className="py-4 lg:py-8 bg-[#F5F9FF]">
         <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-8 items-center">
             
@@ -112,7 +112,7 @@ export function CandidateManagement() {
                   Manage Candidates <br/>
                   <span className="relative inline-block">
                     with Ease
-                    <svg className="absolute w-full h-3 -bottom-1 left-0 text-orange-400" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <svg className="absolute w-full h-3 -bottom-1 left-0 text-violet-400" viewBox="0 0 100 10" preserveAspectRatio="none">
                       <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" strokeWidth="3"/>
                     </svg>
                   </span>
@@ -133,7 +133,7 @@ export function CandidateManagement() {
                  {/* Floating Card 1 */}
                  <div className="absolute top-8 -left-6 bg-white p-4 rounded-[16px] shadow-lg border border-slate-100 flex flex-col items-center gap-2">
                     <span className="text-[11px] text-slate-500 font-bold uppercase tracking-wider">AI Match Score</span>
-                    <div className="relative w-16 h-16 rounded-full border-4 border-orange-100 border-t-[#f97316] flex items-center justify-center">
+                    <div className="relative w-16 h-16 rounded-full border-4 border-violet-100 border-t-[#6D28D9] flex items-center justify-center">
                       <span className="text-xl font-bold text-[#111]">98%</span>
                     </div>
                  </div>
@@ -153,7 +153,7 @@ export function CandidateManagement() {
                     <div className="flex flex-col gap-2">
                       <div className="flex items-center gap-3"><div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div><span className="text-[11px] font-medium">Applied</span></div>
                       <div className="flex items-center gap-3"><div className="w-2.5 h-2.5 rounded-full bg-emerald-500"></div><span className="text-[11px] font-medium">Screened</span></div>
-                      <div className="flex items-center gap-3"><div className="w-2.5 h-2.5 rounded-full border-2 border-orange-500"></div><span className="text-[11px] font-medium">Interviewing</span></div>
+                      <div className="flex items-center gap-3"><div className="w-2.5 h-2.5 rounded-full border-2 border-violet-500"></div><span className="text-[11px] font-medium">Interviewing</span></div>
                       <div className="flex items-center gap-3"><div className="w-2.5 h-2.5 rounded-full border-2 border-slate-200"></div><span className="text-[11px] font-medium text-slate-400">Offer</span></div>
                     </div>
                  </div>
@@ -175,8 +175,8 @@ export function CandidateManagement() {
                   { title: "Better Hiring Decisions", desc: "Involve multiple stakeholders, collect clear feedback, and evaluate talent objectively.", icon: <CheckCircle className="w-6 h-6" /> },
                   { title: "Build a Strong Talent Pool", desc: "Create reusable candidate databases for future hiring requirements.", icon: <Users className="w-6 h-6" /> }
                 ].map((item, idx) => (
-                  <div key={idx} className="flex gap-5 bg-white p-6 rounded-[20px] border border-slate-100 shadow-[0_2px_15px_rgb(0,0,0,0.03)] hover:border-orange-100 transition-colors shrink-0">
-                    <div className="w-14 h-14 shrink-0 bg-[#FFF8F3] text-[#f97316] rounded-xl flex items-center justify-center">
+                  <div key={idx} className="flex gap-5 bg-white p-6 rounded-[20px] border border-slate-100 shadow-[0_2px_15px_rgb(0,0,0,0.03)] hover:border-violet-100 transition-colors shrink-0">
+                    <div className="w-14 h-14 shrink-0 bg-[#F6F3FF] text-[#6D28D9] rounded-xl flex items-center justify-center">
                       {item.icon}
                     </div>
                     <div className="flex flex-col justify-center">
@@ -297,7 +297,7 @@ function CandidateOverviewSection() {
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
           <div className="w-full lg:w-[62%]">
-            <span className="text-[#f97316] font-bold text-[13px] uppercase tracking-wider mb-3 block">
+            <span className="text-[#6D28D9] font-bold text-[13px] uppercase tracking-wider mb-3 block">
               Candidate Management
             </span>
             <h2 className="text-[2rem] lg:text-[2.75rem] font-bold text-[#111111] leading-[1.15] tracking-tight mb-6">
@@ -307,7 +307,7 @@ function CandidateOverviewSection() {
           </div>
 
           <aside className="w-full lg:w-[38%]">
-            <div className="lg:sticky lg:top-28 bg-[#FFFCF4] rounded-[28px] p-7 lg:p-8 border border-orange-50">
+            <div className="lg:sticky lg:top-28 bg-[#F5F9FF] rounded-[28px] p-7 lg:p-8 border border-violet-50">
               <h3 className="text-[15px] font-bold text-[#111111] uppercase tracking-wider mb-6">
                 At a glance
               </h3>
@@ -318,8 +318,8 @@ function CandidateOverviewSection() {
                   { label: 'Communication', value: 'Email, SMS and WhatsApp are sent from the profile and logged against it automatically.' },
                   { label: 'Pipelines', value: 'Stages are configured per job opening, so each role runs the process it actually needs.' },
                 ].map((item, idx) => (
-                  <div key={idx} className="border-b border-orange-100/70 last:border-0 pb-5 last:pb-0">
-                    <dt className="text-[13px] font-bold text-[#f97316] uppercase tracking-wide mb-1.5">
+                  <div key={idx} className="border-b border-violet-100/70 last:border-0 pb-5 last:pb-0">
+                    <dt className="text-[13px] font-bold text-[#6D28D9] uppercase tracking-wide mb-1.5">
                       {item.label}
                     </dt>
                     <dd className="text-[15px] text-[#4B5563] leading-relaxed">{item.value}</dd>
@@ -355,7 +355,7 @@ function CapabilityDetailSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: Math.min(idx, 1) * 0.08 }}
-              className="border-t-2 border-[#f97316] pt-6"
+              className="border-t-2 border-[#6D28D9] pt-6"
             >
               <h3 className="text-[1.3125rem] lg:text-[1.5rem] font-bold text-[#111111] leading-snug tracking-tight mb-4">
                 {item.title}
@@ -374,10 +374,10 @@ const features = [
     title: "Unified Candidate Profile", 
     desc: "Get a complete view of every candidate, including resumes, communications, and interview scores.",
     illustration: (
-      <div className="w-[85%] bg-white rounded-lg shadow-sm border border-orange-100 p-3 flex gap-3">
-        <div className="w-10 h-10 rounded-full bg-orange-100 shrink-0"></div>
+      <div className="w-[85%] bg-white rounded-lg shadow-sm border border-violet-100 p-3 flex gap-3">
+        <div className="w-10 h-10 rounded-full bg-violet-100 shrink-0"></div>
         <div className="flex-1 space-y-2">
-          <div className="h-3 bg-orange-100 rounded w-1/2"></div>
+          <div className="h-3 bg-violet-100 rounded w-1/2"></div>
           <div className="h-2 bg-slate-100 rounded w-3/4"></div>
           <div className="flex gap-1 mt-1">
             <div className="h-4 w-12 bg-emerald-50 rounded text-[8px] flex items-center justify-center text-emerald-600 font-bold">Top Fit</div>
@@ -391,8 +391,8 @@ const features = [
     desc: "Automatically match candidates to job requirements based on skills and experience using AI.",
     illustration: (
       <div className="flex items-center gap-4">
-        <div className="w-16 h-16 rounded-full border-[5px] border-orange-100 border-t-[#f97316] flex items-center justify-center bg-white shadow-sm">
-          <span className="font-bold text-[#f97316] text-lg">95%</span>
+        <div className="w-16 h-16 rounded-full border-[5px] border-violet-100 border-t-[#6D28D9] flex items-center justify-center bg-white shadow-sm">
+          <span className="font-bold text-[#6D28D9] text-lg">95%</span>
         </div>
         <div className="space-y-2">
           <div className="h-2 w-16 bg-slate-200 rounded"></div>
@@ -406,7 +406,7 @@ const features = [
     desc: "Extract key information from resumes and CVs instantly to populate candidate profiles.",
     illustration: (
       <div className="w-[65%] h-[80%] bg-white rounded-lg shadow-sm border border-slate-200 p-3 flex flex-col gap-2 relative">
-        <div className="h-2 w-full bg-orange-400 absolute top-1/2 left-0 -translate-y-1/2 opacity-30 shadow-[0_0_15px_#f97316]"></div>
+        <div className="h-2 w-full bg-violet-400 absolute top-1/2 left-0 -translate-y-1/2 opacity-30 shadow-[0_0_15px_#6D28D9]"></div>
         <div className="h-2 bg-slate-200 rounded w-1/3 mb-1"></div>
         <div className="h-1.5 bg-slate-100 rounded w-full"></div>
         <div className="h-1.5 bg-slate-100 rounded w-5/6"></div>
@@ -421,7 +421,7 @@ const features = [
       <div className="w-[85%] bg-white rounded-lg shadow-sm border border-slate-200 p-2.5 flex items-center gap-2">
         <Search className="w-4 h-4 text-slate-400" />
         <div className="h-2 bg-slate-200 rounded w-1/2"></div>
-        <div className="ml-auto px-2.5 py-1 bg-[#f97316] text-white rounded text-[9px] font-bold">Search</div>
+        <div className="ml-auto px-2.5 py-1 bg-[#6D28D9] text-white rounded text-[9px] font-bold">Search</div>
       </div>
     )
   },
@@ -432,7 +432,7 @@ const features = [
       <div className="w-full flex gap-2 px-3 h-[70%]">
         <div className="flex-1 bg-white rounded shadow-sm border border-slate-100 flex flex-col p-2 gap-2">
           <div className="h-2 w-1/2 bg-slate-200 rounded mb-1"></div>
-          <div className="h-8 w-full bg-orange-50 rounded border border-orange-100"></div>
+          <div className="h-8 w-full bg-violet-50 rounded border border-violet-100"></div>
           <div className="h-8 w-full bg-slate-50 rounded border border-slate-100"></div>
         </div>
         <div className="flex-1 bg-white rounded shadow-sm border border-slate-100 flex flex-col p-2 gap-2">
@@ -448,7 +448,7 @@ const features = [
     illustration: (
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-3">
-          <div className="w-3.5 h-3.5 rounded-full bg-orange-400 relative after:content-[''] after:absolute after:top-4 after:left-1.5 after:w-[2px] after:h-5 after:bg-slate-200"></div>
+          <div className="w-3.5 h-3.5 rounded-full bg-violet-400 relative after:content-[''] after:absolute after:top-4 after:left-1.5 after:w-[2px] after:h-5 after:bg-slate-200"></div>
           <div className="h-2 w-20 bg-slate-200 rounded"></div>
         </div>
         <div className="flex items-center gap-3 mt-1">
@@ -471,7 +471,7 @@ function WorkflowSection() {
             <div className="text-[8px] font-bold text-center">Apply for a Job</div>
             <div className="h-1 bg-slate-100 rounded w-full"></div>
             <div className="h-1 bg-slate-100 rounded w-2/3"></div>
-            <div className="mt-1 bg-orange-400 h-3 w-1/2 mx-auto rounded text-[6px] text-white flex items-center justify-center font-bold">Submit</div>
+            <div className="mt-1 bg-violet-400 h-3 w-1/2 mx-auto rounded text-[6px] text-white flex items-center justify-center font-bold">Submit</div>
           </div>
           <div className="w-[110%] h-1.5 bg-slate-400 rounded-b-md shadow-md"></div>
         </div>
@@ -486,8 +486,8 @@ function WorkflowSection() {
           <div className="h-1 bg-slate-200 rounded w-full"></div>
           <div className="h-1 bg-slate-200 rounded w-5/6"></div>
           <div className="h-1 bg-slate-200 rounded w-4/6"></div>
-          <div className="absolute top-1/2 left-0 w-full h-4 bg-blue-400/20 border-y border-blue-400 flex items-center justify-center -translate-y-1/2 shadow-[0_0_10px_rgba(96,165,250,0.5)]">
-             <span className="text-[5px] font-bold text-blue-700">Parsing...</span>
+          <div className="absolute top-1/2 left-0 w-full h-4 bg-violet-400/20 border-y border-violet-400 flex items-center justify-center -translate-y-1/2 shadow-[0_0_10px_rgba(96,165,250,0.5)]">
+             <span className="text-[5px] font-bold text-violet-700">Parsing...</span>
           </div>
         </div>
       )
@@ -505,9 +505,9 @@ function WorkflowSection() {
             </div>
           </div>
           <div className="flex gap-1 mt-auto">
-            <span className="px-1 py-0.5 bg-blue-50 text-blue-600 rounded text-[5px] font-medium">Java</span>
-            <span className="px-1 py-0.5 bg-blue-50 text-blue-600 rounded text-[5px] font-medium">React</span>
-            <span className="px-1 py-0.5 bg-blue-50 text-blue-600 rounded text-[5px] font-medium">AWS</span>
+            <span className="px-1 py-0.5 bg-violet-50 text-violet-600 rounded text-[5px] font-medium">Java</span>
+            <span className="px-1 py-0.5 bg-violet-50 text-violet-600 rounded text-[5px] font-medium">React</span>
+            <span className="px-1 py-0.5 bg-violet-50 text-violet-600 rounded text-[5px] font-medium">AWS</span>
           </div>
         </div>
       )
@@ -523,14 +523,14 @@ function WorkflowSection() {
               <div className="w-4 h-4 rounded-full bg-slate-200 overflow-hidden"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" alt="" /></div>
               <div className="text-[6px] font-medium text-slate-700">Ananya Rao</div>
             </div>
-            <div className="text-[6px] font-bold text-orange-600 bg-orange-50 px-1 py-0.5 rounded">95%</div>
+            <div className="text-[6px] font-bold text-violet-600 bg-violet-50 px-1 py-0.5 rounded">95%</div>
           </div>
           <div className="flex items-center justify-between pt-0.5">
             <div className="flex items-center gap-1">
               <div className="w-4 h-4 rounded-full bg-slate-200 overflow-hidden"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop" alt="" /></div>
               <div className="text-[6px] font-medium text-slate-700">Rohit Sharma</div>
             </div>
-            <div className="text-[6px] font-bold text-orange-600 bg-orange-50 px-1 py-0.5 rounded">92%</div>
+            <div className="text-[6px] font-bold text-violet-600 bg-violet-50 px-1 py-0.5 rounded">92%</div>
           </div>
         </div>
       )
@@ -555,12 +555,12 @@ function WorkflowSection() {
           </div>
           <div className="grid grid-cols-7 gap-0.5 mb-2 px-1">
             {[...Array(14)].map((_, i) => (
-              <div key={i} className={`h-1.5 rounded-sm ${i === 9 ? 'bg-orange-500' : 'bg-slate-100'}`}></div>
+              <div key={i} className={`h-1.5 rounded-sm ${i === 9 ? 'bg-violet-500' : 'bg-slate-100'}`}></div>
             ))}
           </div>
-          <div className="mt-auto flex items-center gap-1.5 bg-blue-50/50 p-1 rounded border border-blue-100">
-            <div className="w-3 h-3 bg-blue-500 rounded flex items-center justify-center text-white text-[5px]">▶</div>
-            <div className="text-[5px] font-bold text-blue-700 leading-none">May 20, 11:00 AM<br/><span className="font-medium text-[4px]">Video Interview</span></div>
+          <div className="mt-auto flex items-center gap-1.5 bg-violet-50/50 p-1 rounded border border-violet-100">
+            <div className="w-3 h-3 bg-violet-500 rounded flex items-center justify-center text-white text-[5px]">▶</div>
+            <div className="text-[5px] font-bold text-violet-700 leading-none">May 20, 11:00 AM<br/><span className="font-medium text-[4px]">Video Interview</span></div>
           </div>
         </div>
       )
@@ -571,7 +571,7 @@ function WorkflowSection() {
       illustration: (
         <div className="w-full h-full bg-white rounded-lg shadow-sm border border-slate-200 p-2 flex flex-col gap-1.5">
           <div className="text-[7px] font-bold text-slate-800">Candidate Feedback</div>
-          <div className="flex items-center gap-1 text-[7px] text-orange-400">★★★★★</div>
+          <div className="flex items-center gap-1 text-[7px] text-violet-400">★★★★★</div>
           <div className="space-y-1 mt-1">
             <div className="flex items-center justify-between">
               <span className="text-[5px] text-slate-600">Technical Skills</span>
@@ -639,10 +639,10 @@ function WorkflowSection() {
                        fill="none" stroke="url(#orange-grad)" strokeWidth="4" />
                  <defs>
                    <linearGradient id="orange-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                     <stop offset="0%" stopColor="#f97316" stopOpacity="0.2" />
-                     <stop offset="10%" stopColor="#f97316" stopOpacity="1" />
-                     <stop offset="90%" stopColor="#f97316" stopOpacity="1" />
-                     <stop offset="100%" stopColor="#f97316" stopOpacity="0.2" />
+                     <stop offset="0%" stopColor="#6D28D9" stopOpacity="0.2" />
+                     <stop offset="10%" stopColor="#6D28D9" stopOpacity="1" />
+                     <stop offset="90%" stopColor="#6D28D9" stopOpacity="1" />
+                     <stop offset="100%" stopColor="#6D28D9" stopOpacity="0.2" />
                    </linearGradient>
                  </defs>
               </svg>
@@ -654,24 +654,24 @@ function WorkflowSection() {
                 return (
                   <div key={idx} className="relative flex justify-center w-full h-full">
                      {/* Node */}
-                     <div className={`absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#f97316] ring-[6px] ring-white shadow-[0_0_15px_rgba(249,115,22,0.5)] z-20 flex items-center justify-center ${isTop ? 'top-[calc(50%+60px)]' : 'top-[calc(50%-60px)]'} -translate-y-1/2`}>
+                     <div className={`absolute left-1/2 -translate-x-1/2 w-6 h-6 rounded-full bg-[#6D28D9] ring-[6px] ring-white shadow-[0_0_15px_rgba(109,40,217,0.5)] z-20 flex items-center justify-center ${isTop ? 'top-[calc(50%+60px)]' : 'top-[calc(50%-60px)]'} -translate-y-1/2`}>
                         <div className="w-2 h-2 rounded-full bg-white"></div>
                      </div>
                      
                      {/* Dashed line */}
-                     <div className={`absolute left-1/2 -translate-x-1/2 w-[2px] h-[75px] border-l-[2.5px] border-dashed border-orange-200 z-10 ${isTop ? 'bottom-[calc(50%-60px)]' : 'top-[calc(50%-60px)]'}`}></div>
+                     <div className={`absolute left-1/2 -translate-x-1/2 w-[2px] h-[75px] border-l-[2.5px] border-dashed border-violet-200 z-10 ${isTop ? 'bottom-[calc(50%-60px)]' : 'top-[calc(50%-60px)]'}`}></div>
 
                      {/* Card */}
-                     <div className={`absolute left-1/2 -translate-x-1/2 w-[310px] bg-white rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-orange-50 z-30 ${isTop ? 'bottom-[calc(50%+25px)]' : 'top-[calc(50%+25px)]'} hover:shadow-[0_8px_30px_rgba(249,115,22,0.15)] transition-all hover:-translate-y-1`}>
+                     <div className={`absolute left-1/2 -translate-x-1/2 w-[310px] bg-white rounded-2xl p-5 shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-violet-50 z-30 ${isTop ? 'bottom-[calc(50%+25px)]' : 'top-[calc(50%+25px)]'} hover:shadow-[0_8px_30px_rgba(109,40,217,0.15)] transition-all hover:-translate-y-1`}>
                        {/* Floating icon */}
-                       <div className={`absolute -top-5 right-6 w-12 h-12 rounded-full bg-[#f97316] text-white flex items-center justify-center shadow-[0_4px_15px_rgba(249,115,22,0.4)] border-4 border-white`}>
+                       <div className={`absolute -top-5 right-6 w-12 h-12 rounded-full bg-[#6D28D9] text-white flex items-center justify-center shadow-[0_4px_15px_rgba(109,40,217,0.4)] border-4 border-white`}>
                           {step.icon}
                        </div>
                        
                        <div className="flex gap-4 h-full items-center">
                           {/* Left text */}
                           <div className="flex-1 flex flex-col justify-center">
-                             <span className="text-[#f97316] font-bold text-[20px] leading-none mb-1.5">{step.id}</span>
+                             <span className="text-[#6D28D9] font-bold text-[20px] leading-none mb-1.5">{step.id}</span>
                              <h4 className="font-bold text-[#111111] text-[16px] leading-tight mb-2">{step.title}</h4>
                              <p className="text-[12px] text-[#4B5563] leading-relaxed">
                                {step.desc}
@@ -699,10 +699,10 @@ function WorkflowSection() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: (idx % 3) * 0.1, duration: 0.5 }}
               key={idx} 
-              className="bg-white rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#f2f2f2] flex flex-col gap-5 hover:shadow-[0_8px_30px_rgb(249,115,22,0.08)] hover:border-orange-200 transition-all cursor-default"
+              className="bg-white rounded-2xl p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-[#f2f2f2] flex flex-col gap-5 hover:shadow-[0_8px_30px_rgb(249,115,22,0.08)] hover:border-violet-200 transition-all cursor-default"
             >
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl bg-orange-50 flex items-center justify-center font-bold text-[#f97316] text-xl shrink-0">
+                <div className="w-12 h-12 rounded-xl bg-violet-50 flex items-center justify-center font-bold text-[#6D28D9] text-xl shrink-0">
                   {step.id}
                 </div>
                 <div>
@@ -756,17 +756,17 @@ function FAQSection() {
           {faqs.map((faq, idx) => (
             <div
               key={idx}
-              className={`border border-[#F2F2F2] rounded-[16px] overflow-hidden transition-all duration-300 ${openIdx === idx ? "bg-[#FFFCF4] shadow-sm" : "bg-white hover:border-orange-100"}`}
+              className={`border border-[#F2F2F2] rounded-[16px] overflow-hidden transition-all duration-300 ${openIdx === idx ? "bg-[#F5F9FF] shadow-sm" : "bg-white hover:border-violet-100"}`}
             >
               <button
                 onClick={() => setOpenIdx(openIdx === idx ? -1 : idx)}
                 aria-expanded={openIdx === idx}
                 aria-controls={`cm-faq-answer-${idx}`}
                 id={`cm-faq-question-${idx}`}
-                className="w-full text-left px-8 py-6 flex justify-between items-center gap-4 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-inset rounded-[16px]"
+                className="w-full text-left px-8 py-6 flex justify-between items-center gap-4 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-inset rounded-[16px]"
               >
                 <span className="font-bold text-[16px] text-[#111111]">{faq.q}</span>
-                <ChevronDown aria-hidden="true" className={`w-5 h-5 shrink-0 text-slate-400 transition-transform duration-300 ${openIdx === idx ? "rotate-180 text-[#f97316]" : ""}`} />
+                <ChevronDown aria-hidden="true" className={`w-5 h-5 shrink-0 text-slate-400 transition-transform duration-300 ${openIdx === idx ? "rotate-180 text-[#6D28D9]" : ""}`} />
               </button>
               {/* 0fr→1fr grid row rather than a fixed 200px max-height, which
                   truncated taller content with no visual cue. */}
@@ -777,7 +777,7 @@ function FAQSection() {
                 className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${openIdx === idx ? "grid-rows-[1fr]" : "grid-rows-[0fr]"}`}
               >
                 <div className="overflow-hidden">
-                  <div className="px-8 pb-6 text-[#4B5563] text-[15px] leading-relaxed border-t border-orange-100/50 mt-2 pt-5">
+                  <div className="px-8 pb-6 text-[#4B5563] text-[15px] leading-relaxed border-t border-violet-100/50 mt-2 pt-5">
                     {faq.a}
                   </div>
                 </div>
@@ -788,7 +788,7 @@ function FAQSection() {
 
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
           <span className="text-[15px] font-medium text-[#4B5563]">Still have questions? Our team is here to help you.</span>
-          <Link to={DEMO_PATH} className="px-8 py-3 bg-[#f97316] text-white rounded-lg text-[15px] font-bold shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:bg-[#ea580c] transition-colors inline-flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+          <Link to={DEMO_PATH} className="px-8 py-3 bg-[#6D28D9] text-white rounded-lg text-[15px] font-bold shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:bg-[#5B21B6] transition-colors inline-flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
             Contact Us →
           </Link>
         </div>
@@ -801,7 +801,7 @@ function FinalCTASection() {
   return (
     <section className="py-4 lg:py-8 bg-white">
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
-        <div className="bg-[#FFFCF4] rounded-[40px] p-10 md:p-16 border border-orange-50 shadow-xl flex flex-col lg:flex-row items-center gap-8 lg:gap-8 relative overflow-hidden">
+        <div className="bg-[#F5F9FF] rounded-[40px] p-10 md:p-16 border border-violet-50 shadow-xl flex flex-col lg:flex-row items-center gap-8 lg:gap-8 relative overflow-hidden">
            
            <div className="w-full lg:w-1/2 relative h-[400px] lg:h-[450px]">
              {/* Abstract Background Blur */}
@@ -819,21 +819,21 @@ function FinalCTASection() {
                    <img alt="" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" className="w-8 h-8 rounded-full" />
                    <div>
                      <div className="h-2 w-16 bg-slate-200 rounded mb-1"></div>
-                     <div className="flex text-orange-400 text-[10px]">★★★★★</div>
+                     <div className="flex text-violet-400 text-[10px]">★★★★★</div>
                    </div>
                  </div>
                  <div className="flex items-center gap-3">
                    <img alt="" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" className="w-8 h-8 rounded-full" />
                    <div>
                      <div className="h-2 w-16 bg-slate-200 rounded mb-1"></div>
-                     <div className="flex text-orange-400 text-[10px]">★★★★★</div>
+                     <div className="flex text-violet-400 text-[10px]">★★★★★</div>
                    </div>
                  </div>
                </div>
              </div>
 
-             <div className="absolute bottom-16 right-0 lg:-right-4 bg-white p-5 rounded-full shadow-lg border border-slate-100 z-20 flex items-center justify-center w-24 h-24 border-[6px] border-t-[#f97316]">
-                <span className="font-bold text-[#f97316] text-2xl">95%</span>
+             <div className="absolute bottom-16 right-0 lg:-right-4 bg-white p-5 rounded-full shadow-lg border border-slate-100 z-20 flex items-center justify-center w-24 h-24 border-[6px] border-t-[#6D28D9]">
+                <span className="font-bold text-[#6D28D9] text-2xl">95%</span>
              </div>
              
              <div className="absolute bottom-4 left-8 bg-white px-5 py-3 rounded-xl shadow-lg border border-slate-100 z-20 flex items-center gap-3">
@@ -852,7 +852,7 @@ function FinalCTASection() {
              <p className="text-[1.125rem] text-[#4B5563] leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
                Streamline candidate management, accelerate hiring, and deliver a better recruitment experience with PyHire's AI-powered Candidate Management platform.
              </p>
-             <Link to={DEMO_PATH} className="px-10 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[17px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.3)] hover:-translate-y-1 inline-flex items-center justify-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+             <Link to={DEMO_PATH} className="px-10 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[17px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.3)] hover:-translate-y-1 inline-flex items-center justify-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
                Book a Demo Today <ArrowRight className="w-5 h-5" />
              </Link>
            </div>

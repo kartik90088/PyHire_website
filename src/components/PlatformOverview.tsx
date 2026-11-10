@@ -34,7 +34,7 @@ export function PlatformOverview() {
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
           <div className="w-full lg:w-[58%]">
-            <span className="text-[#f97316] font-bold text-[13px] uppercase tracking-wider mb-3 block">
+            <span className="text-[#6D28D9] font-bold text-[13px] uppercase tracking-wider mb-3 block">
               The Platform
             </span>
             <h2 className="text-[2rem] lg:text-[2.75rem] font-bold text-[#111111] leading-[1.15] tracking-tight mb-6">
@@ -44,7 +44,7 @@ export function PlatformOverview() {
           </div>
 
           <aside className="w-full lg:w-[42%]">
-            <div className="lg:sticky lg:top-28 bg-[#FFFCF4] rounded-[28px] p-7 lg:p-8 border border-orange-50">
+            <div className="lg:sticky lg:top-28 bg-[#F5F9FF] rounded-[28px] p-7 lg:p-8 border border-violet-50">
               <h3 className="text-[15px] font-bold text-[#111111] uppercase tracking-wider mb-6">
                 Built for
               </h3>
@@ -67,8 +67,8 @@ export function PlatformOverview() {
                     value: 'Role-based access, complete audit trails and DPDPA/GDPR-aligned data governance.',
                   },
                 ].map((item, idx) => (
-                  <div key={idx} className="border-b border-orange-100/70 last:border-0 pb-5 last:pb-0">
-                    <dt className="text-[13px] font-bold text-[#f97316] uppercase tracking-wide mb-1.5">
+                  <div key={idx} className="border-b border-violet-100/70 last:border-0 pb-5 last:pb-0">
+                    <dt className="text-[13px] font-bold text-[#6D28D9] uppercase tracking-wide mb-1.5">
                       {item.label}
                     </dt>
                     <dd className="text-[15px] text-[#4B5563] leading-relaxed">{item.value}</dd>

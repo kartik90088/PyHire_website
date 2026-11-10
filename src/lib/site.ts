@@ -64,7 +64,7 @@ export function organizationSchema() {
     name: SITE_NAME,
     url: absoluteUrl('/'),
     description:
-      'PyHire is an AI-powered recruitment operating system covering the complete hiring lifecycle — job creation, candidate sourcing, AI matching, interviews, offers and analytics.',
+      'PyHire is the AI-powered applicant tracking system that takes a role from requisition to joining day — job descriptions, candidate matching, interviews, offers, client and vendor work, all in one workspace.',
     email: 'support@veriright.com',
     telephone: '+91-9964667676',
     areaServed: 'IN',
@@ -74,9 +74,9 @@ export function organizationSchema() {
       width: 400,
       height: 123,
     },
-    /* `sameAs` is deliberately absent: every social link in the footer is still
-       a "#" placeholder, and claiming profiles that do not resolve is worse
-       than claiming none. Add the real URLs here when they exist. */
+    /* `sameAs` is deliberately absent: there are no social profile URLs yet,
+       and claiming profiles that do not resolve is worse than claiming none.
+       Add the real URLs here (and to the footer) when they exist. */
   };
 }
 
@@ -101,9 +101,9 @@ export function webSiteSchema() {
  * product, who it serves and what it does — the difference between being
  * described accurately in an AI answer and being guessed at from prose.
  *
- * `offers` is deliberately omitted: pricing is not published anywhere on this
- * site, and inventing a price to satisfy a rich-result warning would put false
- * information into structured data.
+ * `offers` is deliberately omitted for now: the pricing page publishes plan
+ * prices, but the content document flags the GST wording as "confirm with
+ * finance before publishing". Add Offer entries once that is settled.
  */
 export function softwareApplicationSchema() {
   return {
@@ -117,23 +117,23 @@ export function softwareApplicationSchema() {
     operatingSystem: 'Web browser',
     inLanguage: 'en',
     description:
-      'PyHire is an AI-powered recruitment operating system for staffing agencies, recruitment firms and in-house HR teams. It covers the full hiring lifecycle — job requisitions, candidate sourcing, AI resume screening and matching, interview scheduling, omnichannel candidate communication, offers, analytics and compliance — in one configurable platform.',
+      'PyHire is the AI-powered applicant tracking system for Indian recruiting teams — consultancies, in-house HR and hybrid teams. It takes a role from requisition to joining day: job descriptions, candidate matching, interviews, offers, client and vendor work, all in one workspace.',
     publisher: { '@id': `${siteOrigin()}/#organization` },
     isPartOf: { '@id': `${siteOrigin()}/#website` },
     audience: {
       '@type': 'BusinessAudience',
-      audienceType:
-        'Recruitment agencies, staffing firms, RPO providers, in-house HR and talent acquisition teams',
+      audienceType: 'Recruitment consultancies, in-house HR teams and hybrid teams',
     },
     featureList: [
-      'Candidate management with a single unified profile per candidate',
-      'AI candidate matching and resume parsing',
-      'Job requisition management, approval chains and one-click job posting',
-      'Interview scheduling, panel coordination and structured scorecards',
-      'Client and vendor management with branded portals',
-      'Omnichannel candidate communication across email, WhatsApp, SMS and calling',
-      'Recruitment analytics, pipeline reporting and hiring dashboards',
-      'Role-based access control, audit logs and DPDPA/GDPR-aligned compliance',
+      'Requisitions with approvals, AI-read job descriptions and one table of every open role',
+      'Bulk CV upload, a resume bank and a candidate pipeline from first contact to joining day',
+      'AI resume and JD parsing, and candidate matching with reasons',
+      'Interview scheduling with reminders, evaluation forms, offer letters and joining checks',
+      'Email, SMS, WhatsApp and cloud calling with recordings on one candidate timeline',
+      'Client onboarding, vendor scorecards and a prospect pipeline for consultancies',
+      'Role-based dashboards, job description analysis and recruiter performance',
+      'Branded careers page, candidate portal and an Android app',
+      'Consent, data access requests, erasure and retention tools for DPDP and GDPR',
     ],
   };
 }

@@ -135,7 +135,7 @@ The canonical content contract (`ProductPageProps` in [src/components/ProductPag
 
 ### 2.4 Lead-capture logic — current state
 
-**The funnel is closed end to end.** Every "Book a Demo" / "Request Demo" / "Get Free Quote" control links to the constants in [src/lib/routes.ts](src/lib/routes.ts) (`DEMO_PATH`, `QUOTE_PATH`, `PLATFORM_PATH`), all of which currently point at `/contact-us`. The form there is a controlled React form that POSTs to `/api/contact`.
+**The funnel is closed end to end.** *(Updated Oct 2026: the form is now [site/Contact.tsx](src/pages/site/Contact.tsx) at `/contact` (since Nov 2026 also: contact cards, a sticky navy "What happens next" panel, a form progress bar "n of 6 required", icon chips for company type) with the content document's fields — full name, work email, phone, company, company type, optional team size and message, plus consent. [server/index.js](server/index.js) accepts that shape and, for cached old pages, the earlier firstName/lastName/subject/message shape; the form also sends those legacy fields so it works against an undeployed old API. Redeploy the API with `deploy.sh --api`.)* Every "Book a Demo" / "Request Demo" / "Get Free Quote" control links to the constants in [src/lib/routes.ts](src/lib/routes.ts) (`DEMO_PATH`, `QUOTE_PATH`, `PLATFORM_PATH`), all of which currently point at `/contact-us`. The form there is a controlled React form that POSTs to `/api/contact`.
 
 ```
 ContactUs form  ──POST /api/contact──►  nginx  ──proxy──►  127.0.0.1:8060
@@ -349,46 +349,33 @@ ai-recruiting-platform/
 
 ### 5.1 Route map
 
-18 `<Route>` entries in [src/App.tsx](src/App.tsx); the two parameterised routes expand to **35 crawlable URLs** at build time (see [Section 12.6](#126-build-and-deploy)).
+**Content source of truth: `PyHire_Website_Content.pdf` (14 October 2026).** Every page's copy, the menu, CTAs, prices and title/meta tags come from it verbatim. Where it says "to be supplied" or "confirm before publishing", the site shows nothing rather than inventing it (customer logos, quotes, results, company story, commission terms, certifications/hosting region).
 
-| # | Route | Page component | Layout strategy |
-|---|---|---|---|
-| 1 | `/` | [Home.tsx](src/pages/Home.tsx) | Composes 11 section components |
-| 2 | `/candidate-management` | [CandidateManagement.tsx](src/pages/CandidateManagement.tsx) | **Fully bespoke** |
-| 3–9 | `/job-management`, `/ai-candidate-matching`, `/interview-management`, `/client-vendor-management`, `/unified-communication`, `/analytics-dashboards`, `/compliance-security` | one page each | Shared `ProductPageLayout` + custom hero |
-| 10 | `/about-us` | [AboutUs.tsx](src/pages/AboutUs.tsx) | Bespoke |
-| 11 | `/blog` | [Blog.tsx](src/pages/Blog.tsx) | Bespoke listing — **lazy-loaded** |
-| 12 | `/blog/:slug` | [BlogPost.tsx](src/pages/BlogPost.tsx) | Article from [blogPosts.ts](src/data/blogPosts.ts) — **lazy-loaded** |
-| 13 | `/case-studies` | [CaseStudies.tsx](src/pages/CaseStudies.tsx) | Hero + [CaseStudiesList](src/pages/CaseStudiesList.tsx) — **lazy-loaded** |
-| 14 | `/case-studies/:slug` | [CaseStudyDetail.tsx](src/pages/CaseStudyDetail.tsx) | Study from [caseStudies.ts](src/data/caseStudies.ts) — **lazy-loaded** |
-| 15 | `/contact-us` | [ContactUs.tsx](src/pages/ContactUs.tsx) | Bespoke — **working** lead-capture form + info cards |
-| 16 | `/privacy-policy` | [PrivacyPolicy.tsx](src/pages/PrivacyPolicy.tsx) | [LegalPage](src/pages/LegalPage.tsx) + [legal.ts](src/data/legal.ts) — **lazy-loaded** |
-| 17 | `/terms-of-use` | [TermsOfUse.tsx](src/pages/TermsOfUse.tsx) | Same shared layout — **lazy-loaded** |
-| 18 | `*` | [NotFound.tsx](src/pages/NotFound.tsx) | Catch-all, marked `noindex, follow` |
-
-The four content routes are code-split behind `React.lazy` with a shared skeleton `RouteFallback`, so visitors who never open the blog never download the content stores.
-
-**Route lists that must stay in sync (four places, no shared constant):** the `<Route>` table in `App.tsx`, `platformLinks`/`resourcesLinks` in [Navbar.tsx](src/components/Navbar.tsx), the Platform column in [Footer.tsx](src/components/Footer.tsx), and `STATIC_ROUTES` in [scripts/routes.mjs](scripts/routes.mjs). A route missing from the fourth is not prerendered and not in the sitemap — it will still work for users, and be invisible to crawlers.
-
-### 5.2 Home page composition
-
-[src/pages/Home.tsx](src/pages/Home.tsx) renders, in order:
-
-| Order | Component | Purpose |
+| Route | Page | Source |
 |---|---|---|
-| 1 | `Hero` | Headline + autoplay MVP video + dual CTA |
-| 2 | `Mission` | Mission statement + 5 KPI stat cards |
-| 3 | `PlatformOverview` | Prose overview of the platform, above the card grid |
-| 4 | `Features` | 11 capability cards, each with a hand-built UI mockup |
-| 5 | `Compliance` | 4 enterprise compliance badges |
-| 6 | `FeatureHighlight` | "Why Recruitment Teams Choose PyHire" node-and-edge SVG diagram |
-| 7 | `VideoSection` | "See PyHire in Action" — full demo video with controls |
-| 8 | `Testimonials` | 3 anonymized customer quotes |
-| 9 | `FAQ` | Searchable knowledge base (embeds `FAQContact` at its foot) |
-| 10 | `Insights` | 3 blog article teasers |
-| 11 | `CTA` | Final conversion block + trust row |
+| `/` | [Home.tsx](src/pages/Home.tsx) | doc §2 |
+| `/product/{jobs-and-candidates, ai, interviews-and-offers, communication, clients-and-vendors, analytics, careers-page, mobile}` | one template, [site/ProductPage.tsx](src/pages/site/ProductPage.tsx) | copy in [data/productPages.ts](src/data/productPages.ts), doc §3–10 |
+| `/solutions` | [site/Solutions.tsx](src/pages/site/Solutions.tsx) | doc §12 |
+| ~~`/security`~~ | **Removed 2026-10-28 at the business's request** (doc §11). `/compliance-security` now redirects to `/` | — |
+| `/pricing` | [site/Pricing.tsx](src/pages/site/Pricing.tsx) | doc §13 (plans, limits, inclusions, FAQ + FAQPage JSON-LD) |
+| `/partners`, `/about`, `/contact` | [site/Partners.tsx](src/pages/site/Partners.tsx), [site/About.tsx](src/pages/site/About.tsx), [site/Contact.tsx](src/pages/site/Contact.tsx) | doc §14 |
+| `/blog`, `/blog/:slug`, `/case-studies`, `/case-studies/:slug`, `/privacy-policy`, `/terms-of-use` | unchanged | — |
+| old URLs (`/job-management`, `/candidate-management`, `/about-us`, `/contact-us`, …) | `<Navigate replace>` to the new page | `legacyRedirects` in [data/navigation.ts](src/data/navigation.ts) — **also add these as nginx 301s** |
+| `*` | [NotFound.tsx](src/pages/NotFound.tsx) | noindex |
 
-`Home` also calls `useSeo` with the home title/description and its own JSON-LD.
+All inner pages are `lazy()` chunks. The old page components (`JobManagement.tsx`, `AboutUs.tsx`, `ContactUs.tsx`, `ProductPageLayout.tsx`, …) are no longer routed but are kept.
+
+**Navigation has one source:** [src/data/navigation.ts](src/data/navigation.ts) (`productLinks`, `mainLinks`, `resourceLinks`, `legalLinks`, `legacyRedirects`) feeds the Navbar, Footer, product-page "More of PyHire" strip and the router. The only list kept by hand is `STATIC_ROUTES` in [scripts/routes.mjs](scripts/routes.mjs) (prerender + sitemap) — update it with any route change.
+
+**CTAs** ([lib/routes.ts](src/lib/routes.ts)): `DEMO_PATH = /contact`; `TRIAL_PATH = /contact?topic=trial` because no self-serve sign-up URL exists yet. `?topic=` (trial, partner, enterprise, app) labels the enquiry on the form and in the lead record.
+
+### 5.2 Home page composition — PyCore family design (2026-10-30)
+
+**The whole site now follows the PyMedic (pymedic.com) design system**, with PyHire's own logo colours: navy `#02224C` (ink, dark panels) and orange `#FD6500` (where PyMedic uses blue). Fonts: **Outfit** headings (extra-bold, tight), **Figtree** body — loaded in `index.html`, exposed via `@theme` (`--font-inter`/`--font-script` now also resolve to Figtree). Tokens and primitives live in [components/home/shared.tsx](src/components/home/shared.tsx): `INK`, `MUTED`, `ACCENT`, `ACCENT_DEEP`, `TINT`, `PANEL` (navy); `Eyebrow` (uppercase), `SectionHeading` with an `accent` prop for **two-tone headlines** (navy lead + orange tail), pill `PrimaryButton` (navy text on orange — white on orange fails contrast) / `OutlineButton`.
+
+**Home "next level" pass (2026-11):** `MTour` (tabbed product tour — 8 areas × 3 features, auto-steps every 3.2 s, built from `productPages` data, BlockViz visuals), `WhyChoose` (the doc's four reasons), `MPlans` (plan cards from the shared [data/plans.ts](src/data/plans.ts), also used by Pricing), and a `ScrollProgress` bar mounted in `App.tsx`; `MFeatures` is no longer rendered. Current order: MProblem → MMarquee → MJourney → MModules → MTour → MWorkspaces → WhyChoose → MOrbit → MPlans → MFaq → MVideo → MCta. Home sections ([components/medic/](src/components/medic/)): **since 2026-11-02 the top section is `MProblem` as the hero** (H1 "Recruiting shouldn’t need six tools and a spreadsheet.", CTAs added, with the cycling problem picture (`ProblemScene`: email, drive, phone, WhatsApp, report, slip-through) on the right and the six problem cards in a 3×2 grid below; the `OrbitDiagram` "Every module. One PyHire." now lives in its own `MOrbit` section between Workspaces and the FAQ (hero polish: drifting glow backdrop, pulsing eyebrow pill, shimmering gradient tail on the H1, green tick row, counting stats strip, and two floating callouts under the orbit — keep callouts out of the orbit area or they hide labels); the separate `MOrbit` section and `MHero` are kept but not rendered; the video `MVideo` sits just above the closing band). Orbit rings turn the same way at the same speed with inner labels offset 18°, so labels never collide. Original PyMedic order: `MHero` (two-tone H1, highlight, green trust pills, dark "Recruiter workspace" window + toast) → `MMarquee` ("One platform for") → `MVideo` (existing demo video) → `MProblem` (photo + dashed cards + solution banner) → `MJourney` (4 doc steps + 7-stage pipeline) → `MModules` (8 numbered cards, Explore →) → `MFeatures` (4 alternating deep dives from productPages data, app windows with BlockViz) → `MWorkspaces` (platform → 3 team boxes) → `MOrbit` → `MFaq` (pricing FAQ) → `MCta` (navy band). `AppWindow` is the shared window frame. Labels mirroring PyMedic ("One platform for", "Every module. One PyHire.", "Before you book a demo.") are the only non-document headings.
+
+Inner pages: `PageHero` (left-aligned, two-tone word-reveal title via `splitHeadline`), product pages use `FeatureRows` (alternating full-width rows, app window + BlockViz), `ClosingBand` is the navy PyMedic band. Header: white floating bar, active link in a pale pill. Footer: white, divided columns. The Equip-era home components (HomeHero, HubFlow, WhyChoose, ProductAccordion, FinalCta, DemoShowcase, TestimonialWall…) remain in `components/home` but are not rendered.
 
 ### 5.3 Platform feature modules (the 8 marketed capabilities)
 
@@ -1048,7 +1035,7 @@ location / { try_files $uri $uri/ /index.html; }
 `$uri/` must come **before** the `/index.html` fallback. Reversed, the SPA fallback shadows every prerendered page and the whole prerender step is silently undone. Verify after any nginx change:
 
 ```bash
-curl -s https://pyhire.veriright.com/job-management | grep -o '<h2' | wc -l   # non-zero = prerendered
+curl -s https://pyhire.veriright.com/product/ai | grep -o '<h2' | wc -l   # non-zero = prerendered
 ```
 
 Use `grep -o … | wc -l`, not `grep -c`: the built HTML is a single long line, so a line count always reports 1.
@@ -1137,3 +1124,22 @@ Reflects the codebase as of 2026-08-26. Items marked 🔴 block a production lau
 ---
 
 *Documentation reflects a full read of the codebase. Where the site's marketing copy describes capabilities that are not implemented in this repository, that distinction is stated explicitly rather than assumed.*
+
+---
+
+## Addendum — per-page product layouts (2026-11-04)
+
+The eight product pages no longer share one template. Copy still comes from `src/data/productPages.ts`; the layout is chosen by `page.mockup` in [src/components/site/ProductLayouts.tsx](src/components/site/ProductLayouts.tsx) (`ProductBody`):
+
+| mockup | Body layout |
+|---|---|
+| jobs | `FeatureRows` (alternating rows) + `HeroDash` |
+| ai | `StickyShowcase` (scroll-driven active block), centered hero |
+| interviews | `TimelineFlow` (scroll-filled vertical line) |
+| communication | `ChannelTabs` (tabs + Prev/Next) |
+| clients | `BentoBlocks` (bento grid) |
+| analytics | `StackedCards` (sticky stacking cards) |
+| careers | `StepsPath` (numbered path), centered hero |
+| mobile | `PhoneShowcase` (phone between feature columns) |
+
+`ProductPage.tsx` uses `CENTERED = ['ai','careers']` for the hero and `hasHeroDash(kind)` to pick the dashboard hero visual. Continuous loops use `useLoops()` so prerendered snapshots stay stable.

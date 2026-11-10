@@ -21,8 +21,8 @@ export function CandidateManagementHero() {
   return (
     <section className="relative w-full bg-[#fdfdfd] pt-12 pb-12 lg:pt-10 lg:pb-8 overflow-hidden flex justify-center">
       {/* Background shapes, matching the sibling heroes */}
-      <div className="absolute top-1/2 -left-24 w-44 h-44 bg-[#2563eb] rounded-full opacity-90 -translate-y-1/2 hidden lg:block" aria-hidden="true" />
-      <div className="absolute -right-40 -bottom-24 w-72 h-72 bg-[#f97316] rounded-full hidden lg:block -z-10" aria-hidden="true" />
+      <div className="absolute top-1/2 -left-24 w-44 h-44 bg-[#6D28D9] rounded-full opacity-90 -translate-y-1/2 hidden lg:block" aria-hidden="true" />
+      <div className="absolute -right-40 -bottom-24 w-72 h-72 bg-[#6D28D9] rounded-full hidden lg:block -z-10" aria-hidden="true" />
 
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-6">
@@ -40,13 +40,13 @@ export function CandidateManagementHero() {
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5">
               <Link
                 to={DEMO_PATH}
-                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
               >
                 Book a Demo
               </Link>
               <Link
                 to={QUOTE_PATH}
-                className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-4 text-[#f97316] font-bold text-[16px] transition-colors hover:text-[#ea580c] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-4 py-4 text-[#6D28D9] font-bold text-[16px] transition-colors hover:text-[#5B21B6] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full"
               >
                 Get Free Quote
               </Link>
@@ -83,7 +83,7 @@ export function CandidateManagementHero() {
                   <p className="text-slate-500 text-[11px] xl:text-[12px] mb-2">Lead React Architect</p>
                   <div className="flex flex-wrap gap-1 mb-2">
                     {['React', 'TypeScript', 'Node.js'].map((t) => (
-                      <span key={t} className="bg-blue-50 text-blue-600 text-[9px] xl:text-[10px] font-semibold px-2 py-0.5 rounded">{t}</span>
+                      <span key={t} className="bg-violet-50 text-violet-600 text-[9px] xl:text-[10px] font-semibold px-2 py-0.5 rounded">{t}</span>
                     ))}
                   </div>
                   <div className="flex items-center gap-2 bg-emerald-50/70 rounded-lg p-2">
@@ -102,7 +102,7 @@ export function CandidateManagementHero() {
               <div className="absolute left-[31%] top-[36%] w-[30%] bg-white rounded-[20px] shadow-[0_12px_40px_rgba(15,23,42,0.10)] border border-slate-100 p-2.5 z-30">
                 <div className="relative rounded-[14px] overflow-hidden bg-slate-100 aspect-square">
                   <img src="/cm-candidate-2.webp" alt="" className="w-full h-full object-cover" width={384} height={508} decoding="async" />
-                  <span className="absolute top-2 right-2 bg-orange-50 text-[#ea580c] text-[10px] xl:text-[11px] font-bold px-2 py-1 rounded-full leading-tight text-center shadow-sm">
+                  <span className="absolute top-2 right-2 bg-violet-50 text-[#5B21B6] text-[10px] xl:text-[11px] font-bold px-2 py-1 rounded-full leading-tight text-center shadow-sm">
                     92%<br /><span className="font-semibold">Match</span>
                   </span>
                 </div>
@@ -122,12 +122,12 @@ export function CandidateManagementHero() {
               <div className="absolute right-0 top-0 w-[42%] bg-white rounded-[20px] shadow-[0_12px_40px_rgba(15,23,42,0.10)] border border-slate-100 p-3.5 z-40">
                 <div className="flex items-center justify-between mb-3">
                   <p className="font-bold text-[#111111] text-[12px] xl:text-[14px]">Candidate Pipeline</p>
-                  <span className="bg-orange-50 text-[#f97316] text-[9px] xl:text-[10px] font-bold px-2 py-0.5 rounded-full">Live</span>
+                  <span className="bg-violet-50 text-[#6D28D9] text-[9px] xl:text-[10px] font-bold px-2 py-0.5 rounded-full">Live</span>
                 </div>
                 <dl className="flex flex-col gap-2.5">
                   {[
-                    { icon: Users, tint: 'text-blue-500 bg-blue-50', label: 'Total Talent Pool', value: '14,280', vc: 'text-[#111111]' },
-                    { icon: Filter, tint: 'text-[#f97316] bg-orange-50', label: 'In Screening', value: '420', vc: 'text-[#f97316]' },
+                    { icon: Users, tint: 'text-violet-500 bg-violet-50', label: 'Total Talent Pool', value: '14,280', vc: 'text-[#111111]' },
+                    { icon: Filter, tint: 'text-[#6D28D9] bg-violet-50', label: 'In Screening', value: '420', vc: 'text-[#6D28D9]' },
                     { icon: CheckCircle2, tint: 'text-emerald-600 bg-emerald-50', label: 'Interviewed', value: '188', vc: 'text-emerald-600' },
                     { icon: Award, tint: 'text-purple-600 bg-purple-50', label: 'Offers Extended', value: '34', vc: 'text-purple-600' },
                   ].map(({ icon: Icon, tint, label, value, vc }) => (
@@ -145,7 +145,7 @@ export function CandidateManagementHero() {
               {/* -- AI Resume Parser -- */}
               <div className="absolute right-0 bottom-[2%] w-[40%] bg-white rounded-[20px] shadow-[0_12px_40px_rgba(15,23,42,0.10)] border border-slate-100 p-3.5 z-40">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="w-7 h-7 rounded-lg bg-orange-50 text-[#f97316] flex items-center justify-center shrink-0">
+                  <span className="w-7 h-7 rounded-lg bg-violet-50 text-[#6D28D9] flex items-center justify-center shrink-0">
                     <Sparkles className="w-4 h-4" />
                   </span>
                   <span className="leading-tight">
@@ -156,8 +156,8 @@ export function CandidateManagementHero() {
                 <dl className="flex flex-col gap-1.5">
                   {[
                     { label: 'Skills Verified', value: '18 / 18', vc: 'text-emerald-600' },
-                    { label: 'Experience Match', value: '7+ Years', vc: 'text-blue-600' },
-                    { label: 'Culture Fit', value: 'Exceptional', vc: 'text-[#f97316]' },
+                    { label: 'Experience Match', value: '7+ Years', vc: 'text-violet-600' },
+                    { label: 'Culture Fit', value: 'Exceptional', vc: 'text-[#6D28D9]' },
                   ].map(({ label, value, vc }) => (
                     <div key={label} className="flex items-center justify-between bg-slate-50/80 rounded-lg px-2.5 py-1.5">
                       <dt className="text-[10px] xl:text-[11px] text-slate-600">{label}</dt>
@@ -177,7 +177,7 @@ export function CandidateManagementHero() {
               <span className="absolute left-[14%] bottom-[8%] w-9 h-9 xl:w-11 xl:h-11 rounded-full overflow-hidden ring-4 ring-white shadow-lg z-30">
                 <img src="/cm-avatar-3.webp" alt="" className="w-full h-full object-cover" width={128} height={128} decoding="async" />
               </span>
-              <span className="absolute left-[19%] top-[3%] w-8 h-8 rounded-full bg-orange-50 border border-orange-100 text-[#f97316] flex items-center justify-center shadow-sm z-30">
+              <span className="absolute left-[19%] top-[3%] w-8 h-8 rounded-full bg-violet-50 border border-violet-100 text-[#6D28D9] flex items-center justify-center shadow-sm z-30">
                 <UserPlus className="w-4 h-4" />
               </span>
             </div>
@@ -198,7 +198,7 @@ export function CandidateManagementHero() {
               <div className="bg-white rounded-[20px] shadow-[0_10px_30px_rgba(15,23,42,0.08)] border border-slate-100 p-4">
                 <div className="flex items-center justify-between mb-3">
                   <p className="font-bold text-[#111111] text-[14px]">Candidate Pipeline</p>
-                  <span className="bg-orange-50 text-[#f97316] text-[10px] font-bold px-2 py-0.5 rounded-full">Live</span>
+                  <span className="bg-violet-50 text-[#6D28D9] text-[10px] font-bold px-2 py-0.5 rounded-full">Live</span>
                 </div>
                 <dl className="grid grid-cols-2 gap-2">
                   {[

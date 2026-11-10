@@ -84,22 +84,46 @@ function clean(value, max) {
   return typeof value === 'string' ? value.trim().slice(0, max) : '';
 }
 
+const COMPANY_TYPES = ['Consultancy', 'In-house HR', 'Both'];
+const TEAM_SIZES = ['1–5', '6–20', '21–100', '100+'];
+
+/**
+ * Two payload shapes are accepted:
+ *  - current form (content document, Oct 2026): fullName, email, phone,
+ *    company, companyType, optional teamSize/message/topic, consent;
+ *  - the earlier form: firstName/lastName, email, phone, subject, message.
+ * The legacy shape keeps visitors on a cached old page from being rejected;
+ * it can be removed once no old bundle is in circulation.
+ */
 function validate(body) {
+  const legacy = !body.fullName;
+  const firstName = clean(body.firstName, 100);
+  const lastName = clean(body.lastName, 100);
   const data = {
-    firstName: clean(body.firstName, 100),
-    lastName: clean(body.lastName, 100),
+    fullName: legacy ? [firstName, lastName].filter(Boolean).join(' ') : clean(body.fullName, 200),
     email: clean(body.email, 200),
     phone: clean(body.phone, 40),
+    company: clean(body.company, 200),
+    companyType: clean(body.companyType, 40),
+    teamSize: clean(body.teamSize, 20),
+    topic: clean(body.topic, 100),
     subject: clean(body.subject, 200),
     message: clean(body.message, 5000),
     consent: body.consent === true,
   };
 
   const errors = [];
-  if (!data.firstName) errors.push('First name is required.');
+  if (!data.fullName) errors.push('Full name is required.');
   if (!data.email) errors.push('Email address is required.');
   else if (!EMAIL_RE.test(data.email)) errors.push('Email address is not valid.');
-  if (!data.message) errors.push('Message is required.');
+  if (legacy) {
+    if (!data.message) errors.push('Message is required.');
+  } else {
+    if (!data.phone) errors.push('Phone is required.');
+    if (!data.company) errors.push('Company is required.');
+    if (!COMPANY_TYPES.includes(data.companyType)) errors.push('Company type is required.');
+    if (data.teamSize && !TEAM_SIZES.includes(data.teamSize)) data.teamSize = '';
+  }
   if (!data.consent) errors.push('Consent is required.');
 
   return { data, errors };
@@ -129,17 +153,19 @@ if (process.env.SMTP_HOST) {
 }
 
 function emailBody(data, meta) {
-  const name = [data.firstName, data.lastName].filter(Boolean).join(' ');
   return [
     `New enquiry from the PyHire website.`,
     ``,
-    `Name:    ${name}`,
-    `Email:   ${data.email}`,
-    `Phone:   ${data.phone || '—'}`,
-    `Subject: ${data.subject || '—'}`,
+    `Name:         ${data.fullName}`,
+    `Email:        ${data.email}`,
+    `Phone:        ${data.phone || '—'}`,
+    `Company:      ${data.company || '—'}`,
+    `Company type: ${data.companyType || '—'}`,
+    `Team size:    ${data.teamSize || '—'}`,
+    `About:        ${data.topic || data.subject || '—'}`,
     ``,
-    `Message:`,
-    data.message,
+    `What they would like to see:`,
+    data.message || '—',
     ``,
     `---`,
     `Consent given: yes`,
@@ -198,11 +224,14 @@ app.post('/api/contact', async (req, res) => {
     await transporter.sendMail({
       from: MAIL_FROM,
       to: MAIL_TO,
-      replyTo: `${stripNewlines(`${data.firstName} ${data.lastName}`.trim())} <${data.email}>`,
+      replyTo: `${stripNewlines(data.fullName)} <${data.email}>`,
       subject: stripNewlines(
-        data.subject
-          ? `PyHire enquiry: ${data.subject}`
-          : `PyHire enquiry from ${data.firstName} ${data.lastName}`.trim(),
+        [
+          `PyHire enquiry${data.topic ? ` (${data.topic})` : ''}: ${data.fullName}`,
+          data.company,
+        ]
+          .filter(Boolean)
+          .join(' — '),
       ),
       text: emailBody(data, meta),
     });

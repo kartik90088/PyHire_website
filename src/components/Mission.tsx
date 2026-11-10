@@ -1,26 +1,29 @@
+/** Published KPI claims — shared with the home page stat cards. Verify before changing. */
+export const missionStats = [
+  {
+    value: "1M",
+    label: "Profiles processed in the last\n6 months",
+  },
+  {
+    value: "10K+",
+    label: "Profiles processed daily",
+  },
+  {
+    value: "9.2/10",
+    label: "Total Reviews out of 10 in app\n(Interviews module)",
+  },
+  {
+    value: "99.87%",
+    label: "AI Accuracy Rate",
+  },
+  {
+    value: "99.3%",
+    label: "Matching Candidate\n(Accuracy)",
+  },
+];
+
 export function Mission() {
-  const stats = [
-    {
-      value: "1M",
-      label: "Profiles processed in the last\n6 months",
-    },
-    {
-      value: "10K+",
-      label: "Profiles processed daily",
-    },
-    {
-      value: "9.2/10",
-      label: "Total Reviews out of 10 in app\n(Interviews module)",
-    },
-    {
-      value: "99.87%",
-      label: "AI Accuracy Rate",
-    },
-    {
-      value: "99.3%",
-      label: "Matching Candidate\n(Accuracy)",
-    },
-  ];
+  const stats = missionStats;
 
   return (
     <section className="py-4 lg:py-8 relative overflow-hidden bg-white">

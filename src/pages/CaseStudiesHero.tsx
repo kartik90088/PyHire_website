@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
-import { DEMO_PATH, QUOTE_PATH } from '../lib/routes';
+import { DEMO_PATH, TRIAL_PATH } from '../lib/routes';
 import {
   Award,
   CheckCircle2,
@@ -51,13 +51,13 @@ const fadeUp = {
 export function CaseStudiesHero() {
   // Top padding clears the fixed navbar on every breakpoint.
   return (
-    <section className="relative w-full bg-[#FFFCF4] pt-28 pb-16 lg:pt-24 lg:pb-20 overflow-hidden">
+    <section className="relative w-full bg-[#F5F9FF] pt-28 pb-10 lg:pt-24 lg:pb-12 overflow-hidden">
 
       {/* Decorative brand shapes */}
-      <div className="absolute top-[52%] -left-20 w-36 h-36 bg-[#f97316] rounded-full hidden lg:block" aria-hidden="true" />
-      <div className="absolute -bottom-40 -right-32 w-[380px] h-[380px] bg-[#f97316] rounded-full hidden lg:block" aria-hidden="true" />
-      <div className="absolute bottom-[12%] right-[30%] w-56 h-56 bg-orange-100/40 rounded-full hidden lg:block" aria-hidden="true" />
-      <div className="absolute top-[22%] right-[10%] w-64 h-64 bg-orange-50/70 rounded-full hidden lg:block" aria-hidden="true" />
+      <div className="absolute top-[52%] -left-20 w-36 h-36 bg-[#6D28D9] rounded-full hidden lg:block" aria-hidden="true" />
+      <div className="absolute -bottom-40 -right-32 w-[380px] h-[380px] bg-[#6D28D9] rounded-full hidden lg:block" aria-hidden="true" />
+      <div className="absolute bottom-[12%] right-[30%] w-56 h-56 bg-violet-100/40 rounded-full hidden lg:block" aria-hidden="true" />
+      <div className="absolute top-[22%] right-[10%] w-64 h-64 bg-violet-50/70 rounded-full hidden lg:block" aria-hidden="true" />
 
       <div className="max-w-[1400px] mx-auto px-5 sm:px-8 lg:px-12 w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-8 relative">
 
@@ -68,7 +68,7 @@ export function CaseStudiesHero() {
             transition={{ duration: 0.6 }}
             className="text-[3rem] sm:text-[3.5rem] lg:text-[4.25rem] font-bold text-[#111111] leading-[1.1] tracking-tight mb-6"
           >
-            Success stories<br />of Hiring<br />with <span className="text-[#f97316]">PyHire</span>
+            Success stories<br />of Hiring<br />with <span className="text-[#6D28D9]">PyHire</span>
           </motion.h1>
 
           {/* Accent rule */}
@@ -78,8 +78,8 @@ export function CaseStudiesHero() {
             className="flex items-center gap-2 mb-7"
             aria-hidden="true"
           >
-            <span className="block w-20 h-1 rounded-full bg-[#f97316]" />
-            <span className="block w-1.5 h-1.5 rounded-full bg-[#f97316]" />
+            <span className="block w-20 h-1 rounded-full bg-[#6D28D9]" />
+            <span className="block w-1.5 h-1.5 rounded-full bg-[#6D28D9]" />
           </motion.div>
 
           <motion.p
@@ -95,16 +95,16 @@ export function CaseStudiesHero() {
             transition={{ duration: 0.6, delay: 0.22 }}
             className="flex flex-wrap items-center gap-4 sm:gap-6"
           >
-            <Link to={DEMO_PATH} className="group px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 inline-flex items-center gap-3 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
-              Book a Demo
+            <Link to={DEMO_PATH} className="group px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 inline-flex items-center gap-3 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
+              Book a demo
               <span className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center transition-transform group-hover:translate-x-1">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                   <path d="M2 8h11M9 4l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </span>
             </Link>
-            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#f97316] font-bold text-[16px] transition-colors hover:text-[#ea580c] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full">
-              Get Free Quote
+            <Link to={TRIAL_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#6D28D9] font-bold text-[16px] transition-colors hover:text-[#5B21B6] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full">
+              Start free trial
             </Link>
           </motion.div>
         </div>
@@ -161,7 +161,7 @@ export function CaseStudiesHero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="absolute top-[26px] left-[36px] w-[62px] h-[62px] rounded-full bg-[#f97316] flex items-center justify-center shadow-[0_10px_24px_-6px_rgba(249,115,22,0.55)] z-30"
+              className="absolute top-[26px] left-[36px] w-[62px] h-[62px] rounded-full bg-[#6D28D9] flex items-center justify-center shadow-[0_10px_24px_-6px_rgba(109,40,217,0.55)] z-30"
               aria-hidden="true"
             >
               <Users className="w-7 h-7 text-white" strokeWidth={2} />
@@ -193,12 +193,12 @@ export function CaseStudiesHero() {
                 {pipelineStages.map(({ icon: Icon, label, count }) => (
                   <li key={label} className="flex items-center justify-between gap-3">
                     <span className="flex items-center gap-3">
-                      <span className="w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center shrink-0">
-                        <Icon className="w-4 h-4 text-[#f97316]" strokeWidth={2} aria-hidden="true" />
+                      <span className="w-8 h-8 rounded-full bg-violet-50 flex items-center justify-center shrink-0">
+                        <Icon className="w-4 h-4 text-[#6D28D9]" strokeWidth={2} aria-hidden="true" />
                       </span>
                       <span className="text-[14px] font-medium text-slate-700">{label}</span>
                     </span>
-                    <span className="text-[13px] font-bold text-[#f97316] bg-orange-50 rounded-full px-2.5 py-1 tabular-nums">
+                    <span className="text-[13px] font-bold text-[#6D28D9] bg-violet-50 rounded-full px-2.5 py-1 tabular-nums">
                       {count}
                     </span>
                   </li>
@@ -215,7 +215,7 @@ export function CaseStudiesHero() {
             >
               <div className="flex items-center gap-1 mb-4" aria-label="Rated 5 out of 5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 text-[#f97316] fill-[#f97316]" aria-hidden="true" />
+                  <Star key={i} className="w-4 h-4 text-[#6D28D9] fill-[#6D28D9]" aria-hidden="true" />
                 ))}
               </div>
               <blockquote className="text-[15px] text-[#111111] leading-relaxed font-medium mb-5">
@@ -249,8 +249,8 @@ export function CaseStudiesHero() {
                 <svg className="w-[130px] h-[62px] shrink-0" viewBox="0 0 130 62" fill="none" aria-hidden="true">
                   <defs>
                     <linearGradient id="tth-fill" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#f97316" stopOpacity="0.22" />
-                      <stop offset="100%" stopColor="#f97316" stopOpacity="0" />
+                      <stop offset="0%" stopColor="#6D28D9" stopOpacity="0.22" />
+                      <stop offset="100%" stopColor="#6D28D9" stopOpacity="0" />
                     </linearGradient>
                   </defs>
                   <path
@@ -259,14 +259,14 @@ export function CaseStudiesHero() {
                   />
                   <path
                     d="M2 50 L20 40 L34 46 L50 26 L66 34 L82 16 L98 24 L114 6 L128 12"
-                    stroke="#f97316"
+                    stroke="#6D28D9"
                     strokeWidth="2.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
                 </svg>
                 <div>
-                  <div className="text-[26px] font-bold text-[#f97316] leading-none mb-1.5">-35%</div>
+                  <div className="text-[26px] font-bold text-[#6D28D9] leading-none mb-1.5">-35%</div>
                   <p className="text-[13px] text-slate-500 leading-snug">Improved<br />Time to Hire</p>
                 </div>
               </div>

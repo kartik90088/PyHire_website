@@ -84,12 +84,12 @@ export function AnalyticsDashboards() {
       workflowTitle="From Data to Insights"
       workflowDesc="Transform raw recruitment data into actionable strategic intelligence."
       workflowSteps={[
-        { id: "01", title: "Data Collection", desc: "System automatically captures all recruitment activities.", icon: <Database className="w-6 h-6 text-[#f97316]" /> },
-        { id: "02", title: "Real-time Processing", desc: "Metrics are calculated and updated instantly.", icon: <Activity className="w-6 h-6 text-[#f97316]" /> },
-        { id: "03", title: "Dashboard Generation", desc: "Visualize data through intuitive charts and graphs.", icon: <PieChart className="w-6 h-6 text-[#f97316]" /> },
-        { id: "04", title: "Custom Filtering", desc: "Slice data by department, recruiter, role, or date.", icon: <Filter className="w-6 h-6 text-[#f97316]" /> },
-        { id: "05", title: "Identify Bottlenecks", desc: "Spot pipeline delays and source inefficiencies.", icon: <Target className="w-6 h-6 text-[#f97316]" /> },
-        { id: "06", title: "Executive Reporting", desc: "Export and share beautiful reports with stakeholders.", icon: <Presentation className="w-6 h-6 text-[#f97316]" /> }
+        { id: "01", title: "Data Collection", desc: "System automatically captures all recruitment activities.", icon: <Database className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "02", title: "Real-time Processing", desc: "Metrics are calculated and updated instantly.", icon: <Activity className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "03", title: "Dashboard Generation", desc: "Visualize data through intuitive charts and graphs.", icon: <PieChart className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "04", title: "Custom Filtering", desc: "Slice data by department, recruiter, role, or date.", icon: <Filter className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "05", title: "Identify Bottlenecks", desc: "Spot pipeline delays and source inefficiencies.", icon: <Target className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "06", title: "Executive Reporting", desc: "Export and share beautiful reports with stakeholders.", icon: <Presentation className="w-6 h-6 text-[#6D28D9]" /> }
       ]}
       benefitsTitle="Make Data-Driven Hiring Decisions"
       benefitsDesc="Stop guessing and start optimizing your talent acquisition strategy with precise analytics."

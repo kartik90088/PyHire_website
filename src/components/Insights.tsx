@@ -19,7 +19,7 @@ import { blogPosts, readingMinutes } from "../data/blogPosts";
 /* Panel tints are presentational and belong to this layout, not to the posts —
    they cycle by position so the row keeps its warm/red/teal rhythm whichever
    three articles are current. */
-const PANEL_TINTS = ["bg-[#ffdca8]", "bg-[#ffa1a1]", "bg-[#a6d8d4]"];
+const PANEL_TINTS = ["bg-[#DDD6FE]", "bg-[#ffa1a1]", "bg-[#a6d8d4]"];
 
 /** Warms the lazily-loaded article chunk before the visitor clicks through. */
 let prefetched = false;

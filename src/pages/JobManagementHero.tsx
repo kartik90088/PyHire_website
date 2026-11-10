@@ -9,16 +9,16 @@ export function JobManagementHero() {
     <section className="relative w-full bg-[#fdfdfd] pt-12 pb-12 lg:pt-10 lg:pb-8 overflow-hidden flex justify-center">
       
       {/* Background Shapes */}
-      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-blue-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
+      <div className="absolute top-1/2 -left-20 w-40 h-40 bg-violet-500 rounded-full opacity-90 -translate-y-1/2 hidden lg:block"></div>
       <div className="absolute bottom-20 left-40 w-6 h-6 bg-green-400 rounded-full hidden lg:block"></div>
-      <div className="absolute -bottom-20 right-[-100px] w-80 h-80 bg-orange-600 rounded-full hidden lg:block"></div>
-      <div className="absolute top-20 right-[40%] w-12 h-12 border-4 border-orange-200 rounded-full hidden lg:block"></div>
+      <div className="absolute -bottom-20 right-[-100px] w-80 h-80 bg-violet-600 rounded-full hidden lg:block"></div>
+      <div className="absolute top-20 right-[40%] w-12 h-12 border-4 border-violet-200 rounded-full hidden lg:block"></div>
       
       {/* Decorative Dots */}
       <div className="absolute bottom-[20%] left-[8%] w-3 h-3 bg-green-400 rounded-full hidden lg:block"></div>
       <div className="absolute bottom-16 left-16 hidden lg:grid grid-cols-4 gap-2 opacity-50">
         {[...Array(16)].map((_, i) => (
-          <div key={i} className="w-1.5 h-1.5 bg-orange-300 rounded-full"></div>
+          <div key={i} className="w-1.5 h-1.5 bg-violet-300 rounded-full"></div>
         ))}
       </div>
 
@@ -50,10 +50,10 @@ export function JobManagementHero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex flex-wrap items-center gap-6"
           >
-            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+            <Link to={DEMO_PATH} className="inline-flex items-center justify-center px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[16px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
               Book a Demo
             </Link>
-            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#f97316] font-bold text-[16px] transition-colors hover:text-[#ea580c] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full">
+            <Link to={QUOTE_PATH} className="inline-flex items-center justify-center px-4 py-4 text-[#6D28D9] font-bold text-[16px] transition-colors hover:text-[#5B21B6] underline underline-offset-8 decoration-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full">
               Get Free Quote
             </Link>
           </motion.div>
@@ -108,17 +108,17 @@ export function JobManagementHero() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center"><Briefcase className="w-4 h-4 text-blue-500"/></div>
+                  <div className="w-8 h-8 rounded-lg bg-violet-50 flex items-center justify-center"><Briefcase className="w-4 h-4 text-violet-500"/></div>
                   <span className="text-[13px] font-medium text-slate-600">Active Jobs</span>
                 </div>
-                <span className="font-bold text-blue-500">24</span>
+                <span className="font-bold text-violet-500">24</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center"><FileText className="w-4 h-4 text-orange-500"/></div>
+                  <div className="w-8 h-8 rounded-lg bg-violet-50 flex items-center justify-center"><FileText className="w-4 h-4 text-violet-500"/></div>
                   <span className="text-[13px] font-medium text-slate-600">Draft Jobs</span>
                 </div>
-                <span className="font-bold text-orange-500">06</span>
+                <span className="font-bold text-violet-500">06</span>
               </div>
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
@@ -182,10 +182,10 @@ export function JobManagementHero() {
           </div>
           
           {/* Small circular icons */}
-          <div className="absolute top-[-20px] left-[250px] w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 shadow-sm z-20">
+          <div className="absolute top-[-20px] left-[250px] w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center text-violet-500 shadow-sm z-20">
             <Briefcase className="w-5 h-5" />
           </div>
-          <div className="absolute bottom-[10px] right-[250px] w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-500 shadow-sm z-20">
+          <div className="absolute bottom-[10px] right-[250px] w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center text-violet-500 shadow-sm z-20">
             <Building2 className="w-5 h-5" />
           </div>
         </div>

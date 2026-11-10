@@ -2,10 +2,10 @@ import { Briefcase, Target, Users, Kanban, CalendarDays, MessageSquare, Building
 import { Link } from "react-router-dom";
 import { DEMO_PATH } from "../lib/routes";
 
-export function Features() {
-  const cards = [
+/** The 11 capability cards, shared with the home page product accordion. */
+export const featureCards = [
     {
-      icon: <Briefcase className="w-6 h-6 text-[#f97316]" />,
+      icon: <Briefcase className="w-6 h-6 text-[#6D28D9]" />,
       title: "Job Management",
       description: "Create, manage, and organize job openings with AI-assisted job creation and hiring workflows.",
       mockup: (
@@ -31,7 +31,7 @@ export function Features() {
       )
     },
     {
-      icon: <Target className="w-6 h-6 text-[#f97316]" />,
+      icon: <Target className="w-6 h-6 text-[#6D28D9]" />,
       title: "AI Candidate Matching",
       description: "Automatically identify the best candidates using AI-powered skills, experience, and qualification matching.",
       mockup: (
@@ -63,7 +63,7 @@ export function Features() {
       )
     },
     {
-      icon: <Users className="w-6 h-6 text-[#f97316]" />,
+      icon: <Users className="w-6 h-6 text-[#6D28D9]" />,
       title: "Candidate Management",
       description: "Manage candidate profiles, recruitment history, assignments, and sourcing from one centralized database.",
       mockup: (
@@ -91,7 +91,7 @@ export function Features() {
       )
     },
     {
-      icon: <Kanban className="w-6 h-6 text-[#f97316]" />,
+      icon: <Kanban className="w-6 h-6 text-[#6D28D9]" />,
       title: "Candidate Pipeline",
       description: "Track every candidate from application to hiring with customizable recruitment stages.",
       mockup: (
@@ -101,12 +101,12 @@ export function Features() {
                  <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-slate-300"></div><span className="font-medium text-slate-600">Sourced</span></div>
                  <div className="font-bold text-slate-900">320</div>
               </div>
-              <div className="flex items-center justify-between text-[12px] bg-white p-2 rounded-lg shadow-sm border border-orange-100 -mx-2 px-2">
-                 <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-orange-400"></div><span className="font-bold text-orange-600">Screening</span></div>
-                 <div className="font-bold text-orange-600">150</div>
+              <div className="flex items-center justify-between text-[12px] bg-white p-2 rounded-lg shadow-sm border border-violet-100 -mx-2 px-2">
+                 <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-violet-400"></div><span className="font-bold text-violet-600">Screening</span></div>
+                 <div className="font-bold text-violet-600">150</div>
               </div>
               <div className="flex items-center justify-between text-[12px]">
-                 <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-blue-400"></div><span className="font-medium text-slate-600">Interview</span></div>
+                 <div className="flex items-center gap-2"><div className="w-2 h-2 rounded-full bg-violet-400"></div><span className="font-medium text-slate-600">Interview</span></div>
                  <div className="font-bold text-slate-900">45</div>
               </div>
               <div className="flex items-center justify-between text-[12px]">
@@ -118,7 +118,7 @@ export function Features() {
       )
     },
     {
-      icon: <CalendarDays className="w-6 h-6 text-[#f97316]" />,
+      icon: <CalendarDays className="w-6 h-6 text-[#6D28D9]" />,
       title: "Interview Management",
       description: "Schedule interviews, collect structured feedback, and eliminate scheduling conflicts.",
       mockup: (
@@ -129,14 +129,14 @@ export function Features() {
            <div className="flex justify-between mb-4 px-2">
               <div className="text-center"><div className="text-[10px] text-slate-400 mb-1">Mon</div><div className="w-6 h-6 flex items-center justify-center text-[12px] font-medium text-slate-600">23</div></div>
               <div className="text-center"><div className="text-[10px] text-slate-400 mb-1">Tue</div><div className="w-6 h-6 flex items-center justify-center text-[12px] font-medium text-slate-600">24</div></div>
-              <div className="text-center relative"><div className="text-[10px] text-orange-500 font-bold mb-1">Wed</div><div className="w-7 h-7 bg-[#f97316] text-white rounded-full flex items-center justify-center text-[12px] font-bold shadow-md">25</div><div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-orange-500 rounded-full"></div></div>
+              <div className="text-center relative"><div className="text-[10px] text-violet-500 font-bold mb-1">Wed</div><div className="w-7 h-7 bg-[#6D28D9] text-white rounded-full flex items-center justify-center text-[12px] font-bold shadow-md">25</div><div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-violet-500 rounded-full"></div></div>
               <div className="text-center"><div className="text-[10px] text-slate-400 mb-1">Thu</div><div className="w-6 h-6 flex items-center justify-center text-[12px] font-medium text-slate-600">26</div></div>
               <div className="text-center"><div className="text-[10px] text-slate-400 mb-1">Fri</div><div className="w-6 h-6 flex items-center justify-center text-[12px] font-medium text-slate-600">27</div></div>
            </div>
            <div className="space-y-2 mt-2">
               <div className="flex items-start gap-3">
                  <div className="text-[10px] font-bold text-slate-500 mt-1 w-10 text-right">10:00 AM</div>
-                 <div className="flex-1 bg-white border-l-2 border-orange-400 p-2 rounded shadow-sm">
+                 <div className="flex-1 bg-white border-l-2 border-violet-400 p-2 rounded shadow-sm">
                     <div className="text-[11px] font-bold text-slate-800">Interview with Sarah</div>
                  </div>
               </div>
@@ -145,7 +145,7 @@ export function Features() {
       )
     },
     {
-      icon: <MessageSquare className="w-6 h-6 text-[#f97316]" />,
+      icon: <MessageSquare className="w-6 h-6 text-[#6D28D9]" />,
       title: "Unified Communication",
       description: "Manage Email, WhatsApp, SMS, and calling from one shared communication hub.",
       mockup: (
@@ -159,7 +159,7 @@ export function Features() {
                  </div>
               </div>
               <div className="bg-white p-3 rounded-xl border border-slate-100 shadow-sm flex items-start gap-3">
-                 <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">@</div>
+                 <div className="w-8 h-8 rounded-full bg-violet-100 flex items-center justify-center text-violet-600">@</div>
                  <div className="flex-1">
                     <div className="flex justify-between items-center"><span className="text-[11px] font-bold text-slate-800">David Ross</span><span className="text-[9px] text-slate-400">Yesterday</span></div>
                     <div className="text-[10px] text-slate-500 mt-1 truncate">I have attached my updated resume.</div>
@@ -170,7 +170,7 @@ export function Features() {
       )
     },
     {
-      icon: <Building2 className="w-6 h-6 text-[#f97316]" />,
+      icon: <Building2 className="w-6 h-6 text-[#6D28D9]" />,
       title: "Client & Vendor Management",
       description: "Manage recruitment clients, sourcing vendors, commissions, and business relationships from one platform.",
       mockup: (
@@ -196,7 +196,7 @@ export function Features() {
       )
     },
     {
-      icon: <BarChart3 className="w-6 h-6 text-[#f97316]" />,
+      icon: <BarChart3 className="w-6 h-6 text-[#6D28D9]" />,
       title: "Recruitment Analytics",
       description: "Monitor recruiter productivity, hiring performance, pipeline health, and hiring trends with real-time dashboards.",
       mockup: (
@@ -215,8 +215,8 @@ export function Features() {
              <div className="text-[10px] font-bold text-slate-400 mb-3">Placement Time Trend</div>
              <div className="h-10 w-full flex items-end gap-1.5 justify-between">
                 {[40, 60, 45, 80, 50, 75, 90, 65].map((h, i) => (
-                  <div key={i} className="w-full bg-orange-100 rounded-t-sm relative group">
-                    <div className="absolute bottom-0 w-full bg-orange-400 rounded-t-sm transition-all" style={{height: `${h}%`}}></div>
+                  <div key={i} className="w-full bg-violet-100 rounded-t-sm relative group">
+                    <div className="absolute bottom-0 w-full bg-violet-400 rounded-t-sm transition-all" style={{height: `${h}%`}}></div>
                   </div>
                 ))}
              </div>
@@ -225,7 +225,7 @@ export function Features() {
       )
     },
     {
-      icon: <Video className="w-6 h-6 text-[#f97316]" />,
+      icon: <Video className="w-6 h-6 text-[#6D28D9]" />,
       title: "AI Interviews",
       description: "Conduct live and recorded interviews with AI-powered insights and candidate evaluation.",
       mockup: (
@@ -256,7 +256,7 @@ export function Features() {
       )
     },
     {
-      icon: <Shield className="w-6 h-6 text-[#f97316]" />,
+      icon: <Shield className="w-6 h-6 text-[#6D28D9]" />,
       title: "Role-Based Access",
       description: "Provide secure access for recruiters, managers, interviewers, and administrators with configurable permissions.",
       mockup: (
@@ -280,7 +280,7 @@ export function Features() {
       )
     },
     {
-      icon: <FileCheck className="w-6 h-6 text-[#f97316]" />,
+      icon: <FileCheck className="w-6 h-6 text-[#6D28D9]" />,
       title: "Compliance & Audit Trail",
       description: "Protect candidate data with audit logs, consent tracking, and compliance-ready recruitment workflows.",
       mockup: (
@@ -301,7 +301,10 @@ export function Features() {
         </div>
       )
     }
-  ];
+];
+
+export function Features() {
+  const cards = featureCards;
 
   return (
     <section className="py-4 lg:py-8 bg-[#fdfdfd] overflow-hidden">
@@ -317,7 +320,7 @@ export function Features() {
               From creating jobs to managing candidates, interviews, communication, analytics, and compliance—PyHire brings every recruitment operation into one AI-powered platform.
             </p>
             <div className="relative inline-block">
-              <Link to={DEMO_PATH} className="px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-medium text-lg transition-colors shadow-lg shadow-orange-500/25 inline-flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+              <Link to={DEMO_PATH} className="px-8 py-4 bg-[#6D28D9] hover:bg-[#8B5CF6] text-white rounded-full font-medium text-lg transition-colors shadow-lg shadow-violet-500/25 inline-flex items-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
                 Book A Demo <ChevronRight className="w-5 h-5" />
               </Link>
             </div>
@@ -334,7 +337,7 @@ export function Features() {
               <div className="flex gap-6 pr-6">
                 {cards.map((card, idx) => (
                   <div key={idx} className="flex-none w-[340px] md:w-[380px] bg-white rounded-[32px] p-8 flex flex-col hover:-translate-y-2 transition-transform duration-300 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-                     <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center mb-6 border border-orange-100/50">
+                     <div className="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center mb-6 border border-violet-100/50">
                         {card.icon}
                      </div>
                      <h4 className="font-bold text-[#111827] text-[1.35rem] leading-tight mb-3">{card.title}</h4>
@@ -350,7 +353,7 @@ export function Features() {
               <div className="flex gap-6 pr-6" aria-hidden="true">
                 {cards.map((card, idx) => (
                   <div key={`dup-${idx}`} className="flex-none w-[340px] md:w-[380px] bg-white rounded-[32px] p-8 flex flex-col hover:-translate-y-2 transition-transform duration-300 border border-slate-100 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-                     <div className="w-12 h-12 rounded-2xl bg-orange-50 flex items-center justify-center mb-6 border border-orange-100/50">
+                     <div className="w-12 h-12 rounded-2xl bg-violet-50 flex items-center justify-center mb-6 border border-violet-100/50">
                         {card.icon}
                      </div>
                      <h4 className="font-bold text-[#111827] text-[1.35rem] leading-tight mb-3">{card.title}</h4>

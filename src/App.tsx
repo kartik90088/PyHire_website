@@ -1,21 +1,24 @@
 import { Suspense, lazy } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useSiteJsonLd } from "./lib/useSeo";
 import { Navbar } from "./components/Navbar";
+import { ScrollProgress } from "./components/medic/MHome2";
 import { Home } from "./pages/Home";
-import { CandidateManagement } from "./pages/CandidateManagement";
-import { JobManagement } from "./pages/JobManagement";
-import { AICandidateMatching } from "./pages/AICandidateMatching";
-import { InterviewManagement } from "./pages/InterviewManagement";
-import { ClientVendorManagement } from "./pages/ClientVendorManagement";
-import { UnifiedCommunication } from "./pages/UnifiedCommunication";
-import { AnalyticsDashboards } from "./pages/AnalyticsDashboards";
-import { ComplianceSecurity } from "./pages/ComplianceSecurity";
-import { AboutUs } from "./pages/AboutUs";
-import { ContactUs } from "./pages/ContactUs";
 import { NotFound } from "./pages/NotFound";
 import { Footer } from "./components/Footer";
 import { ChatbotWidget } from "./components/ChatbotWidget";
+import { legacyRedirects } from "./data/navigation";
+import { productPages } from "./data/productPages";
+
+/* The redesigned inner pages (PyHire website content document, Oct 2026) are
+   split into their own chunks so the home page bundle stays lean. The eight
+   product pages share one template chunk. */
+const ProductPage = lazy(() => import("./pages/site/ProductPage").then((m) => ({ default: m.ProductPage })));
+const Solutions = lazy(() => import("./pages/site/Solutions").then((m) => ({ default: m.Solutions })));
+const Pricing = lazy(() => import("./pages/site/Pricing").then((m) => ({ default: m.Pricing })));
+const Partners = lazy(() => import("./pages/site/Partners").then((m) => ({ default: m.Partners })));
+const About = lazy(() => import("./pages/site/About").then((m) => ({ default: m.About })));
+const Contact = lazy(() => import("./pages/site/Contact").then((m) => ({ default: m.Contact })));
 
 // Route-level code splitting: the blog listing and article pages ship as their
 // own chunks, so the content store isn't downloaded by visitors who never
@@ -51,27 +54,30 @@ export default function App() {
 
   return (
     <BrowserRouter>
-      <div className="min-h-screen flex flex-col bg-slate-50 font-sans selection:bg-emerald-200 selection:text-emerald-900">
+      <div className="min-h-screen flex flex-col font-sans text-[#1B1650] selection:bg-[#DDD6FE] selection:text-[#1B1650]">
+        <ScrollProgress />
         <Navbar />
         <Suspense fallback={<RouteFallback />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/candidate-management" element={<CandidateManagement />} />
-          <Route path="/job-management" element={<JobManagement />} />
-          <Route path="/ai-candidate-matching" element={<AICandidateMatching />} />
-          <Route path="/interview-management" element={<InterviewManagement />} />
-          <Route path="/client-vendor-management" element={<ClientVendorManagement />} />
-          <Route path="/unified-communication" element={<UnifiedCommunication />} />
-          <Route path="/analytics-dashboards" element={<AnalyticsDashboards />} />
-          <Route path="/compliance-security" element={<ComplianceSecurity />} />
-          <Route path="/about-us" element={<AboutUs />} />
+          {productPages.map((page) => (
+            <Route key={page.path} path={page.path} element={<ProductPage page={page} />} />
+          ))}
+          <Route path="/solutions" element={<Solutions />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/partners" element={<Partners />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
-          <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
+          {/* Pre-redesign URLs → their new pages (see data/navigation.ts). */}
+          {Object.entries(legacyRedirects).map(([from, to]) => (
+            <Route key={from} path={from} element={<Navigate to={to} replace />} />
+          ))}
           {/* Catch-all — unmatched URLs previously rendered an empty gap between
               the navbar and footer. Marked noindex inside the component. */}
           <Route path="*" element={<NotFound />} />

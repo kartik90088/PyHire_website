@@ -43,11 +43,11 @@ export function AboutUs() {
             {/* 1. Hero Section */}
       <section className="relative w-full pt-10 lg:pt-10 flex flex-col items-center text-center overflow-hidden bg-white pb-0">
         {/* Subtle radial gradient */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#FFFCF4] via-white to-white pointer-events-none"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#F5F9FF] via-white to-white pointer-events-none"></div>
         
         <div className="relative w-full max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16 flex flex-col items-center">
                 {/* Decorative elements */}
-        <div className="absolute top-10 left-[45%] text-orange-500">
+        <div className="absolute top-10 left-[45%] text-violet-500">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="currentColor"/>
           </svg>
@@ -178,12 +178,12 @@ export function AboutUs() {
           {/* Decorative dots right */}
           <div className="absolute right-[-10px] top-10 z-0 hidden lg:block opacity-60">
              <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="5" cy="5" r="2" fill="#f97316"/>
-              <circle cx="20" cy="5" r="2" fill="#f97316"/>
-              <circle cx="35" cy="5" r="2" fill="#f97316"/>
-              <circle cx="5" cy="20" r="2" fill="#f97316"/>
-              <circle cx="20" cy="20" r="2" fill="#f97316"/>
-              <circle cx="35" cy="20" r="2" fill="#f97316"/>
+              <circle cx="5" cy="5" r="2" fill="#6D28D9"/>
+              <circle cx="20" cy="5" r="2" fill="#6D28D9"/>
+              <circle cx="35" cy="5" r="2" fill="#6D28D9"/>
+              <circle cx="5" cy="20" r="2" fill="#6D28D9"/>
+              <circle cx="20" cy="20" r="2" fill="#6D28D9"/>
+              <circle cx="35" cy="20" r="2" fill="#6D28D9"/>
             </svg>
           </div>
           
@@ -248,7 +248,7 @@ export function AboutUs() {
             
             {/* Left Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="absolute -left-10 -top-10 text-orange-500 opacity-60 z-0">
+              <div className="absolute -left-10 -top-10 text-violet-500 opacity-60 z-0">
                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="5" cy="5" r="2" fill="currentColor"/>
                   <circle cx="20" cy="5" r="2" fill="currentColor"/>
@@ -274,7 +274,7 @@ export function AboutUs() {
 
             {/* Right Content */}
             <div className="flex flex-col order-1 lg:order-2 lg:pl-10">
-              <span className="text-orange-500 font-bold text-[14px] uppercase tracking-wider mb-3">Our Commitment</span>
+              <span className="text-violet-500 font-bold text-[14px] uppercase tracking-wider mb-3">Our Commitment</span>
               <h2 className="text-[2.5rem] lg:text-[3rem] font-bold text-[#111111] leading-[1.1] mb-6 tracking-tight">
                 We empower<br />
                 recruitment teams
@@ -283,7 +283,7 @@ export function AboutUs() {
                 We build technology that empowers recruiters to work smarter, collaborate seamlessly, and make confident hiring decisions. Our platform is designed to simplify complexity and bring clarity to every stage of hiring.
               </p>
               
-              <div className="border-l-4 border-orange-500 pl-6 py-1">
+              <div className="border-l-4 border-violet-500 pl-6 py-1">
                 <p className="text-[16px] font-bold text-[#111111] leading-relaxed">
                   We believe technology should enable people, not complicate their work. PyHire is built to make hiring smarter, faster and more human.
                 </p>
@@ -300,7 +300,7 @@ export function AboutUs() {
           <div className="bg-[#F8F9FA] rounded-[32px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-6 text-center md:text-left">
                <div className="w-24 h-24 shrink-0 flex items-center justify-center bg-white rounded-2xl shadow-sm">
-                 <Rocket className="w-12 h-12 text-[#f97316]" />
+                 <Rocket className="w-12 h-12 text-[#6D28D9]" />
                </div>
                <div>
                  <h2 className="text-[1.75rem] font-bold text-[#111111] mb-2 tracking-tight">Ready to transform your hiring process?</h2>
@@ -308,7 +308,7 @@ export function AboutUs() {
                </div>
             </div>
             
-            <Link to={DEMO_PATH} className="px-8 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-lg font-bold text-[15px] transition-all inline-flex items-center gap-2 whitespace-nowrap shadow-[0_4px_14px_rgb(249,115,22,0.3)] shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+            <Link to={DEMO_PATH} className="px-8 py-3.5 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-lg font-bold text-[15px] transition-all inline-flex items-center gap-2 whitespace-nowrap shadow-[0_4px_14px_rgb(249,115,22,0.3)] shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
               Book a Demo <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
@@ -352,7 +352,7 @@ function WhatWeBuildSection() {
       <div className="max-w-[1320px] mx-auto px-5 sm:px-8 lg:px-12 xl:px-16">
         <div className="flex flex-col lg:flex-row gap-10 lg:gap-16">
           <div className="w-full lg:w-[62%]">
-            <span className="text-orange-500 font-bold text-[14px] uppercase tracking-wider mb-3 block">
+            <span className="text-violet-500 font-bold text-[14px] uppercase tracking-wider mb-3 block">
               What We Build
             </span>
             <h2 className="text-[2rem] lg:text-[2.75rem] font-bold text-[#111111] leading-[1.15] tracking-tight mb-6">
@@ -362,7 +362,7 @@ function WhatWeBuildSection() {
           </div>
 
           <aside className="w-full lg:w-[38%]">
-            <div className="lg:sticky lg:top-28 bg-[#FFFCF4] rounded-[28px] p-7 lg:p-8 border border-orange-50">
+            <div className="lg:sticky lg:top-28 bg-[#F5F9FF] rounded-[28px] p-7 lg:p-8 border border-violet-50">
               <h3 className="text-[15px] font-bold text-[#111111] uppercase tracking-wider mb-6">
                 The platform
               </h3>
@@ -380,10 +380,10 @@ function WhatWeBuildSection() {
                   <li key={item.to}>
                     <Link
                       to={item.to}
-                      className="group flex items-center justify-between gap-3 text-[15px] font-semibold text-[#111111] hover:text-[#f97316] transition-colors py-1.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded"
+                      className="group flex items-center justify-between gap-3 text-[15px] font-semibold text-[#111111] hover:text-[#6D28D9] transition-colors py-1.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded"
                     >
                       {item.label}
-                      <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#f97316] group-hover:translate-x-0.5 transition-all" aria-hidden="true" />
+                      <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#6D28D9] group-hover:translate-x-0.5 transition-all" aria-hidden="true" />
                     </Link>
                   </li>
                 ))}

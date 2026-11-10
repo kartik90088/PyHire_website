@@ -18,7 +18,7 @@ export function FeatureHighlight() {
               Recruitment teams choose PyHire to hire faster, improve recruiter productivity, deliver a better candidate experience, and scale hiring operations with AI-powered automation—all from one intelligent recruitment platform.
             </p>
             <div className="pt-6 relative inline-block">
-              <Link to={DEMO_PATH} className="px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-medium text-lg transition-colors shadow-lg shadow-orange-500/25 inline-flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+              <Link to={DEMO_PATH} className="px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-medium text-lg transition-colors shadow-lg shadow-violet-500/25 inline-flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
                 Book A Demo
               </Link>
               <Sparkle className="absolute -top-2 -right-6 w-8 h-8 text-yellow-400 fill-yellow-400" />
@@ -28,8 +28,8 @@ export function FeatureHighlight() {
           {/* Right Content - Illustration area */}
           <div className="w-full lg:w-[65%] relative h-[650px] lg:h-[800px] flex items-center justify-center">
              {/* Large background blob */}
-             <div className="absolute right-[-10%] top-[0%] w-[120%] h-[120%] bg-[#fffcf4] rounded-full blur-[60px] opacity-80 -z-10 hidden sm:block"></div>
-             <div className="absolute right-[-10%] top-[5%] bottom-0 w-[95%] bg-[#fff9ea] rounded-tl-[400px] rounded-bl-[200px] -z-10"></div>
+             <div className="absolute right-[-10%] top-[0%] w-[120%] h-[120%] bg-[#F5F9FF] rounded-full blur-[60px] opacity-80 -z-10 hidden sm:block"></div>
+             <div className="absolute right-[-10%] top-[5%] bottom-0 w-[95%] bg-[#F6F3FF] rounded-tl-[400px] rounded-bl-[200px] -z-10"></div>
              
              {/* The Interactive Diagram */}
              <div className="relative w-full h-full min-h-[650px] max-w-[900px] hidden sm:block">
@@ -49,15 +49,15 @@ export function FeatureHighlight() {
                 </svg>
 
                 {/* AI Center Node */}
-                <div className="absolute top-[46%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white/90 backdrop-blur-sm rounded-[24px] shadow-[0_8px_40px_rgb(245,166,35,0.25)] flex items-center justify-center z-30 border border-orange-50">
-                   <span className="text-[1.25rem] font-bold text-[#f97316]">PyHire</span>
+                <div className="absolute top-[46%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-white/90 backdrop-blur-sm rounded-[24px] shadow-[0_8px_40px_rgb(245,166,35,0.25)] flex items-center justify-center z-30 border border-violet-50">
+                   <span className="text-[1.25rem] font-bold text-[#6D28D9]">PyHire</span>
                 </div>
 
                 {/* 1. Hire Faster */}
                 <div className="absolute top-[22%] left-[35%] -translate-x-1/2 -translate-y-1/2 w-[210px] bg-white rounded-[20px] p-4 shadow-xl border border-slate-50 z-20 hover:-translate-y-1 transition-transform">
                    <h4 className="font-bold text-slate-800 text-[13px] mb-3 tracking-tight">Hire Faster</h4>
-                   <div className="w-10 h-10 mb-3 bg-orange-50/50 rounded-xl flex items-center justify-center">
-                     <Zap className="w-6 h-6 text-[#f97316]" strokeWidth={1.5} />
+                   <div className="w-10 h-10 mb-3 bg-violet-50/50 rounded-xl flex items-center justify-center">
+                     <Zap className="w-6 h-6 text-[#6D28D9]" strokeWidth={1.5} />
                    </div>
                    <p className="text-[11px] text-slate-500 leading-snug">Reduce time-to-hire with intelligent automation and streamlined recruitment workflows.</p>
                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#f5a623] rounded-full flex items-center justify-center border-2 border-white"><Check className="w-3.5 h-3.5 text-white stroke-[3]"/></div>
@@ -66,8 +66,8 @@ export function FeatureHighlight() {
                 {/* 2. Better Candidate Quality */}
                 <div className="absolute top-[20%] left-[68%] -translate-x-1/2 -translate-y-1/2 w-[210px] bg-white rounded-[20px] p-4 shadow-xl border border-slate-50 z-20 hover:-translate-y-1 transition-transform">
                    <h4 className="font-bold text-slate-800 text-[13px] mb-3 tracking-tight">Better Candidate Quality</h4>
-                   <div className="w-10 h-10 mb-3 bg-orange-50/50 rounded-xl flex items-center justify-center">
-                     <Target className="w-6 h-6 text-[#f97316]" strokeWidth={1.5} />
+                   <div className="w-10 h-10 mb-3 bg-violet-50/50 rounded-xl flex items-center justify-center">
+                     <Target className="w-6 h-6 text-[#6D28D9]" strokeWidth={1.5} />
                    </div>
                    <p className="text-[11px] text-slate-500 leading-snug">AI helps identify the most relevant candidates based on skills, experience, and job fit.</p>
                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#f5a623] rounded-full flex items-center justify-center border-2 border-white"><Check className="w-3.5 h-3.5 text-white stroke-[3]"/></div>
@@ -76,8 +76,8 @@ export function FeatureHighlight() {
                 {/* 3. Boost Recruiter Productivity */}
                 <div className="absolute top-[29%] left-[86%] -translate-x-1/2 -translate-y-1/2 w-[210px] bg-white rounded-[20px] p-4 shadow-xl border border-slate-50 z-20 hover:-translate-y-1 transition-transform">
                    <h4 className="font-bold text-slate-800 text-[13px] mb-3 tracking-tight">Boost Recruiter Productivity</h4>
-                   <div className="w-10 h-10 mb-3 bg-orange-50/50 rounded-xl flex items-center justify-center">
-                     <Users className="w-6 h-6 text-[#f97316]" strokeWidth={1.5} />
+                   <div className="w-10 h-10 mb-3 bg-violet-50/50 rounded-xl flex items-center justify-center">
+                     <Users className="w-6 h-6 text-[#6D28D9]" strokeWidth={1.5} />
                    </div>
                    <p className="text-[11px] text-slate-500 leading-snug">Automate repetitive recruitment tasks so recruiters can focus on engaging top talent.</p>
                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#f5a623] rounded-full flex items-center justify-center border-2 border-white"><Check className="w-3.5 h-3.5 text-white stroke-[3]"/></div>
@@ -86,8 +86,8 @@ export function FeatureHighlight() {
                 {/* 4. Scale Without Complexity */}
                 <div className="absolute top-[50%] left-[88%] -translate-x-1/2 -translate-y-1/2 w-[210px] bg-white rounded-[20px] p-4 shadow-xl border border-slate-50 z-20 hover:-translate-y-1 transition-transform">
                    <h4 className="font-bold text-slate-800 text-[13px] mb-3 tracking-tight">Scale Without Complexity</h4>
-                   <div className="w-10 h-10 mb-3 bg-orange-50/50 rounded-xl flex items-center justify-center">
-                     <Settings className="w-6 h-6 text-[#f97316]" strokeWidth={1.5} />
+                   <div className="w-10 h-10 mb-3 bg-violet-50/50 rounded-xl flex items-center justify-center">
+                     <Settings className="w-6 h-6 text-[#6D28D9]" strokeWidth={1.5} />
                    </div>
                    <p className="text-[11px] text-slate-500 leading-snug">Manage multiple recruiters, teams, clients, and high-volume hiring from one platform.</p>
                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#f5a623] rounded-full flex items-center justify-center border-2 border-white"><Check className="w-3.5 h-3.5 text-white stroke-[3]"/></div>
@@ -96,8 +96,8 @@ export function FeatureHighlight() {
                 {/* 5. Enterprise Security */}
                 <div className="absolute top-[73%] left-[86%] -translate-x-1/2 -translate-y-1/2 w-[210px] bg-white rounded-[20px] p-4 shadow-xl border border-slate-50 z-20 hover:-translate-y-1 transition-transform">
                    <h4 className="font-bold text-slate-800 text-[13px] mb-3 tracking-tight">Enterprise Security</h4>
-                   <div className="w-10 h-10 mb-3 bg-orange-50/50 rounded-xl flex items-center justify-center">
-                     <Shield className="w-6 h-6 text-[#f97316]" strokeWidth={1.5} />
+                   <div className="w-10 h-10 mb-3 bg-violet-50/50 rounded-xl flex items-center justify-center">
+                     <Shield className="w-6 h-6 text-[#6D28D9]" strokeWidth={1.5} />
                    </div>
                    <p className="text-[11px] text-slate-500 leading-snug">Protect candidate data with role-based access, audit trails, and compliance-ready workflows.</p>
                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#f5a623] rounded-full flex items-center justify-center border-2 border-white"><Check className="w-3.5 h-3.5 text-white stroke-[3]"/></div>
@@ -106,8 +106,8 @@ export function FeatureHighlight() {
                 {/* 6. Data-Driven Hiring */}
                 <div className="absolute top-[85%] left-[68%] -translate-x-1/2 -translate-y-1/2 w-[210px] bg-white rounded-[20px] p-4 shadow-xl border border-slate-50 z-20 hover:-translate-y-1 transition-transform">
                    <h4 className="font-bold text-slate-800 text-[13px] mb-3 tracking-tight">Data-Driven Hiring</h4>
-                   <div className="w-10 h-10 mb-3 bg-orange-50/50 rounded-xl flex items-center justify-center">
-                     <BarChart3 className="w-6 h-6 text-[#f97316]" strokeWidth={1.5} />
+                   <div className="w-10 h-10 mb-3 bg-violet-50/50 rounded-xl flex items-center justify-center">
+                     <BarChart3 className="w-6 h-6 text-[#6D28D9]" strokeWidth={1.5} />
                    </div>
                    <p className="text-[11px] text-slate-500 leading-snug">Track hiring performance, recruiter productivity, and pipeline health with real-time analytics.</p>
                    <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-[#f5a623] rounded-full flex items-center justify-center border-2 border-white"><Check className="w-3.5 h-3.5 text-white stroke-[3]"/></div>
@@ -178,7 +178,7 @@ export function FeatureHighlight() {
 
                 {/* Decorative plant */}
                 <div className="absolute top-[68%] left-[6%] -translate-x-1/2 -translate-y-1/2 w-24 h-40 z-10 hidden lg:block">
-                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-12 bg-orange-200 rounded-b-[16px] rounded-t-sm shadow-sm"></div>
+                   <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-12 bg-violet-200 rounded-b-[16px] rounded-t-sm shadow-sm"></div>
                    <div className="absolute bottom-12 left-1/2 w-1.5 h-16 bg-emerald-700 -rotate-12 origin-bottom rounded-full"></div>
                    <div className="absolute bottom-16 left-[8px] w-8 h-12 bg-[#f5a623] rounded-full rounded-bl-none rotate-45 opacity-90"></div>
                    <div className="absolute bottom-20 right-[4px] w-7 h-10 bg-[#fcd34d] rounded-full rounded-br-none -rotate-45 opacity-90"></div>

@@ -65,7 +65,7 @@ export function Prose({
           return (
             <blockquote
               key={i}
-              className="my-7 border-l-4 border-[#f97316] bg-[#FFFCF4] rounded-r-[16px] pl-6 pr-6 py-5 text-[1.0625rem] text-[#111111] italic leading-relaxed"
+              className="my-7 border-l-4 border-[#6D28D9] bg-[#F5F9FF] rounded-r-[16px] pl-6 pr-6 py-5 text-[1.0625rem] text-[#111111] italic leading-relaxed"
             >
               <RichText text={block.text} />
             </blockquote>
@@ -85,11 +85,11 @@ export function Prose({
                 >
                   {block.type === 'ul' ? (
                     <span
-                      className="mt-[0.65em] w-1.5 h-1.5 rounded-full bg-[#f97316] shrink-0"
+                      className="mt-[0.65em] w-1.5 h-1.5 rounded-full bg-[#6D28D9] shrink-0"
                       aria-hidden="true"
                     />
                   ) : (
-                    <span className="shrink-0 w-7 h-7 rounded-full bg-orange-50 border border-orange-100 text-[#f97316] text-[13px] font-bold flex items-center justify-center mt-0.5">
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-violet-50 border border-violet-100 text-[#6D28D9] text-[13px] font-bold flex items-center justify-center mt-0.5">
                       {j + 1}
                     </span>
                   )}

@@ -7,17 +7,17 @@ export function CTA() {
     <section className="py-4 lg:py-8 bg-white relative overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="relative rounded-[40px] overflow-hidden bg-[#FFFCF4] p-8 sm:p-12 lg:p-16 border border-yellow-100/50 shadow-[0_20px_60px_-15px_rgba(249,115,22,0.1)]">
+        <div className="relative rounded-[40px] overflow-hidden bg-[#F5F9FF] p-8 sm:p-12 lg:p-16 border border-yellow-100/50 shadow-[0_20px_60px_-15px_rgba(109,40,217,0.1)]">
           {/* Decorative Dotted Patterns */}
           <div className="absolute top-8 left-8 grid grid-cols-4 gap-2 opacity-20 pointer-events-none">
              {[...Array(16)].map((_, i) => (
-               <div key={`dot-tl-${i}`} className="w-2 h-2 rounded-full bg-[#f97316]"></div>
+               <div key={`dot-tl-${i}`} className="w-2 h-2 rounded-full bg-[#6D28D9]"></div>
              ))}
           </div>
 
           <div className="absolute bottom-8 right-8 grid grid-cols-4 gap-2 opacity-20 pointer-events-none">
              {[...Array(16)].map((_, i) => (
-               <div key={`dot-br-${i}`} className="w-2 h-2 rounded-full bg-[#f97316]"></div>
+               <div key={`dot-br-${i}`} className="w-2 h-2 rounded-full bg-[#6D28D9]"></div>
              ))}
           </div>
 
@@ -42,7 +42,7 @@ export function CTA() {
                   {/* Top Candidates Card */}
                   <div className="absolute top-[5%] left-[-5%] bg-white/95 backdrop-blur-sm rounded-[20px] p-4 shadow-xl z-20 w-[200px] animate-[float_5s_ease-in-out_infinite]">
                     <div className="flex items-center gap-2 mb-3">
-                      <div className="w-2 h-2 rounded-full bg-orange-200"></div>
+                      <div className="w-2 h-2 rounded-full bg-violet-200"></div>
                       <span className="text-[10px] font-bold text-slate-500 tracking-wider">Top Candidates</span>
                     </div>
                     <div className="space-y-3">
@@ -61,7 +61,7 @@ export function CTA() {
                                ))}
                             </div>
                           </div>
-                          <div className="text-orange-500 font-bold text-[12px]">{candidate.score}</div>
+                          <div className="text-violet-500 font-bold text-[12px]">{candidate.score}</div>
                         </div>
                       ))}
                     </div>
@@ -82,9 +82,9 @@ export function CTA() {
                     <div className="text-[11px] font-bold text-slate-600 mb-2">AI Match Score</div>
                     <div className="relative w-16 h-16 rounded-full border-[3px] border-slate-100 flex items-center justify-center">
                       <svg className="absolute inset-0 w-full h-full transform -rotate-90">
-                         <circle cx="32" cy="32" r="29" stroke="#f97316" strokeWidth="3" fill="none" strokeDasharray="182" strokeDashoffset="10" strokeLinecap="round" />
+                         <circle cx="32" cy="32" r="29" stroke="#6D28D9" strokeWidth="3" fill="none" strokeDasharray="182" strokeDashoffset="10" strokeLinecap="round" />
                       </svg>
-                      <span className="text-[#f97316] font-bold text-[14px]">95%</span>
+                      <span className="text-[#6D28D9] font-bold text-[14px]">95%</span>
                     </div>
                   </div>
 
@@ -117,11 +117,11 @@ export function CTA() {
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-4 mb-8">
-                <Link to={DEMO_PATH} className="w-full sm:w-auto px-8 py-4 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[17px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.3)] hover:shadow-[0_12px_25px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 flex items-center justify-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2">
+                <Link to={DEMO_PATH} className="w-full sm:w-auto px-8 py-4 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[17px] transition-all shadow-[0_8px_20px_rgb(249,115,22,0.3)] hover:shadow-[0_12px_25px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 flex items-center justify-center gap-2 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2">
                   Book a Demo
                   <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
                 </Link>
-                <Link to={PLATFORM_PATH} className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-800 rounded-full font-bold text-[17px] transition-all border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-[#f97316]">
+                <Link to={PLATFORM_PATH} className="w-full sm:w-auto px-8 py-4 bg-white hover:bg-slate-50 text-slate-800 rounded-full font-bold text-[17px] transition-all border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 flex items-center justify-center outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9]">
                   Explore Platform
                 </Link>
               </div>

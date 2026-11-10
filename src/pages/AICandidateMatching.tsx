@@ -84,12 +84,12 @@ export function AICandidateMatching() {
       workflowTitle="How AI Matching Works"
       workflowDesc="Let the AI do the heavy lifting of sorting and ranking your talent pool."
       workflowSteps={[
-        { id: "01", title: "Job Requirements", desc: "System ingests the core skills and experience needed.", icon: <Layers className="w-6 h-6 text-[#f97316]" /> },
-        { id: "02", title: "Data Ingestion", desc: "Candidate resumes and profiles are processed.", icon: <Filter className="w-6 h-6 text-[#f97316]" /> },
-        { id: "03", title: "Semantic Analysis", desc: "AI understands context and meaning behind keywords.", icon: <BrainCircuit className="w-6 h-6 text-[#f97316]" /> },
-        { id: "04", title: "Scoring Generation", desc: "Calculates fit percentage against the job requirements.", icon: <Star className="w-6 h-6 text-[#f97316]" /> },
-        { id: "05", title: "Ranking", desc: "Surfaces the most qualified candidates to the top.", icon: <BarChart2 className="w-6 h-6 text-[#f97316]" /> },
-        { id: "06", title: "Recruiter Action", desc: "Recruiters focus on engaging the best matches immediately.", icon: <Target className="w-6 h-6 text-[#f97316]" /> }
+        { id: "01", title: "Job Requirements", desc: "System ingests the core skills and experience needed.", icon: <Layers className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "02", title: "Data Ingestion", desc: "Candidate resumes and profiles are processed.", icon: <Filter className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "03", title: "Semantic Analysis", desc: "AI understands context and meaning behind keywords.", icon: <BrainCircuit className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "04", title: "Scoring Generation", desc: "Calculates fit percentage against the job requirements.", icon: <Star className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "05", title: "Ranking", desc: "Surfaces the most qualified candidates to the top.", icon: <BarChart2 className="w-6 h-6 text-[#6D28D9]" /> },
+        { id: "06", title: "Recruiter Action", desc: "Recruiters focus on engaging the best matches immediately.", icon: <Target className="w-6 h-6 text-[#6D28D9]" /> }
       ]}
       benefitsTitle="Hire Smarter, Not Harder"
       benefitsDesc="Maximize the efficiency of your talent acquisition team with precise recommendations."

@@ -65,7 +65,7 @@ function CaseStudyBody({ body }: { body: Block[] }) {
           return (
             <blockquote
               key={i}
-              className="my-8 border-l-4 border-[#f97316] bg-[#FFFCF4] rounded-r-[16px] pl-6 pr-6 py-5 text-[1.125rem] text-[#111111] italic leading-relaxed"
+              className="my-8 border-l-4 border-[#6D28D9] bg-[#F5F9FF] rounded-r-[16px] pl-6 pr-6 py-5 text-[1.125rem] text-[#111111] italic leading-relaxed"
             >
               <RichText text={block.text} />
             </blockquote>
@@ -80,11 +80,11 @@ function CaseStudyBody({ body }: { body: Block[] }) {
                 <li key={j} className="flex gap-3.5 text-[1.0625rem] text-[#4B5563] leading-[1.75]">
                   {block.type === 'ul' ? (
                     <span
-                      className="mt-[0.65em] w-1.5 h-1.5 rounded-full bg-[#f97316] shrink-0"
+                      className="mt-[0.65em] w-1.5 h-1.5 rounded-full bg-[#6D28D9] shrink-0"
                       aria-hidden="true"
                     />
                   ) : (
-                    <span className="shrink-0 w-7 h-7 rounded-full bg-orange-50 border border-orange-100 text-[#f97316] text-[13px] font-bold flex items-center justify-center mt-1">
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-violet-50 border border-violet-100 text-[#6D28D9] text-[13px] font-bold flex items-center justify-center mt-1">
                       {j + 1}
                     </span>
                   )}
@@ -204,9 +204,9 @@ export function CaseStudyDetail() {
 
   if (!study) {
     return (
-      <main className="pt-32 pb-24 bg-white min-h-screen font-sans">
+      <main className="pt-28 pb-14 bg-white min-h-screen font-sans">
         <div className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 text-center">
-          <div className="inline-block px-3 py-1 bg-orange-50 text-orange-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-8 tracking-wider uppercase border border-orange-100">
+          <div className="inline-block px-3 py-1 bg-violet-50 text-violet-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-8 tracking-wider uppercase border border-violet-100">
             CASE STUDIES
           </div>
           <h1 className="text-[2.5rem] lg:text-[3rem] font-bold text-[#111111] leading-[1.1] mb-6 tracking-tight">
@@ -218,7 +218,7 @@ export function CaseStudyDetail() {
           </p>
           <Link
             to="/case-studies"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:-translate-y-0.5"
           >
             <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to case studies
           </Link>
@@ -230,9 +230,9 @@ export function CaseStudyDetail() {
   return (
     <main className="pt-12 bg-white min-h-screen font-sans overflow-hidden">
       {/* 1. Hero banner */}
-      <section className="relative bg-[#FFFCF4]">
+      <section className="relative bg-[#F5F9FF]">
         <div
-          className="absolute top-0 right-0 w-[520px] h-[520px] bg-orange-100/40 rounded-full -translate-y-1/3 translate-x-1/4 z-0 hidden lg:block"
+          className="absolute top-0 right-0 w-[520px] h-[520px] bg-violet-100/40 rounded-full -translate-y-1/3 translate-x-1/4 z-0 hidden lg:block"
           aria-hidden="true"
         />
 
@@ -241,13 +241,13 @@ export function CaseStudyDetail() {
           <nav aria-label="Breadcrumb" className="mb-8">
             <ol className="flex items-center gap-2 text-[13px] font-semibold text-slate-500 flex-wrap">
               <li>
-                <Link to="/" className="inline-block py-3 -my-3 hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded">
+                <Link to="/" className="inline-block py-3 -my-3 hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded">
                   Home
                 </Link>
               </li>
               <li aria-hidden="true"><ChevronRight className="w-3.5 h-3.5 text-slate-300" /></li>
               <li>
-                <Link to="/case-studies" className="inline-block py-3 -my-3 hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded">
+                <Link to="/case-studies" className="inline-block py-3 -my-3 hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded">
                   Case Studies
                 </Link>
               </li>
@@ -262,7 +262,7 @@ export function CaseStudyDetail() {
             transition={{ duration: 0.6 }}
             className="max-w-[920px]"
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-orange-50 text-orange-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-6 tracking-wider uppercase border border-orange-100">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-violet-50 text-violet-600 text-[12px] sm:text-[11px] font-bold rounded-md mb-6 tracking-wider uppercase border border-violet-100">
               <Layers className="w-3.5 h-3.5" aria-hidden="true" />
               {study.segment}
             </div>
@@ -282,7 +282,7 @@ export function CaseStudyDetail() {
             )}
 
             {/* Verbatim scope note from the source document. */}
-            <p className="text-[15px] text-slate-500 italic leading-relaxed border-l-2 border-orange-200 pl-4">
+            <p className="text-[15px] text-slate-500 italic leading-relaxed border-l-2 border-violet-200 pl-4">
               {study.disclaimer}
             </p>
 
@@ -320,7 +320,7 @@ export function CaseStudyDetail() {
           <CaseStudyBody body={study.body} />
 
           {/* CTA */}
-          <div className="mt-12 bg-[#FFFCF4] border border-orange-100 rounded-[32px] p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
+          <div className="mt-12 bg-[#F5F9FF] border border-violet-100 rounded-[32px] p-8 sm:p-10 flex flex-col sm:flex-row items-center gap-6">
             <div className="flex-1">
               <h2 className="text-[1.5rem] font-bold text-[#111111] leading-snug mb-2">
                 See this working on your own hiring
@@ -331,7 +331,7 @@ export function CaseStudyDetail() {
             </div>
             <Link
               to={DEMO_PATH}
-              className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-[#f97316] hover:bg-[#ea580c] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] focus-visible:ring-offset-2"
+              className="shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-[#6D28D9] hover:bg-[#5B21B6] text-white rounded-full font-bold text-[15px] transition-all shadow-[0_4px_14px_rgb(249,115,22,0.3)] hover:shadow-[0_6px_20px_rgb(249,115,22,0.4)] hover:-translate-y-0.5 outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] focus-visible:ring-offset-2"
             >
               Book a Demo <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
@@ -340,7 +340,7 @@ export function CaseStudyDetail() {
           <div className="mt-10">
             <Link
               to="/case-studies"
-              className="inline-flex items-center gap-2 text-[14px] font-bold text-slate-600 hover:text-[#f97316] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#f97316] rounded-full px-2 py-2.5"
+              className="inline-flex items-center gap-2 text-[14px] font-bold text-slate-600 hover:text-[#6D28D9] transition-colors outline-none focus-visible:ring-2 focus-visible:ring-[#6D28D9] rounded-full px-2 py-2.5"
             >
               <ArrowLeft className="w-4 h-4" aria-hidden="true" /> Back to all case studies
             </Link>
@@ -357,7 +357,7 @@ export function CaseStudyDetail() {
 
       {/* 3. Related case studies */}
       {related.length > 0 && (
-        <section className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 pb-20">
+        <section className="max-w-[1200px] mx-auto px-5 sm:px-8 lg:px-12 pb-12">
           <div className="border-t border-slate-100 pt-14">
             <h2 className="text-[1.75rem] lg:text-[2rem] font-bold text-[#111111] tracking-tight mb-2">
               Related Case Studies
